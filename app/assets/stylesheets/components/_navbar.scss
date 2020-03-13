@@ -1,6 +1,16 @@
+body {
+  padding-top: 4.5rem; // Needed for fixed-top bootstrap navabar
+}
+
+// Transition CSS for homepage only
 .navbar-davide {
-  background-color: $navbar-bg;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
   justify-content: space-between;
+}
+
+.navbar-davide-colorize {
+  background-color: $navbar-bg;
 }
 
 .navbar-davide .navbar-brand img {

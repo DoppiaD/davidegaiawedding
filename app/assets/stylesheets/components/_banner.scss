@@ -4,9 +4,9 @@
   height: 100vh;
   color: #eee;
   text-align: center;
-  // padding-top: 40vh;
   display: flex;
   align-items: flex-end;
+  margin-top: -4.5rem; //used to counterbalance body padding-top due to navbar
 }
 
 .banner-hero {
