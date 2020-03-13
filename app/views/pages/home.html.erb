@@ -1,2 +1,32 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="display-1 banner-hero m-1">Davide & Gaia</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col banner-description">
+        <p class="">“We think we’re quite ready <br> for another adventure!”</p>
+        <div class="my-3">
+          <%= link_to "RSVP", "#", class: "btn btn-primary" %>
+        </div>
+        <span data-aos='fade-up' data-aos-easing="ease" data-aos-delay="800">
+          <i class="fas fa-chevron-down"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 100 %>
+    </div>
+  </div>
+</div>
+<% 100.times do |x| %>
+  <p class="display-1">Ciao</p>
+<% end %>
