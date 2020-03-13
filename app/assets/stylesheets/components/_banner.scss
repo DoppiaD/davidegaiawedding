@@ -1,0 +1,22 @@
+.home-banner {
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
+  background-size: cover;
+  height: 100vh;
+  color: #eee;
+  text-align: center;
+  // padding-top: 40vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.banner-hero {
+  padding-bottom: 30vh;
+  text-align: left;
+  display: block;
+}
+
+.banner-description {
+  margin-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
+}
