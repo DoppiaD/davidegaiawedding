@@ -26,11 +26,11 @@ body {
     justify-content: space-evenly;
   }
 
-  // .navbar-brand {
-  //   margin: 0 auto;
-  //   position: block;
-  //   transform: translateX(-50%);
-  // }
+  .navbar-brand {
+    // margin: 0 auto;
+    position: inline-block;
+    transform: translateX(-50%);
+  }
 }
 
 // Hamburger menu styling
