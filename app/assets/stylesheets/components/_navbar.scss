@@ -2,52 +2,40 @@ body {
   padding-top: 4.5rem; // Needed for fixed-top bootstrap navabar
 }
 
-// Transition CSS for homepage only
 .navbar-davide {
-  background-color: transparent;
+  background-color: transparent; // Applied only if banner class is present in the page
   transition: 0.5s background-color ease;
   justify-content: space-between;
+
+  .navbar-brand img {
+    width: 40px;
+  }
+
+  .navbarSupportedContent {
+    flex-grow: 0;
+  }
 }
 
 .navbar-davide-colorize {
   background-color: $navbar-bg;
 }
 
-.navbar-davide .navbar-brand img {
-  width: 40px;
-}
-
-#navbar-mobile {
-  display: flex;
-}
-
-#navbar-main {
-  display: none;
-}
-
 @include media-breakpoint-up(md) {
 
-  #navbar-mobile {
-    display: none;
-  }
-  #navbar-main {
-    display: flex;
-  }
   .navbar-davide {
     justify-content: space-evenly;
   }
 
-  .navbar-brand {
-    // margin: 0 auto;
-    position: inline-block;
-    transform: translateX(-50%);
-  }
+  // .navbar-brand {
+  //   margin: 0 auto;
+  //   position: block;
+  //   transform: translateX(-50%);
+  // }
 }
 
 // Hamburger menu styling
-
 .icon-bar {
-	width: 24px;
+	width: 22px;
 	height: 2px;
 	background-color: $primary;
 	display: block;
