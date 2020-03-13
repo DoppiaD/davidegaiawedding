@@ -1,0 +1,43 @@
+.wedding-info {
+  text-align: center;
+}
+
+.wedding-date {
+  padding-top: $spacer * 4.25;
+  margin-bottom: $spacer * 2;
+}
+
+.wedding-data {
+  &:first-child {
+    margin-bottom: $spacer;
+  }
+  i {
+    margin-bottom: $spacer;
+    color: $primary;
+  }
+  h1 {
+    margin-bottom: $spacer * 0.25;
+  }
+  br {
+    display: block;
+  }
+}
+
+.wedding-info {
+  padding-bottom: 4.25rem;
+}
+
+@include media-breakpoint-up(md) {
+
+  .wedding-date {
+    padding-bottom: $spacer * 3;
+  }
+  .wedding-data {
+    br {
+      display: none;
+    }
+    :first-child {
+      margin-bottom: 0;
+    }
+  }
+}
