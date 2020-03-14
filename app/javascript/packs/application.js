@@ -24,8 +24,10 @@ require("channels")
 import "bootstrap";
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { windowHeight } from '../components/banner';
+import { scrollToChevron } from '../components/banner';
 
 document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
   windowHeight();
+  scrollToChevron();
 });

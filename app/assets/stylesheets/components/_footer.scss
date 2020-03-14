@@ -5,31 +5,19 @@
 }
 
 .fa-beat {
-  animation:fa-beat 5s ease-in-out infinite;
+  animation: fa-beat 5s ease-in-out infinite;
 }
 
 @keyframes fa-beat {
   0% {
     transform:scale(1);
   }
-  // 5% {
-  //   transform:scale(1.25);
-  // }
   25% {
     transform:scale(1.25);
   }
-  // 30% {
-  //   transform:scale(1);
-  // }
-  // 35% {
-  //   transform:scale(1.25);
-  // }
   50% {
     transform:scale(1);
   }
-  // 55% {
-  //   transform:scale(1.25);
-  // }
   75% {
     transform:scale(1.25);
   }

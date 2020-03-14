@@ -8,21 +8,21 @@
     <div class="row">
       <div class="col banner-description">
         <p>“We think we’re quite ready
-          <br>
+          <br>š
           for another adventure!”</p>
         <div class="my-3">
           <%= link_to "RSVP", "#", class: "btn btn-primary", role: 'button' %>
         </div>
-        <span data-aos='fade-up' data-aos-easing="ease" data-aos-delay="800">
-          <i class="fas fa-chevron-down"></i>
-        </span>
+        <%= link_to "#chevron-hook", class: "chevron-animate" do %>
+          <i class="fas fa-lg fa-chevron-down"></i>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
 <div class="container text-center info-spacer">
-  <div class="row ">
-    <div class="col wedding-date">
+  <div class="row">
+    <div class="col wedding-date" id="chevron-hook">
       <p>Come celebrate with us!</p>
       <h1 class="display-1">September 25th, 2020</h1>
     </div>

@@ -24,7 +24,36 @@
   margin-bottom: 3vh;
   display: flex;
   flex-direction: column;
-  p, span {
+  p, i {
     text-shadow: $d-text-shadow;
   }
 }
+
+@keyframes chevron-animate {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(-50%);
+  }
+}
+
+.chevron-animate {
+  animation: chevron-animate 4s ease infinite;
+  color: white;
+}
+// .chevron-animate {
+//   transition-delay: .8s;
+//   // opacity: 1;
+//   // transform: translateZ(0);
+//   transition-timing-function: ease;
+//   transition-duration: 1s;
+//   transition-property: opacity, transform;
+//   transform: translate3d(0,100px,0);
+// }
