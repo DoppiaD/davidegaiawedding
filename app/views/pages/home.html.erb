@@ -7,9 +7,11 @@
     </div>
     <div class="row">
       <div class="col banner-description">
-        <p>“We think we’re quite ready <br> for another adventure!”</p>
+        <p>“We think we’re quite ready
+          <br>
+          for another adventure!”</p>
         <div class="my-3">
-          <%= link_to "RSVP", "#", class: "btn btn-primary" %>
+          <%= link_to "RSVP", "#", class: "btn btn-primary", role: 'button' %>
         </div>
         <span data-aos='fade-up' data-aos-easing="ease" data-aos-delay="800">
           <i class="fas fa-chevron-down"></i>
@@ -27,18 +29,20 @@
   </div>
   <div class="row">
     <div class="col-sm-6 wedding-data">
-      <i class="fas fa-calendar-day fa-3x"></i>
+      <i class="fas fa-calendar-day fa-3x mb-3"></i>
       <h6 class="text-uppercase">Wedding Celebration</h6>
-      <p>Ceremony begins at 16:00.<br> Food starts at 18:00!</p>
+      <p>Ceremony begins at 16:00.<br>
+        Food starts at 18:00!</p>
     </div>
     <div class="col-sm-6 wedding-data">
-      <i class="fas fa-map-marked-alt fa-3x "></i>
+      <i class="fas fa-map-marked-alt fa-3x mb-3"></i>
       <h6 class="text-uppercase">Tenuta la Morra</h6>
-      <p>Via Villafranca 77, 10061<br> Cavour TO, Italy</p>
+      <p>Via Villafranca 77, 10061<br>
+        Cavour TO, Italy</p>
     </div>
   </div>
 </div>
-<div class="breakimage">
+<div class="container-fluid breakimage spacer-image">
 </div>
 <div class="container info-spacer">
   <div class="row ">
@@ -47,25 +51,62 @@
       <h6>“Home is behind, the wedding ahead.”</h6>
     </div>
   </div>
-  <div class="row justify-content-around">
-    <div class="card-deck">
-      <div class="col-sm-5 logistics-data">
-        <div class="card">
-          <%= image_tag("https://via.placeholder.com/400x150", class: "card-img-top")%>
-          <div class="card-body">
-            <h5 class="card-title">How to get here</h5>
-            <p class="card-text">Step by step travel instructions</p>
-          </div>
-        </div>
+  <div class="card-deck">
+    <div class="card d-card-shadow">
+      <%= link_to "#", class: "stretched-link" do %>
+        <%= image_tag("https://via.placeholder.com/400x150", class: "card-img-top")%>
+      <% end %>
+      <div class="card-body">
+        <h5 class="card-title">How to get here</h5>
+        <p class="card-text">Step by step travel instructions</p>
       </div>
-      <div class="col-sm-5 logistics-data">
-          <div class="card">
-            <%= image_tag("https://via.placeholder.com/400x150", class: "card-img-top")%>
-            <div class="card-body">
-              <h5 class="card-title">Where to stay</h5>
-              <p class="card-text">Partner hotel for wedding night</p>
-            </div>
-          </div>
+    </div>
+    <div class="card d-card-shadow">
+      <%= link_to "#", class: "stretched-link" do %>
+        <%= image_tag("https://via.placeholder.com/400x150", class: "card-img-top")%>
+      <% end %>
+      <div class="card-body">
+        <h5 class="card-title">Where to stay</h5>
+        <p class="card-text">Partner hotel for wedding night</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="container-fluid wine-tour-info spacer-image">
+</div> -->
+<div class="container info-spacer">
+  <div class="row ">
+    <div class="col tourist-hero text-center">
+      <h2>Tourist Info</h2>
+      <h6>“Not All Those Who Wander Are Lost.”</h6>
+    </div>
+  </div>
+  <div class="card-deck">
+    <div class="card d-card-shadow">
+      <%= link_to "#", class: "stretched-link" do %>
+        <%= image_tag("https://via.placeholder.com/400x300", class: "card-img-top")%>
+      <% end %>
+      <div class="card-body">
+        <h5 class="card-title">Torino</h5>
+        <p class="card-text">Our hometown</p>
+      </div>
+    </div>
+    <div class="card d-card-shadow">
+      <%= link_to "#", class: "stretched-link" do %>
+        <%= image_tag("https://via.placeholder.com/400x300", class: "card-img-top")%>
+      <% end %>
+      <div class="card-body">
+        <h5 class="card-title">Cavour</h5>
+        <p class="card-text">The historical wedding town</p>
+      </div>
+    </div>
+    <div class="card d-card-shadow">
+      <%= link_to "#", class: "stretched-link" do %>
+        <%= image_tag("https://via.placeholder.com/400x300", class: "card-img-top")%>
+      <% end %>
+      <div class="card-body">
+        <h5 class="card-title">Langhe</h5>
+        <p class="card-text">Italy's best wine region</p>
       </div>
     </div>
   </div>

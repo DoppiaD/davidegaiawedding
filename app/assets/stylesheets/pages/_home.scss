@@ -45,6 +45,9 @@
 .breakimage {
   background-image: url('https://images.unsplash.com/photo-1578266352185-77ca67e96508?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
   height: 50vh;
+}
+
+.spacer-image {
   background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
@@ -52,12 +55,23 @@
 }
 
 @include media-breakpoint-up(xl) {
-  .breakimage {
+  .spacer-image {
     background-attachment: fixed;
   }
 }
 
 // Logistics section
 .logistics-hero {
+  margin-bottom: $spacer * 2;
+}
+
+// Wine-tour info
+.wine-tour-info {
+  height: 50vh;
+  background-image: asset-url("wine-tour.jpg");
+}
+
+// Tourist info section
+.tourist-hero {
   margin-bottom: $spacer * 2;
 }

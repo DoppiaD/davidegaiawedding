@@ -1,0 +1,15 @@
+.d-card-shadow {
+  box-shadow: $d-card-shadow;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition-property: color, background-color, box-shadow, transform;
+  transition-duration: .15s;
+  border: 0;
+  &:hover {
+    box-shadow: $d-card-hover-shadow;
+    transform: translateY(-2px);
+    color: $secondary;
+  }
+  &:active {
+    box-shadow: $d-card-hover-shadow;
+  }
+}
