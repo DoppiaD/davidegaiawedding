@@ -1,7 +1,10 @@
-.wedding-info {
-  text-align: center;
+// General
+.info-spacer {
+  padding-top: $spacer * 4.25;
+  padding-bottom: $spacer * 4.25;
 }
 
+// Wedding info
 .wedding-date {
   padding-top: $spacer * 4.25;
   margin-bottom: $spacer * 2;
@@ -23,10 +26,6 @@
   }
 }
 
-.wedding-info {
-  padding-bottom: 4.25rem;
-}
-
 @include media-breakpoint-up(md) {
 
   .wedding-date {
@@ -40,4 +39,25 @@
       margin-bottom: 0;
     }
   }
+}
+
+// Break breakimage
+.breakimage {
+  background-image: url('https://images.unsplash.com/photo-1578266352185-77ca67e96508?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
+  height: 50vh;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@include media-breakpoint-up(xl) {
+  .breakimage {
+    background-attachment: fixed;
+  }
+}
+
+// Logistics section
+.logistics-hero {
+  margin-bottom: $spacer * 2;
 }
