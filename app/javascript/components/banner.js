@@ -2,7 +2,7 @@ const windowHeight = () => {
   const banner = document.querySelector('.home-banner');
   if (banner) {
     banner.style.height = window.innerHeight + 'px';
-    window.onresize = function(event) {
+    window.onresize = function() {
       banner.style.height = window.innerHeight + 'px';
     };
   }

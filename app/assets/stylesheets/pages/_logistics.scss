@@ -1,0 +1,86 @@
+.hotel-picture {
+  background-image: url('https://q-xx.bstatic.com/xdata/images/hotel/840x460/52212918.jpg?k=a22d32fe721d4e20bdeafb7dce6b859364b94c7c4438c9b48724559c6343211d&o=');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 60vh;
+}
+
+.hotel-info {
+  .hotel-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: $spacer * 1.5;
+    padding-top: $spacer * 2;
+    padding-bottom: $spacer * 2;
+    .feature-deck {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 10rem);
+      grid-template-rows: auto;
+      grid-gap: $spacer $spacer;
+      max-width: 32rem;
+      .card-body {
+        padding: $spacer / 2;
+        p {
+          margin: 0;
+        }
+      }
+
+      br {
+        display: block;
+      }
+    }
+    .btn {
+      align-self: center;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .hotel-info {
+    .hotel-data {
+      .feature-deck {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-only(sm) {
+  .hotel-info {
+    .hotel-data {
+      .feature-deck {
+        grid-gap: $spacer / 2 $spacer / 2;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .hotel-info {
+    .hotel-picture {
+    order: 1;
+    height: inherit;
+    }
+    .hotel-data {
+      order: 2;
+      .feature-deck {
+        grid-template-columns: repeat(auto-fit, 9rem);
+      }
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .hotel-info {
+    .hotel-data {
+      .feature-deck {
+        grid-template-columns: repeat(auto-fit, 10rem);
+      }
+    }
+  }
+}
