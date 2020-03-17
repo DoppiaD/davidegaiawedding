@@ -11,12 +11,6 @@ $light-gray: #F4F4F4;
 
 $navbar-bg: #FFF;
 
-$d-text-shadow: 0 0 15px rgba(0,0,0,0.2);
-
-$d-card-hover-color: #32325d;
-$d-card-hover-shadow: 0 30px 60px -12px rgba(50,50,93,.25),0 18px 36px -18px rgba(0,0,0,.3),0 -12px 36px -8px rgba(0,0,0,.025);
-$d-card-shadow: 0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025);
-
 // ----------------------------------------
 // Bootstrap Colors
 $primary:       #243E36;
@@ -27,3 +21,10 @@ $secondary:     #6E0D25;
 // $danger:        $red;
 // $light:         $gray-100;
 // $dark:          $gray-800;
+
+// ----------------------------------------
+// Shadows
+$d-text-shadow: 0 0 15px rgba(0,0,0,0.2);
+$d-card-hover-color: #32325d;
+$d-card-hover-shadow: 0 30px 60px -12px rgba(50,50,93,.25),0 18px 36px -18px rgba(0,0,0,.3),0 -12px 36px -8px rgba(0,0,0,.025);
+$d-card-shadow: 0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025);

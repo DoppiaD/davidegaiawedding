@@ -16,6 +16,12 @@
 $body-font: 'Poppins', 'sans-serif';
 $fancy-font: 'Alex Brush', cursive;
 
+// ----------------------------------------
+// Bootstrap Typography
+// Poppins 100 Thin ; 400 Regular ; medium 500 ; semi-bold 600
+$font-weight-lighter: 100;
+$h2-font-size: 4.5rem;
+
 // Display fonts are used for the cursive font
 .display-1,
 .display-2,
@@ -25,13 +31,9 @@ $fancy-font: 'Alex Brush', cursive;
 }
 
 h2 {
-  font-weight: 300 !important;
+  font-weight: 100 !important;
 }
 
 h5 {
   font-weight: 500 !important;
-}
-
-button {
-  border-radius: .5rem !important;
 }

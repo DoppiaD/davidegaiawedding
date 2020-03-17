@@ -1,12 +1,12 @@
 // General
 .info-spacer {
-  padding-top: $spacer * 4.25;
-  padding-bottom: $spacer * 4.25;
+  padding-top: $d-spacer-section;
+  padding-bottom: $d-spacer-section;
 }
 
 // Wedding info
 .wedding-date {
-  padding-top: $spacer * 4.25;
+  padding-top: $d-spacer-section;
   margin-bottom: $spacer * 2;
 }
 
