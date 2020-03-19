@@ -1,12 +1,14 @@
+// Hotel Info
 .hotel-picture {
   background-image: url('https://q-xx.bstatic.com/xdata/images/hotel/840x460/52212918.jpg?k=a22d32fe721d4e20bdeafb7dce6b859364b94c7c4438c9b48724559c6343211d&o=');
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
-  height: 60vh;
+  height: 30vh;
 }
 
 .hotel-info {
+  margin-bottom: $d-spacer-section;
   .hotel-data {
     display: flex;
     flex-direction: column;
@@ -26,9 +28,6 @@
           margin: 0;
         }
       }
-      br {
-        display: block;
-      }
     }
     .btn {
       align-self: center;
@@ -42,6 +41,9 @@
       .feature-deck {
         justify-content: center;
       }
+    br {
+      display: none;
+    }
     }
   }
 }
@@ -56,14 +58,12 @@
   }
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
   .hotel-info {
     .hotel-picture {
-    order: 1;
     height: inherit;
     }
     .hotel-data {
-      order: 2;
       .feature-deck {
         grid-template-columns: repeat(auto-fit, 9rem);
       }
@@ -74,12 +74,135 @@
   }
 }
 
-@include media-breakpoint-up(lg) {
-  .hotel-info {
-    .hotel-data {
-      .feature-deck {
-        grid-template-columns: repeat(auto-fit, 10rem);
+// Trip Info
+
+.trip-info {
+  margin-bottom: $d-spacer-section;
+  .trip-hero {
+    margin-bottom: $spacer * 2;
+  }
+  .trip-nav {
+    display: flex;
+    justify-content: center;
+    .trip-item {
+      background-color: inherit;
+      border-radius: 0;
+      padding-bottom: $spacer * 0.25;
+      color: $muted;
+      &:hover:not(.active), &:active{
+        color: $hover;
       }
+    }
+    .active {
+      color: $primary;
+      background-color: inherit;
+      border-bottom: $primary solid 4px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .trip-info {
+    .trip-hero {
+      br {
+        display: none;
+      }
+    }
+
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .trip-info {
+    .trip-nav {
+      .trip-item:first-child { //Custom nav content
+        p::after {
+          content: ' Caselle';
+        }
+      }
+      .trip-item:nth-child(2) {//Custom nav content
+        p::before {
+          content: 'Milan ';
+        }
+      }
+      .trip-item:last-child {//Custom nav content
+        p::after {
+          content: ', Rent, Share';
+        }
+      }
+    }
+  }
+}
+
+// Trip Timeline
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  margin: $spacer 0;
+  .timeline {
+
+    ul {
+      padding: $spacer 0 0 $spacer * 2;
+      margin: 0;
+      list-style: none;
+      position: relative;
+
+      &::before {
+        content: ' ';
+        height: 100%;
+        width: 1px;
+        background-color: $gray-300;
+        position: absolute;
+        top: 0;
+        left: 2.5em;
+        z-index: -1;
+      }
+    }
+
+    li div{
+      display: inline-block;
+      margin: $spacer 0;
+      vertical-align: top;
+    }
+
+    .bullet {
+      width: 1em;
+      height: 1em;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background: $white;
+      z-index: 1;
+      margin-right: 1em;
+      border: 2px solid $gray-300;
+    }
+
+    .time {
+      width: 20%;
+      font-size: 0.75em;
+      padding-top: 0.25em;
+    }
+
+    .desc {
+      // width: 50%;
+      box-shadow: $d-card-shadow;
+      padding: $spacer;
+    }
+
+    h5 {
+      // font-size: 0.9em;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      // font-size: 0.7em;
+      color: $gray-600;
+    }
+
+    .people img{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
     }
   }
 }

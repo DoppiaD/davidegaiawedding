@@ -1,6 +1,8 @@
 <div class="container hotel-info">
   <div class="row">
-    <div class="col-md-6 hotel-data">
+    <div class="col-lg-6 hotel-picture">
+    </div>
+    <div class="col-lg-6 hotel-data">
       <span>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -8,7 +10,7 @@
         <i class="fas fa-star"></i>
       </span>
       <h1>Hotel Barrage</h1>
-      <p>Stradale S. Secondo 100, Pinerolo (TO),<br> 10064 , Italy</p>
+      <p>Stradale S. Secondo 100, Pinerolo (TO),<br> 10064, Italy</p>
       <div class="feature-deck">
         <div class="card text-center">
           <div class="card-body">
@@ -29,12 +31,47 @@
           </div>
         </div>
       </div>
-      <p class="mt-3">To book, write an email or make a direct call to the Hotel mentioning our wedding:</p>
+      <p class="mt-3">To book, write an email or make a direct call to the  Hotel mentioning our wedding:</p>
       <h6><i class="fas fa-envelope"></i> info@hotelbarrage.it</h6>
       <h6><i class="fas fa-phone"></i> +39 0121 040500</h6>
       <%= link_to "More Info", "https://www.hotelbarrage.it", class:"btn btn-outline-primary" %>
     </div>
-    <div class="col-md-6 hotel-picture">
+  </div>
+</div>
+<div class="container trip-info">
+  <div class="row">
+    <div class="col text-center trip-hero">
+      <h2>How to get there</h2>
+      <h6>“It's a dangerous business, going out your door. You step onto the road,<br>
+        and if you don't keep your feet, there's no knowing where you might be swept off to.”
+      </h6>
     </div>
+  </div>
+  <nav class="nav text-center nav-pills trip-nav nav-justified">
+    <%= link_to "#nav-home", class:"nav-item nav-link active trip-item", 'data-toggle':"tab", 'role':"tab", "aria-controls":"nav-home", "aria-selected":true do %>
+      <div class="trip-feature">
+        <h3 class="mb-1"><i class="fas fa-plane"></i></h3>
+        <p class="mb-0">Turin</p>
+      </div>
+    <% end %>
+    <%= link_to "#nav-profile", class:"nav-item nav-link trip-item", 'data-toggle':"tab", 'role':"tab", "aria-controls":"nav-home", "aria-selected":true do %>
+      <div class="trip-feature">
+        <h3 class="mb-1"><i class="fas fa-plane"></i></h3>
+        <p class="mb-0">Malpensa</p>
+      </div>
+    <% end %>
+    <%= link_to "#nav-contact", class:"nav-item nav-link trip-item", 'data-toggle':"tab", 'role':"tab", "aria-controls":"nav-home", "aria-selected":true do %>
+      <div class="trip-feature">
+        <h3 class="mb-1"><i class="fas fa-car"></i></h3>
+        <p class="mb-0">Drive</p>
+      </div>
+    <% end %>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <%= render 'turin' %>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Malpensa</div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Car</div>
   </div>
 </div>
