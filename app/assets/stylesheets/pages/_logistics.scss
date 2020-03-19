@@ -41,9 +41,9 @@
       .feature-deck {
         justify-content: center;
       }
-    br {
-      display: none;
-    }
+      br {
+        display: none;
+      }
     }
   }
 }
@@ -140,69 +140,60 @@
   justify-content: center;
   margin: $spacer 0;
   .timeline {
-
     ul {
       padding: $spacer 0 0 $spacer * 2;
       margin: 0;
       list-style: none;
       position: relative;
-
       &::before {
         content: ' ';
         height: 100%;
         width: 1px;
-        background-color: $gray-300;
+        background-color: $primary;
         position: absolute;
         top: 0;
         left: 2.5em;
         z-index: -1;
       }
     }
-
     li div{
       display: inline-block;
       margin: $spacer 0;
       vertical-align: top;
     }
-
     .bullet {
-      width: 1em;
-      height: 1em;
+      width: 1rem;
+      height: 1rem;
       box-sizing: border-box;
       border-radius: 50%;
       background: $white;
       z-index: 1;
       margin-right: 1em;
-      border: 2px solid $gray-300;
+      border: 2px solid $primary;
     }
-
-    .time {
-      width: 20%;
-      font-size: 0.75em;
-      padding-top: 0.25em;
-    }
-
     .desc {
-      // width: 50%;
       box-shadow: $d-card-shadow;
       padding: $spacer;
+      margin-top: 0;
+      margin-bottom: $spacer * 2;
+      &:hover {
+        box-shadow: $d-card-hover-shadow;
+      }
     }
-
     h5 {
       // font-size: 0.9em;
       margin: 0;
     }
-
     p {
       margin: 0;
       // font-size: 0.7em;
       color: $gray-600;
     }
-
-    .people img{
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
+    .transportation {
+      margin: $spacer * 0.25 0 0 0;
+      i {
+        padding: 0 $spacer * 0.25;
+      }
     }
   }
 }
