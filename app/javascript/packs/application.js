@@ -25,11 +25,13 @@ import "bootstrap";
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { windowHeight } from '../components/banner';
 import { scrollToChevron } from '../components/banner';
-import { timelineModalJs } from '../components/logistics';
+import { timelineModalJs } from '../pages/logistics';
+// import { timelineSetTitle } from '../pages/logistics';
 
 document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
   windowHeight();
   scrollToChevron();
   timelineModalJs();
+  // timelineSetTitle();
 });
