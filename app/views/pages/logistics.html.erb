@@ -48,30 +48,34 @@
     </div>
   </div>
   <nav class="nav text-center nav-pills trip-nav nav-justified">
-    <%= link_to "#nav-home", class:"nav-item nav-link active trip-item", 'data-toggle':"tab", 'role':"tab", "aria-controls":"nav-home", "aria-selected":true do %>
+    <a class="nav-item nav-link active trip-item" data-target="#nav-turin" data-toggle="tab" role="tab" aria-controls="nav-turin">
       <div class="trip-feature">
         <h3 class="mb-1"><i class="fas fa-plane"></i></h3>
         <p class="mb-0">Turin</p>
       </div>
-    <% end %>
-    <%= link_to "#nav-profile", class:"nav-item nav-link trip-item", 'data-toggle':"tab", 'role':"tab", "aria-controls":"nav-home", "aria-selected":true do %>
+    </a>
+    <a class="nav-item nav-link trip-item" data-target="#nav-milan" data-toggle="tab" role="tab" aria-controls="nav-milan">
       <div class="trip-feature">
         <h3 class="mb-1"><i class="fas fa-plane"></i></h3>
         <p class="mb-0">Malpensa</p>
       </div>
-    <% end %>
-    <%= link_to "#nav-contact", class:"nav-item nav-link trip-item", 'data-toggle':"tab", 'role':"tab", "aria-controls":"nav-home", "aria-selected":true do %>
+    </a>
+    <a class="nav-item nav-link trip-item" data-target="#nav-car" data-toggle="tab" role="tab" aria-controls="nav-car">
       <div class="trip-feature">
         <h3 class="mb-1"><i class="fas fa-car"></i></h3>
         <p class="mb-0">Drive</p>
       </div>
-    <% end %>
+    </a>
   </nav>
   <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="tab-pane fade show active" id="nav-turin" role="tabpanel" aria-labelledby="nav-home-tab">
       <%= render 'trip-turin' %>
     </div>
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Malpensa</div>
-    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Car</div>
+    <div class="tab-pane fade" id="nav-milan" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <%= render 'trip-turin' %>
+    </div>
+    <div class="tab-pane fade" id="nav-car" role="tabpanel" aria-labelledby="nav-contact-tab">
+      <%= render 'trip-turin' %>
+    </div>
   </div>
 </div>
