@@ -1,11 +1,6 @@
 // Anchors Fixed Navbar scroll fix
 #trip::before {
-  display: block;
-  content: " ";
-  margin-top: -100px;
-  height: 100px;
-  visibility: hidden;
-  pointer-events: none;
+   @include fix-anchor-link;
 }
 
 // Hotel Info
