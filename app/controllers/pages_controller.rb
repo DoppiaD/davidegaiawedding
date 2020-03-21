@@ -1,11 +1,14 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :logistics ]
+  skip_before_action :authenticate_user!, only: [ :home, :logistics, :touristinfo ]
 
   def home
   end
 
   def logistics
     @timelineData = TimelineInfo
+  end
+
+  def touristinfo
   end
 
   private
