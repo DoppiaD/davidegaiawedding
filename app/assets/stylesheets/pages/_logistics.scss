@@ -172,16 +172,19 @@
       border: 2px solid $primary;
     }
     .timeline-desc {
-      box-shadow: $d-card-shadow;
       padding: $spacer;
-      margin-top: 0;
+      margin-top: -3px;
       margin-bottom: $spacer * 2;
       border-radius: $border-radius;
+      border: $border-width solid $border-color;
+    }
+    [data-modaltitle] {
+      box-shadow: $d-card-shadow;
+      border: none;
       &:hover {
         box-shadow: $d-card-hover-shadow;
         cursor: pointer;
       }
-
     }
     h5 {
       margin: 0;
