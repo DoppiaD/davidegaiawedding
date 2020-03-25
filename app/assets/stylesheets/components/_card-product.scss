@@ -1,0 +1,30 @@
+.card-product {
+  overflow: hidden;
+  height: 8rem;
+  background: white;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: $border-width solid $border-color;
+  // border-radius: $border-radius;
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacer;
+}
+
+.card-product img {
+  height: 100%;
+  width: 8rem;
+  object-fit: cover;
+}
+
+.card-product h6 {
+  margin: 0;
+  margin-bottom: $spacer * 0.5;
+}
+
+.card-product p {
+  @include d-p-gray;
+}
+
+.card-product .card-product-infos {
+  padding: $spacer;
+}

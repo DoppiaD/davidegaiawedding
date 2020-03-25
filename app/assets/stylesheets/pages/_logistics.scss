@@ -6,9 +6,8 @@
 // Hotel Info
 .hotel-picture {
   background-image: url('https://q-xx.bstatic.com/xdata/images/hotel/840x460/52212918.jpg?k=a22d32fe721d4e20bdeafb7dce6b859364b94c7c4438c9b48724559c6343211d&o=');
-  background-size: cover;
+  @include cover-image;
   background-position: right;
-  background-repeat: no-repeat;
   height: 30vh;
 }
 

@@ -18,9 +18,6 @@
     margin-bottom: $spacer;
     color: $primary;
   }
-  h1 {
-    margin-bottom: $spacer * 0.25;
-  }
   br {
     display: block;
   }
@@ -48,10 +45,8 @@
 }
 
 .spacer-image {
+  @include cover-image
   background-attachment: scroll;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 @include media-breakpoint-up(xl) {

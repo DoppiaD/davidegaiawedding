@@ -1,8 +1,6 @@
 .home-banner {
   background-image: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)), asset-url("banner.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  @include cover-image;
   height: 100vh;
   color: #eee;
   text-align: center;

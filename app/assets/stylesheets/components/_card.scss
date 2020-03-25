@@ -12,4 +12,10 @@
   &:active {
     box-shadow: $d-card-hover-shadow;
   }
+  h5 {
+    margin-bottom: $spacer * 0.5;;
+  }
+  p {
+    @include d-p-gray;
+  }
 }
