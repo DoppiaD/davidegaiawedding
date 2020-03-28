@@ -5,5 +5,4 @@ class User < ApplicationRecord
           :validatable, :trackable
 
   has_many :guests
-
 end
