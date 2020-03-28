@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Cleaning databases..."
-User.delete_all
-Guest.delete_all
+User.destroy_all
+Guest.destroy_all
 
 puts "Creating seed of Users"
 User.create!(email: 'ciccione@gmail.com', password: 'mellon')
