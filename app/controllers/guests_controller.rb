@@ -1,40 +1,31 @@
 class GuestsController < ApplicationController
-  before_action :set_guest, only: [:show, :edit, :update]
+  before_action :set_guest, only: [:edit, :update]
 
   def index
-    @guests = Guest.all
-  end
-
-  def show
-  end
-
-  def new
-    @guest = Guest.new
-  end
-
-  def create
-    @guest = Guest.new(guest_params)
-    @guest.user = current_user
-    if @guest.save
-      redirect_to cocktail_path(@guest)
-    else
-      render 'edit'
-    end
+    @guests = policy_scope(Guest)
   end
 
   def edit
   end
 
   def udpate
+    @guest.update(guest_params)
+  end
+
+  def update
+      @restaurant = Restaurant.find(params[:id])
+      @restaurant.update(restaurant_params)
+      redirect_to index
   end
 
   private
 
   def set_guest
     @guest = Guest.find(params[:id])
+    authorize @guest
   end
 
-  def guests_params
+  def guest_params
     params.require(:guest).permit(:participate, :name, :last_name, :allergies, :shuttle_to, :shuttle_from, :child)
   end
 end
