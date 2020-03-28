@@ -70,3 +70,17 @@
 .tourist-hero {
   margin-bottom: $spacer * 2;
 }
+
+.tourist-home {
+  .d-card-shadow {
+    img {
+      height: 15rem;
+      object-fit: cover;
+    }
+    &:first-child {
+      img {
+        object-position: right;
+      }
+    }
+  }
+}

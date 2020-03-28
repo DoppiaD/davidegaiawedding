@@ -4,6 +4,7 @@ $d-spacer-section: $spacer * 4.25;
 @mixin fix-anchor-link {
   display: block;
   content: " ";
+  // position: relative;
   margin-top: -100px;
   height: 100px;
   visibility: hidden;

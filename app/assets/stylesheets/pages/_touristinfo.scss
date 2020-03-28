@@ -1,4 +1,4 @@
-@mixin tourist-image {
+.tourist-banner {
   @include cover-image;
   height: 60vh;
   background-position: right;
@@ -6,32 +6,48 @@
   margin-bottom: $d-spacer-section;
 }
 
-#turin {
-  background-image: url('https://www.quiiky.com/wp-content/uploads/2018/06/AdobeStock_skyline-turin-torino-italy-gay-lesbian-lgbt-tour-tasty-piedmont-.jpeg');
-  @include tourist-image;
+@mixin anchor-styling {
+  padding: 0;
+  margin: 0;
+  &::before {
+    @include fix-anchor-link;
+  }
 }
 
-#cavour {
-  background-image: url('https://live.staticflickr.com/5112/7184627793_b75605c882_b.jpg');
-  // background-image: url('https://live.staticflickr.com/3802/20079998248_0badf93beb_4k.jpg');
-  @include tourist-image;
+#turin {
+  @include anchor-styling;
+  .tourist-banner {
+    background-image: url('https://www.quiiky.com/wp-content/uploads/2018/06/AdobeStock_skyline-turin-torino-italy-gay-lesbian-lgbt-tour-tasty-piedmont-.jpeg');
+  }
 }
 
 #langhe {
-  background-image: url('https://live.staticflickr.com/65535/49105661002_219ba349b4_h.jpg');
-  @include tourist-image;
+  @include anchor-styling;
+  .tourist-banner {
+    background-image: url('https://live.staticflickr.com/65535/49105661002_219ba349b4_h.jpg');
+  }
+}
+
+#cavour {
+  @include anchor-styling;
+  .tourist-banner {
+    background-image: url('https://live.staticflickr.com/5112/7184627793_b75605c882_b.jpg');
+    // background-image: url('https://live.staticflickr.com/3802/20079998248_0badf93beb_4k.jpg');
+  }
 }
 
 .tourist-title {
+  height:100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  color: rgba(255,255,255,0.75);
+  flex-direction: column;
+  padding: $spacer * 1.5 0;
   text-align: center;
-  text-shadow: $d-text-shadow;
-  padding-top: $spacer * 3;
-  h1, p {
+  h1 {
     margin: 0;
+    color: rgba(255,255,255,0.75);
+    text-shadow: $d-text-shadow;
   }
 }
 

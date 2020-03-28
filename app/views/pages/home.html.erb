@@ -51,7 +51,7 @@
       <h6>“Home is behind, the wedding ahead.”</h6>
     </div>
   </div>
-  <div class="card-deck" data-aos="fade-in">
+  <div class="card-deck logistics-home">
     <div class="card d-card-shadow">
       <%= link_to "#{logistics_path}#hotel", class: "stretched-link" do %>
         <%= image_tag("https://via.placeholder.com/400x150", class: "card-img-top")%>
@@ -81,10 +81,10 @@
       <h6>“Not All Those Who Wander Are Lost.”</h6>
     </div>
   </div>
-  <div class="card-deck">
+  <div class="card-deck tourist-home">
     <div class="card d-card-shadow">
-      <%= link_to "#", class: "stretched-link" do %>
-        <%= image_tag("https://via.placeholder.com/400x300", class: "card-img-top")%>
+      <%= link_to "#{tourist_info_path}#torino", class: "stretched-link" do %>
+        <%= image_tag("https://www.quiiky.com/wp-content/uploads/2018/06/AdobeStock_skyline-turin-torino-italy-gay-lesbian-lgbt-tour-tasty-piedmont-.jpeg", class: "card-img-top")%>
       <% end %>
       <div class="card-body text-center">
         <h5 class="card-title">Torino</h5>
@@ -92,21 +92,21 @@
       </div>
     </div>
     <div class="card d-card-shadow">
-      <%= link_to "#", class: "stretched-link" do %>
-        <%= image_tag("https://via.placeholder.com/400x300", class: "card-img-top")%>
-      <% end %>
-      <div class="card-body text-center">
-        <h5 class="card-title">Cavour</h5>
-        <p class="card-text">The historical wedding town</p>
-      </div>
-    </div>
-    <div class="card d-card-shadow">
-      <%= link_to "#", class: "stretched-link" do %>
-        <%= image_tag("https://via.placeholder.com/400x300", class: "card-img-top")%>
+      <%= link_to tourist_info_path(anchor: 'langhe'), class: "stretched-link" do %>
+        <%= image_tag("https://live.staticflickr.com/65535/49105661002_219ba349b4_h.jpg", class: "card-img-top")%>
       <% end %>
       <div class="card-body text-center">
         <h5 class="card-title">Langhe</h5>
         <p class="card-text">Italy's best wine region</p>
+      </div>
+    </div>
+    <div class="card d-card-shadow">
+      <%= link_to "#{tourist_info_path}#cavour", class: "stretched-link" do %>
+        <%= image_tag("https://live.staticflickr.com/5112/7184627793_b75605c882_b.jpg", class: "card-img-top")%>
+      <% end %>
+      <div class="card-body text-center">
+        <h5 class="card-title">Cavour</h5>
+        <p class="card-text">The historical wedding town</p>
       </div>
     </div>
   </div>
