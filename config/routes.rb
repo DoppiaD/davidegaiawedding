@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/logistics', to: 'pages#logistics'
   get '/tourist-info', to: 'pages#touristinfo'
-  resources :guests, :except => [:show, :destroy]
+  resources :guests, :only => [:index, :edit, :update]
 end

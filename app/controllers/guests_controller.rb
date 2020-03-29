@@ -8,14 +8,13 @@ class GuestsController < ApplicationController
   def edit
   end
 
-  def udpate
-    @guest.update(guest_params)
-  end
-
   def update
-      @restaurant = Restaurant.find(params[:id])
-      @restaurant.update(restaurant_params)
-      redirect_to index
+    if @guest.update(guest_params)
+      redirect_to guests_path  
+    else
+      render 'edit'
+    end
+
   end
 
   private
