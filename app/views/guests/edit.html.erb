@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <%= simple_form_for [ @guest ] do |f| %>
+      <%= simple_form_for [ @guest ], remote: true do |f| %>
       <div class="form-row">
         <div class="col">
       <%= f.input :name %>
