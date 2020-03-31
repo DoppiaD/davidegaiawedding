@@ -11,11 +11,13 @@ User.destroy_all
 Guest.destroy_all
 
 puts "Creating seed of Users"
-User.create!(email: 'ciccione@gmail.com', password: 'mellon')
+c = User.create!(email: 'ciccione@gmail.com', password: 'mellon')
 u = User.create!(email: 'ciccia@gmail.com', password: 'mellon')
 
 puts "Creating seed of Guests"
 Guest.create!(user: u, name: "Bilbo", participate: true, last_name: "Baggings", allergies: "Goblins", shuttle_to: true, shuttle_from: false)
 Guest.create!(user: u, name: "Frodo", participate: true, last_name: "Baggings", allergies: "Uruk Hai", shuttle_to: true, shuttle_from: true, child: true)
+
+Guest.create!(user: c, name: "Samwise", participate: true, last_name: "Gamgee", allergies: "Brains", shuttle_to: false, shuttle_from: true)
 
 puts "Done!"
