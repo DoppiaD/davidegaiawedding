@@ -1,2 +1,10 @@
-<h1>Guests#edit</h1>
-<p>Find me in app/views/guests/edit.html.erb</p>
+<div class="container">
+
+<%= simple_form_for [@guest], remote: true do |f| %>
+  <div class="form-row">
+  <%= f.input :name, wrapper_html: {class: 'col-sm-6'} %>
+  <%= f.input :last_name, wrapper_html: {class: 'col-sm-6'} %>
+  </div>
+  <%= f.submit "Submit", class: "btn btn-primary"%>
+<% end %>
+</div>

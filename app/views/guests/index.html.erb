@@ -1,2 +1,23 @@
-<h1>Guests#index</h1>
-<p>Find me in app/views/guests/index.html.erb</p>
+<div class="container">
+  <h1 class="display-4">Welcome!</h1>
+
+  <div id="accordion">
+    <% @guests.each do |guest| %>
+      <div class="card">
+        <div class="card-header" id="heading<%= guest.id %>">
+          <h5 class="mb-0">
+            <button id="ciao" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse<%= guest.id %>" aria-expanded="false" aria-controls="collapse<%= guest.id %>">
+              <%= "#{guest.name} #{guest.last_name}"%>
+            </button>
+          </h5>
+        </div>
+        <div id="collapse<%= guest.id %>" class="collapse" data-parent="#accordion" aria-labelledby="heading<%= guest.id %>">
+          <div class="card-body">
+            <%= link_to "Edit", edit_guest_path(guest) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
