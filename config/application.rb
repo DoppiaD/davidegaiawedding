@@ -8,6 +8,9 @@ Bundler.require(*Rails.groups)
 
 module Davidegaiawedding
   class Application < Rails::Application
+    # If JS is disabled, the forms still work
+    config.action_view.embed_authenticity_token_in_remote_forms = true
+
     config.generators do |generate|
       generate.assets false
       generate.helper false

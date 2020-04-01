@@ -26,10 +26,12 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { windowHeight } from '../components/banner';
 import { scrollToChevron } from '../components/banner';
 import { timelineModalJs } from '../pages/logistics';
+import { onRefreshOpenAccordion } from '../guests/index';
 
 document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
   windowHeight();
   scrollToChevron();
   timelineModalJs();
+  onRefreshOpenAccordion();
 });
