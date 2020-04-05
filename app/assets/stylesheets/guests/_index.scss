@@ -32,6 +32,14 @@
   }
 }
 
+.guest-grayscale-img {
+  filter: grayscale(1);
+}
+
+.guest-grayscale-bck {
+  background-color: rgba(237, 237, 237, 1) !important;
+}
+
 @include media-breakpoint-up(sm) {
   .guests {
     .guest-deck {

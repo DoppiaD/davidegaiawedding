@@ -1,0 +1,6 @@
+function refreshForm(innerHTML) {
+  const newIndex = document.querySelector('guests');
+  newIndex.innerHTML = innerHTML;
+}
+
+refreshForm('<%= j render "index" %>');
