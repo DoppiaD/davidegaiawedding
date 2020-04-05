@@ -16,8 +16,8 @@ u = User.create!(email: 'ciccia@gmail.com', password: 'mellon')
 
 puts "Creating seed of Guests"
 Guest.create!(user: u, name: "Bilbo", participate: true, last_name: "Baggings", allergies: "Goblins", shuttle_to: true, shuttle_from: false)
-Guest.create!(user: u, name: "Frodo", participate: true, last_name: "Baggings", allergies: "Uruk Hai", shuttle_to: true, shuttle_from: true, child: true)
-Guest.create!(user: u, name: "Frodo2", participate: true, last_name: "Baggings", allergies: "Uruk Hai", shuttle_to: true, shuttle_from: true, child: true)
+Guest.create!(user: u, name: "Frodo", participate: false, last_name: "Baggings", allergies: "Uruk Hai", shuttle_to: true, shuttle_from: true, child: true)
+Guest.create!(user: u, name: "Frodo2", participate: false, last_name: "Baggings", allergies: "Uruk Hai", shuttle_to: true, shuttle_from: true, child: true)
 Guest.create!(user: u, name: "Frodo1", participate: true, last_name: "Baggings", allergies: "Uruk Hai", shuttle_to: true, shuttle_from: true, child: true)
 
 Guest.create!(user: c, name: "Samwise", participate: true, last_name: "Gamgee", allergies: "Brains", shuttle_to: false, shuttle_from: true)

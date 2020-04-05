@@ -3,6 +3,9 @@
 }
 
 .guests {
+  .guests-title {
+    margin-bottom: $d-spacer-section;
+  }
   .guest-deck {
     display: grid;
     grid-template-columns: 1fr 1fr;

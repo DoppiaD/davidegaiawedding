@@ -1,5 +1,5 @@
 <div class="container guests">
-  <h1 class="display-1 text-center">Will you join the party?</h1>
+  <h1 class="display-1 text-center guests-title">Will you join the party?</h1>
 
   <div class="row">
     <div class="col">
@@ -11,15 +11,17 @@
               <h5 class="card-title"><%= "#{guest.name} #{guest.last_name}" %></h5>
             </div>
             <div class="card-footer">
-              <%= content_tag :button, 'Yes', class: "btn btn-sm btn-outline-primary btn-guest", data: {toggle: "modal", target: "#guestmodal", guest_id: guest.id, backdrop: 'static'}%>
-              <%= content_tag :button, 'No', class: "btn btn-sm btn-outline-secondary btn-guest" %>
+              <%= content_tag :button, class: "btn btn-sm btn-outline-primary btn-guest", data: {toggle: "modal", target: "#guestmodal", guest_id: guest.id, backdrop: 'static'} do %>
+                <%= guest.participate ? 'Edit' : 'Yes' %>
+              <% end %>
+              <%= link_to "No", guest_participate_path(guest, participate: false), method: :patch, class: "btn btn-sm btn-outline-secondary btn-guest", remote: true %>
             </div>
           </div>
           <div class="modal fade" id="guestmodal" tabindex="-1" role="dialog" aria-labelledby="timelineModal" aria-hidden="true" data-backdrop="static">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modify your RSVP</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Edit RSVP info</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
