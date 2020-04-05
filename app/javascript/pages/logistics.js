@@ -17,7 +17,6 @@ const timelineModalJs = () => {
     modal.find('.modal-title').text(title['h5'])
     let modalBody = ""
     title['icons'].forEach((icon, i) => {
-      console.log(title['descriptions'][i])
       const titleIcon = '<i class="fas fa-' + icon + '"></i>'
       const titleContent = `<h6>${titleIcon} Arrive by ${icon}</h6>`
       const titleDesc = `<p>${title['descriptions'][i]}</p>`

@@ -7,13 +7,22 @@ const onRefreshOpenAccordion = () => {
       }
     }
 
-        // $(`${guestID}`).collapse('show')
-        //
-        // $(`${guestID}`).style.width = "500px"
-
-    // .on "ajax:error", (e, xhr, status, error) ->
-    //   $("#new_post").append "<p>ERROR</p>"
-
 }
+
+
+const guestModalJs = () => {
+  $('#guestmodal').on('show.bs.modal', function (event) {
+    const button = $(event.relatedTarget)
+    const guestId = button.data('guest_id')
+    // const modal = $(this)
+    // modal.find('.modal-title').text()
+    console.log(guestId)
+    // modal.find('.modal-body').html(modalBody)
+
+  })
+}
+
+export { guestModalJs };
+
 
 export { onRefreshOpenAccordion };

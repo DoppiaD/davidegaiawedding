@@ -1,3 +1,68 @@
 #accordion {
   margin-top: $d-spacer-section;
 }
+
+.guests {
+  .guest-deck {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: $spacer $spacer;
+    .btn-guest {
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+    }
+    .guest-card {
+      text-align: center;
+      .card-body {
+        padding: $spacer;
+        padding-top: 0;
+        background-color: rgba(196, 227, 202, 0.5);
+        h5 {
+          margin: 0;
+        }
+      }
+    }
+    .card-footer {
+      padding: $spacer / 2 0;
+      background-color: white;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .guests {
+    .guest-deck {
+      .btn-guest {
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .guests {
+    .guest-deck {
+      grid-template-columns: 1fr 1fr 1fr;
+      .btn-guest {
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .guests {
+    .guest-deck {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      .btn-guest {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
+    }
+  }
+}

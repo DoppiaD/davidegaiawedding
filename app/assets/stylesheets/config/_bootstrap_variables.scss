@@ -12,10 +12,12 @@ $enable-shadows: false;
 
 // ----------------------------------------
 // Buttons & inputs'
- $border-radius: .5rem;
+$border-radius: .5rem;
 // $border-width: 2px;
 // $border-radius-lg: 4px;
-// $border-radius-sm: 4px;
+$border-radius-sm: $border-radius;
+$btn-padding-x-sm: 2.6rem !default;
+
 
 // ----------------------------------------
 // Cards
