@@ -1,0 +1,6 @@
+function refreshForm(innerHTML) {
+  const newGuestForm = document.getElementById('<%= "edit_guest_#{@guest.id}" %>');
+  newGuestForm.innerHTML = innerHTML;
+}
+
+refreshForm('<%= j render "edit", guest: @guest %>');

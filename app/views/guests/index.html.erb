@@ -6,18 +6,20 @@
       <div class="guest-deck">
         <% @guests.each do |guest| %>
           <div class="card guest-card">
-            <img class="card-img-top" src="https://cdn.dribbble.com/users/3571554/screenshots/7219721/media/476a6bdcce746de9d86fcedaba01ed00.png" alt="Card image cap">
+            <%= image_tag "LOTR/Legolas.png", class: "card-img-top", alt: "Legolas" %>
             <div class="card-body">
               <h5 class="card-title"><%= "#{guest.name} #{guest.last_name}" %></h5>
             </div>
             <div class="card-footer">
-              <%= content_tag :button, class: "btn btn-sm btn-outline-primary btn-guest", data: {toggle: "modal", target: "#guestmodal", guest_id: guest.id, backdrop: 'static'} do %>
-                <%= guest.participate ? 'Edit' : 'Yes' %>
+              <% if guest.participate %>
+                <%= content_tag :button, 'EDIT', data: {toggle: "modal", target: "#guestmodal-#{guest.id}"}, class: "btn btn-sm btn-outline-primary btn-guest" %>
+              <% else %>
+                <%= link_to "YES", guest_participate_path(guest, participate: true), method: :patch, class: "btn btn-sm btn-outline-primary btn-guest", data: {toggle: "modal", target: "#guestmodal"}, remote: true %>
               <% end %>
-              <%= link_to "No", guest_participate_path(guest, participate: false), method: :patch, class: "btn btn-sm btn-outline-secondary btn-guest", remote: true %>
+              <%= link_to "NO", guest_participate_path(guest, participate: false), method: :patch, class: "btn btn-sm btn-outline-secondary btn-guest", remote: true %>
             </div>
           </div>
-          <div class="modal fade" id="guestmodal" tabindex="-1" role="dialog" aria-labelledby="timelineModal" aria-hidden="true" data-backdrop="static">
+          <div class="modal fade" id="guestmodal-<%= guest.id %>" tabindex="-1" role="dialog" aria-labelledby="timelineModal" aria-hidden="true" data-backdrop="static">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -26,7 +28,9 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
+                <div class="modal-body">
                   <%= render "edit", guest: guest %>
+                </div>
               </div>
             </div>
           </div>
@@ -34,25 +38,6 @@
 
       </div>
     </div>
-  </div>
-
-  <div id="accordion">
-    <% @guests.each do |guest| %>
-      <div class="card">
-        <div class="card-header" id="heading<%= guest.id %>">
-          <h5 class="mb-0">
-            <button id="ciao" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse<%= guest.id %>" aria-expanded="false" aria-controls="collapse<%= guest.id %>">
-              <%= "#{guest.name} #{guest.last_name}" %>
-            </button>
-          </h5>
-        </div>
-        <div id="collapse<%= guest.id %>" class="collapse" data-parent="#accordion" aria-labelledby="heading<%= guest.id %>">
-          <div class="card-body">
-            <%= render "edit", guest: guest %>
-          </div>
-        </div>
-      </div>
-    <% end %>
   </div>
 
 </div>

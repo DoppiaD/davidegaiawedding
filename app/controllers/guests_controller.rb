@@ -10,10 +10,15 @@ class GuestsController < ApplicationController
 
   def update
     if @guest.update(guest_params)
-      redirect_to "#{guests_path}#collapse#{@guest.id}"
+      redirect_to guests_path
     else
-      @guests = policy_scope(Guest).order(:created_at)
-      render 'index'
+      respond_to do |format|
+        format.html {
+          @guests = policy_scope(Guest).order(:created_at)
+          render 'index'
+        }
+        format.js
+      end
     end
   end
 
@@ -21,20 +26,12 @@ class GuestsController < ApplicationController
     @guest = Guest.find(params[:guest_id])
     authorize @guest
     @guest.update_attributes(participate: (params[:participate] == "true"))
-    redirect_to guests_path
+    respond_to do |format|
+      format.html {
+        redirect_to guests_path
+      }
+      format.js
   end
-
-  # def participate
-  #   @guest = Guest.find(params[:guest_id])
-  #   binding.pry
-  #   authorize @guest
-  #   if @guest.update_attributes(:participate)
-  #     redirect_to guests_path
-  #   else
-  #     @guests = policy_scope(Guest).order(:created_at)
-  #     render 'index'
-  #   end
-  # end
 
   private
 

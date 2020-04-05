@@ -1,10 +1,7 @@
-#accordion {
-  margin-top: $d-spacer-section;
-}
-
 .guests {
+  margin-top: $spacer;
   .guests-title {
-    margin-bottom: $d-spacer-section;
+    margin-bottom: $spacer;
   }
   .guest-deck {
     display: grid;
@@ -48,11 +45,14 @@
 
 @include media-breakpoint-up(md) {
   .guests {
-    .guest-deck {
-      grid-template-columns: 1fr 1fr 1fr;
-      .btn-guest {
-        padding-left: 2.1rem;
-        padding-right: 2.1rem;
+    .guests-title {
+      margin-bottom: $d-spacer-section;
+      .guest-deck {
+        grid-template-columns: 1fr 1fr 1fr;
+        .btn-guest {
+          padding-left: 2.1rem;
+          padding-right: 2.1rem;
+        }
       }
     }
   }
@@ -60,6 +60,7 @@
 
 @include media-breakpoint-up(lg) {
   .guests {
+    margin-top: $d-spacer-section;
     .guest-deck {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       .btn-guest {
