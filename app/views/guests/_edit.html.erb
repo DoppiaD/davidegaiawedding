@@ -1,31 +1,20 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <%= simple_form_for guest, remote: true do |f| %>
-      <div class="card col-sm-4 mr-3 mb-3">
-      <%= f.input :participate, label: "Yes! I'm coming!", wrapper_html: { class: 'card-body mb-0' } %>
-      </div>
-      <div class="form-row">
-        <%= f.input :name, wrapper_html: { class: 'col-sm-4' }, placeholder: 'Bilbo' %>
-        <%= f.input :last_name, wrapper_html: { class: 'col-sm-4' }, placeholder: 'Baggings' %>
-        <div class="card mb-3 ml-1">
-        <%= f.input :child, label: 'I am below 12 years old!', wrapper_html: { class: 'card-body mb-0' }%>
-        </div>
-      </div>
-      <%= f.input :allergies, label: 'Food allergies & dietary requirements', placeholder: 'Vegan: I dislike Orcs, goblins and Uruk-hai', input_html: { novalidate: true }%>
-
-      <div class="form-row">
-        <p class='col-sm-12 mb-1'>Will you need the shuttle?</p>
-        <%= f.input :shuttle_to, label: 'From Hotel Barrage to Wedding Venue', wrapper_html: { class: 'col-sm-3' } %>
-        <%= f.input :shuttle_from, label: 'From Wedding Venue to Hotel Barrage', wrapper_html: { class: 'col-sm-3' }, input_html: { class: 'col-2'} %>
-        <div class="col-sm-3">
-          <%= link_to "Shuttle Info", '#', class: "btn btn-outline-primary", role: 'button' %>
-        </div>
-      </div>
-
-
-      <%= f.submit "Submit", class: "btn btn-primary" %>
-    <% end %>
+<div class="modal-body">
+  <%= simple_form_for guest, remote: true do |f| %>
+  <div class="form-row">
+    <%= f.input :name, wrapper_html: { class: 'col-sm-6' }, placeholder: 'Bilbo' %>
+    <%= f.input :last_name, wrapper_html: { class: 'col-sm-6' }, placeholder: 'Baggings' %>
+  </div>
+  <%= f.input :allergies, label: 'Food allergies & dietary requirements', placeholder: 'Vegan: I dislike Orcs, goblins and Uruk-hai', input_html: { novalidate: true }%>
+  <div class="form-row">
+    <p class='col-sm-12 mb-1'>Will you need the shuttle?</p>
+    <%= f.input :shuttle_to, label: 'From Hotel Barrage to Wedding Venue', wrapper_html: { class: 'col-sm-3' } %>
+    <%= f.input :shuttle_from, label: 'From Wedding Venue to Hotel Barrage', wrapper_html: { class: 'col-sm-3' }, input_html: { class: 'col-2'} %>
+    <div class="col-sm-3">
+      <%= link_to "Shuttle Info", '#', class: "btn btn-outline-primary", role: 'button' %>
+    </div>
   </div>
 </div>
+<div class="modal-footer">
+  <%= f.submit "Submit", class: "btn btn-primary" %>
 </div>
+<% end %>

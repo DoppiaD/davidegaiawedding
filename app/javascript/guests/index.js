@@ -6,7 +6,6 @@ const onRefreshOpenAccordion = () => {
         $(`${guestID}`).collapse('show');
       }
     }
-
 }
 
 

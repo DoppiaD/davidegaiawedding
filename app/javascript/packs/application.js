@@ -34,6 +34,6 @@ document.addEventListener('turbolinks:load', () => {
   windowHeight();
   scrollToChevron();
   timelineModalJs();
-  onRefreshOpenAccordion();
+  // onRefreshOpenAccordion();
   guestModalJs();
 });

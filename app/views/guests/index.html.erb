@@ -1,6 +1,39 @@
 <div class="container guests">
   <h1 class="display-1 text-center">Will you join the party?</h1>
 
+  <div class="row">
+    <div class="col">
+      <div class="guest-deck">
+        <% @guests.each do |guest| %>
+          <div class="card guest-card">
+            <img class="card-img-top" src="https://cdn.dribbble.com/users/3571554/screenshots/7219721/media/476a6bdcce746de9d86fcedaba01ed00.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= "#{guest.name} #{guest.last_name}" %></h5>
+            </div>
+            <div class="card-footer">
+              <%= content_tag :button, 'Yes', class: "btn btn-sm btn-outline-primary btn-guest", data: {toggle: "modal", target: "#guestmodal", guest_id: guest.id, backdrop: 'static'}%>
+              <%= content_tag :button, 'No', class: "btn btn-sm btn-outline-secondary btn-guest" %>
+            </div>
+          </div>
+          <div class="modal fade" id="guestmodal" tabindex="-1" role="dialog" aria-labelledby="timelineModal" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modify your RSVP</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                  <%= render "edit", guest: guest %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+
   <div id="accordion">
     <% @guests.each do |guest| %>
       <div class="card">
@@ -18,31 +51,6 @@
         </div>
       </div>
     <% end %>
-  </div>
-
-  <div class="row mt-5">
-    <div class="col">
-      <div class="guest-deck">
-        <% @guests.each do |guest| %>
-        <div class="card guest-card">
-          <img class="card-img-top" src="https://cdn.dribbble.com/users/3571554/screenshots/7219721/media/476a6bdcce746de9d86fcedaba01ed00.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><%= "#{guest.name} #{guest.last_name}" %></h5>
-          </div>
-          <div class="card-footer">
-            <%= content_tag :button, 'Yes', class: "btn btn-sm btn-outline-primary btn-guest", data: {toggle: "modal", target: "#guestmodal", guest_id: guest.id}%>
-            <%= content_tag :button, 'No', class: "btn btn-sm btn-outline-secondary btn-guest" %>
-          </div>
-        </div>
-        <% end %>
-        <div class="modal fade" id="guestmodal" tabindex="-1" role="dialog" aria-labelledby="timelineModal" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <%# <%= render "edit", guest: guest %> %>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
 </div>

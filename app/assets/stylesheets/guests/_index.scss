@@ -48,8 +48,8 @@
     .guest-deck {
       grid-template-columns: 1fr 1fr 1fr;
       .btn-guest {
-        padding-left: 2.4rem;
-        padding-right: 2.4rem;
+        padding-left: 2.1rem;
+        padding-right: 2.1rem;
       }
     }
   }
@@ -60,8 +60,20 @@
     .guest-deck {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       .btn-guest {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .guests {
+    .guest-deck {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      .btn-guest {
+        padding-left: 2.6rem;
+        padding-right: 2.6rem;
       }
     }
   }
