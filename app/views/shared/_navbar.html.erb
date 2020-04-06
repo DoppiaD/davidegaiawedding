@@ -13,7 +13,7 @@
     <%= link_to "RSVP", guests_path, class: "btn btn-outline-primary" %>
     <%= link_to '', "#", class: "btn btn-outline-primary dropdown-toggle dropdown-toggle-split", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item", remote: true %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
     </div>
   </div>
   <% else %>

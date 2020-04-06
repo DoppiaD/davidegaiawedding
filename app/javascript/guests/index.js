@@ -3,7 +3,6 @@ const onRefreshOpenModal = () => {
     if ($(".guests")) {
       const guestID = window.location.hash;
       if (guestID) {
-        console.log(`guestmodal-${guestID.substring(1)}`)
         $(`#guestmodal-${guestID.substring(1)}`).modal('show');
       }
     }
