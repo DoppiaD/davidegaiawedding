@@ -15,10 +15,10 @@
             <div class="card-footer">
               <% if guest.participate %>
                 <%= content_tag :button, 'EDIT', id: "guest-edit#{guest.id}", data: {guest_id: "#{guest.id}", toggle: "modal", target: "#guestmodal-#{guest.id}"}, class: "btn btn-sm btn-primary btn-guest" %>
-                <%= link_to "NO", guest_participate_path(guest, participate: false), id: "guest-no#{guest.id}",method: :patch, class: "btn btn-sm btn-outline-secondary btn-guest", data: {guest_id: "#{guest.id}"}, remote: true %>
+                <%= link_to "NO", guest_participate_path(guest, participate: false), id: "guest-no#{guest.id}",method: :patch, class: "btn btn-sm btn-outline-secondary btn-guest", remote: true %>
               <% else %>
-                <%= link_to "YES", guest_participate_path(guest, participate: true), id: "guest-yes#{guest.id}", method: :patch, class: "btn btn-sm btn-outline-primary btn-guest", data: {guest_id: "#{guest.id}"}, remote: true %>
-                <%= link_to "NO", guest_participate_path(guest, participate: false), id: "guest-no#{guest.id}",method: :patch, class: "btn btn-sm btn-secondary btn-guest disabled", data: {guest_id: "#{guest.id}"}, remote: true %>
+                <%= link_to "YES", guest_participate_path(guest, participate: true), method: :patch, class: "btn btn-sm btn-outline-primary btn-guest btn-yes", data: {guest_id: "#{guest.id}"}, remote: true %>
+                <%= link_to "NO", "#", class: "btn btn-sm btn-secondary btn-guest disabled" %>
               <% end %>
             </div>
           </div>

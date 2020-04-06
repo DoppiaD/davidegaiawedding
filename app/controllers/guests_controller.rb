@@ -25,12 +25,13 @@ class GuestsController < ApplicationController
   def participate
     @guest = Guest.find(params[:guest_id])
     authorize @guest
-    @guest.update_attributes(participate: (params[:participate] == "true"))
-    # respond_to do |format|
-    #   format.html { redirect_to guests_path }
-    #   format.js
-    # end
-    redirect_to guests_path
+    participate = (params[:participate] == "true")
+    @guest.update(participate: participate)
+    if participate
+      redirect_to "#{guests_path}##{@guest.id}"
+    else
+      redirect_to guests_path
+    end
   end
 
   private
