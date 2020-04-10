@@ -5,4 +5,5 @@ class User < ApplicationRecord
           :validatable, :trackable
 
   has_many :guests, dependent: :destroy
+  has_many :registries, through: :honeymoons, dependent: :destroy
 end
