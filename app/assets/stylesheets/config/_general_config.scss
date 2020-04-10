@@ -16,3 +16,23 @@ $d-spacer-section: $spacer * 4.25;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+// Sticky bottom footer CSS
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.davide-ama-gaia {
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 0;
+}
+
+.d-footer {
+  flex-shrink: 0;
+}
