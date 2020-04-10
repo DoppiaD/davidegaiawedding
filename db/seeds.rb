@@ -9,6 +9,8 @@
 puts "Cleaning databases..."
 User.destroy_all
 Guest.destroy_all
+Honeymoon.destroy_all
+Registry.destroy_all
 
 puts "Creating seed of Users"
 c = User.create!(email: 'ciccione@gmail.com', password: 'mellon')
@@ -21,5 +23,12 @@ Guest.create!(user: u, name: "Frodo2", participate: false, last_name: "Baggings"
 Guest.new(user: u).save(validate: false)
 
 Guest.create!(user: c, name: "Samwise", participate: true, last_name: "Gamgee", allergies: "Brains", shuttle_to: false, shuttle_from: true)
+
+puts "Creating seed of Registries"
+r = Registry.create!(activity: 'Swim with Dolphins', description: 'Ipsum lorem Dolphins!. We love this funny guys and gals.', value: 500, perk: "Original photo of a dolphin")
+
+puts "Joining the honeymoon"
+Honeymoon.create!(user: u, registry: r)
+Honeymoon.create!(user: c, registry: r)
 
 puts "Done!"
