@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'registries/index'
   devise_for :users
   root to: 'pages#home'
   get '/logistics', to: 'pages#logistics'
