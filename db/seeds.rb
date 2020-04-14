@@ -26,9 +26,11 @@ Guest.create!(user: c, name: "Samwise", participate: true, last_name: "Gamgee", 
 
 puts "Creating seed of Registries"
 r = Registry.create!(activity: 'Swim with Dolphins', description: 'Ipsum lorem Dolphins!. We love this funny guys and gals.', value: 500, perk: "Original photo of a dolphin")
+p = Registry.create!(activity: 'Hobbiton', description: 'Ipsum lorem Hobbits!. We love this funny guys and gals.', value: 50, perk: "Hobbit feets")
 
 puts "Joining the honeymoon"
 Honeymoon.create!(user: u, registry: r)
+Honeymoon.create!(user: u, registry: p)
 Honeymoon.create!(user: c, registry: r)
 
 puts "Done!"
