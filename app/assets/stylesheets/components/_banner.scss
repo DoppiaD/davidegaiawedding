@@ -6,7 +6,7 @@
   text-align: center;
   display: flex;
   align-items: flex-end;
-  margin-top: -4.5rem; //used to counterbalance body padding-top due to navbar
+  margin-top: -$d-navbar-spacer; //used to counterbalance body padding-top due to navbar
 }
 
 .banner-hero {

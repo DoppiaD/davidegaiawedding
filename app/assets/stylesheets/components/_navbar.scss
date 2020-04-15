@@ -1,5 +1,5 @@
 body {
-  padding-top: 4.5rem; // Needed for fixed-top bootstrap navabar
+  padding-top: $d-navbar-spacer; // 66px (4.125rem) height constant Needed for fixed-top bootstrap navabar
 }
 
 .navbar-davide {

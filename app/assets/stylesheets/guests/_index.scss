@@ -9,14 +9,13 @@
     grid-template-rows: auto;
     grid-gap: $spacer $spacer;
     .btn-guest {
-      padding-left: 1.2rem;
-      padding-right: 1.2rem;
+      padding-left: 1.1rem;
+      padding-right: 1.1rem;
     }
     .guest-card {
       text-align: center;
       .card-body {
-        padding: $spacer;
-        padding-top: 0;
+        padding: 0 $spacer $spacer $spacer;
         background-color: rgba(196, 227, 202, 0.5);
         h5 {
           margin: 0;
@@ -55,6 +54,7 @@
   .guests {
     .guests-title {
       margin-bottom: $d-spacer-section;
+    }
       .guest-deck {
         grid-template-columns: 1fr 1fr 1fr;
         .btn-guest {
@@ -62,7 +62,6 @@
           padding-right: 2.1rem;
         }
       }
-    }
   }
 }
 
@@ -82,7 +81,6 @@
 @include media-breakpoint-up(xl) {
   .guests {
     .guest-deck {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
       .btn-guest {
         padding-left: 2.6rem;
         padding-right: 2.6rem;

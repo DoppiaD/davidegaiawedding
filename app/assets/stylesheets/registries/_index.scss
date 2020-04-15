@@ -1,0 +1,95 @@
+.honeymoon-banner {
+  @include cover-image;
+  height: 60vh;
+}
+
+#honeymoon {
+  @include anchor-styling;
+
+  .honeymoon-banner {
+    background-image: url("https://media-exp1.licdn.com/dms/image/C511BAQGsqFOvX9lR2w/company-background_10000/0?e=1586991600&v=beta&t=KxMulfNLXOxBqGHo1wxG1MnZP2fNUMKncVhgbLM_JOg");
+  }
+}
+
+.honeymoon-title {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: $spacer * 3 0 $spacer * 1.5 0;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    color: rgba(255,255,255,0.75);
+    text-shadow: $d-text-shadow;
+  }
+}
+
+#bankTransferInfo {
+  background-color: $light-gray;
+  margin-bottom: $d-spacer-section;
+
+  .honeymoon-border {
+    padding-bottom: $spacer * 2;
+  }
+}
+@include media-breakpoint-up(md) {
+  #bankTransferInfo {
+    .honeymoon-border {
+      border-right: $border-width solid $border-color;
+    }
+  }
+}
+
+.registry-title {
+  text-align: center;
+  margin: $d-spacer-section 0;
+}
+
+
+// Cards
+.registry-deck {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: $spacer * 4 $spacer  * 4;
+  .registry-card {
+    .card-body {
+      padding: $spacer;
+      position: inherit;
+      h5 {
+        margin: 0 0 $spacer / 2 0;
+      }
+      .value-img-overlay {
+        background-color: white;
+        position: absolute;
+        padding: $spacer / 2 ;
+        top: -$spacer * 2;
+        right: $spacer;
+        margin: 0;
+        border-radius: $border-radius;
+      }
+    }
+  }
+  .card-footer {
+    padding: $spacer / 2 $spacer;
+    // display: flex;
+    // flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+  .registry-deck {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .registry-deck {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

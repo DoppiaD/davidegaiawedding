@@ -17,6 +17,9 @@ $d-spacer-section: $spacer * 4.25;
   background-size: cover;
 }
 
+//Sticky navbar
+$d-navbar-spacer: 4.125rem; //used in .navbar and .banner
+
 // Sticky bottom footer CSS
 html, body {
   height: 100%;

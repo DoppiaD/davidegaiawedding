@@ -1,10 +1,46 @@
-<h1>Registries#index</h1>
-<p>Find me in app/views/registries/index.html.erb</p>
+<div class="container-fluid" id="honeymoon">
+  <div class="honeymoon-banner">
+    <div class="honeymoon-title">
+      <h1 class="display-1 text-center">Honeymoon Crowdfunding</h1>
+      <%= link_to "BANK TRANSFER INFO", "#", class: "btn btn-primary", 'role': 'button', data: {toggle: 'collapse', target: '#bankTransferInfo'}, aria: {expanded: 'false', controls: '#bankTransferInfo'} %>
+    </div>
+  </div>
+</div>
+<div class="container collapse" id="bankTransferInfo">
+  <div class="row">
+    <div class="col-md-6 honeymoon-border">
+      <p>ciao</p>
+    </div>
+    <div class="col-nd-6">
+      <p>ciao2</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col registry-title">
+      <h3>Select all the perks you want!</h3>
+      <h3>The amount indicated is only a suggestion, feel free to donate freely</h3>
+    </div>
+  </div>
+<div class="row">
+  <div class="col">
+    <div class="registry-deck">
+      <% @registries.each do |registry| %>
+        <div class="card registry-card">
+          <%= image_tag "https://via.placeholder.com/300x200", class: "card-img-top", alt: "#{registry.activity}" %>
+          <div class="card-body registry-body">
+            <h5 class="value-img-overlay">£50</h5>
+            <h5 class="card-title"><%= registry.activity %></h5>
+            <p class="card-text"><%= registry.description %></p>
+          </div>
+          <div class="card-footer">
 
-<% @registries.each do |registry| %>
-<p><%= registry.activity %></p>
-<% end %>
-
-  <% @honeymoons.each do |honeymoon| %>
-  <p><%= current_user.email %>: <%= honeymoon.registry.activity %></p>
-  <% end %>
+            <h6 class="card-text"><i class="fas fa-gifts"></i> PERK</h6>
+            <p class="card-text"><%= registry.perk %></p>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+</div>
