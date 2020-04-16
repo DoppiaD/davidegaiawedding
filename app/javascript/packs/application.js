@@ -18,15 +18,15 @@ require("channels")
 
 
 // ----------------------------------------------------
-// Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
-// WRITE YOUR OWN JS STARTING FROM HERE 👇
+// CUSTOM JS
 // ----------------------------------------------------
 import "bootstrap";
-import { initUpdateNavbarOnScroll } from '../components/navbar';
-import { windowHeight } from '../components/banner';
-import { scrollToChevron } from '../components/banner';
-import { timelineModalJs } from '../pages/logistics';
-import { onRefreshOpenModal } from '../guests/index';
+import { initUpdateNavbarOnScroll } from '../components/navbar'
+import { windowHeight } from '../components/banner'
+import { scrollToChevron } from '../components/banner'
+import { timelineModalJs } from '../pages/logistics'
+import { onRefreshOpenModal } from '../guests/index'
+import { copyBankText } from '../registry/index'
 
 document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
@@ -34,4 +34,11 @@ document.addEventListener('turbolinks:load', () => {
   scrollToChevron();
   timelineModalJs();
   onRefreshOpenModal();
+  copyBankText();
+
+
+  // Initialize all tooltips
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 });

@@ -8,11 +8,62 @@
 </div>
 <div class="container collapse" id="bankTransferInfo">
   <div class="row">
-    <div class="col-md-6 honeymoon-border">
-      <p>ciao</p>
+    <div class="col-md-6 bank-border bank-col ">
+      <h4>UK Account Details</h4>
+      <h6>Account Name</h6>
+      <div class="input-group">
+        <input id="uk-name" type="text" class="bank-info form-control" aria-label="Gaia Tonanzi" value="Gaia Tonanzi" readonly>
+        <!-- <p class="form-control">Gaia Tonanzi</p> -->
+        <div class="input-group-append">
+          <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#uk-name"} do %>
+            <i class="fas fa-copy"></i>
+          <% end %>
+          <!-- <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Copy"><i class="fas fa-copy"></i></button> -->
+        </div>
+      </div>
+      <h6>Account Number</h6>
+      <div class="input-group">
+        <input id="uk-number" type="text" class="bank-info form-control" aria-label="79366709" value="79366709" readonly>
+        <div class="input-group-append">
+          <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#uk-number"} do %>
+            <i class="fas fa-copy"></i>
+          <% end %>        </div>
+      </div>
+      <h6>Sort Code</h6>
+      <div class="input-group">
+        <input id="uk-sort" type="text" class="bank-info form-control" aria-label="04-00-04" value="04-00-04" readonly>
+        <div class="input-group-append">
+          <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#uk-sort"} do %>
+            <i class="fas fa-copy"></i>
+          <% end %>        </div>
+      </div>
     </div>
-    <div class="col-nd-6">
-      <p>ciao2</p>
+    <div class="col-md-6 bank-col">
+      <h4>EU Account Details</h4>
+      <h6>Account Name</h6>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#eu-name"} do %>
+            <i class="fas fa-copy"></i>
+          <% end %>        </div>
+        <input id="eu-name" type="text" class="bank-info form-control" aria-label="Davide Lora" value="Davide Lora" readonly>
+      </div>
+      <h6>Account Number</h6>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#eu-number"} do %>
+            <i class="fas fa-copy"></i>
+          <% end %>        </div>
+        <input id="eu-number" type="text" class="bank-info form-control" aria-label="IT04H0326801019052555232280" value="IT04H0326801019052555232280" readonly>
+      </div>
+      <h6>BIC/SWIFT</h6>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#eu-sort"} do %>
+            <i class="fas fa-copy"></i>
+          <% end %>        </div>
+        <input id="eu-sort" type="text" class="bank-info form-control" aria-label="SELBIT2BXXX" value="SELBIT2BXXX" readonly>
+      </div>
     </div>
   </div>
 </div>
@@ -28,7 +79,8 @@
     <div class="registry-deck">
       <% @registries.each do |registry| %>
         <div class="card registry-card">
-          <%= image_tag "https://via.placeholder.com/300x200", class: "card-img-top", alt: "#{registry.activity}" %>
+          <!-- Image dimension 300x200-->
+          <%= image_tag "https://www.greatsights.co.nz/assets/greatsights/product/hobbiton-21.jpg", class: "card-img-top", alt: "#{registry.activity}" %>
           <div class="card-body registry-body">
             <h5 class="value-img-overlay">£50</h5>
             <h5 class="card-title"><%= registry.activity %></h5>

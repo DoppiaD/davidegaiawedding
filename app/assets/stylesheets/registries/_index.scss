@@ -28,20 +28,42 @@
 }
 
 #bankTransferInfo {
-  background-color: $light-gray;
-  margin-bottom: $d-spacer-section;
-
-  .honeymoon-border {
-    padding-bottom: $spacer * 2;
-  }
-}
-@include media-breakpoint-up(md) {
-  #bankTransferInfo {
-    .honeymoon-border {
-      border-right: $border-width solid $border-color;
+  background-color: $lotr-green;
+  // border: $border-width * 2 solid $lotr-green;
+  border-radius: $border-radius;
+  margin-top: $spacer * 2;
+  .bank-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacer;
+    margin: $spacer 0;
+    &>p {
+      margin-bottom: $spacer / 4;
+    }
+    .input-group {
+      width: auto;
+      margin-bottom: $spacer;
+      .bank-info {
+        text-align: left;
+        background-color: white;
+      }
+    }
+    h4 {
+      margin-bottom: $spacer;
     }
   }
+  .bank-border {
+    padding-bottom: $spacer * 2;
+    .input-group {
+      .bank-info {
+        text-align: right;
+      }
+    }
+  }
+
 }
+
 
 .registry-title {
   text-align: center;
@@ -56,6 +78,9 @@
   grid-template-rows: auto;
   grid-gap: $spacer * 4 $spacer  * 4;
   .registry-card {
+    img {
+      height: 200px;
+    }
     .card-body {
       padding: $spacer;
       position: inherit;
@@ -75,14 +100,22 @@
   }
   .card-footer {
     padding: $spacer / 2 $spacer;
-    // display: flex;
-    // flex-direction: column;
-    justify-content: space-around;
+    background-color: $lotr-green;
+    border-color: $lotr-green;
   }
 }
 
-
 @include media-breakpoint-up(md) {
+  #bankTransferInfo {
+    .bank-col {
+      align-items: flex-start;
+    }
+    .bank-border {
+      border-right: $border-width solid $border-color;
+      padding-bottom: 0;
+      align-items: flex-end;
+    }
+  }
   .registry-deck {
     grid-template-columns: 1fr 1fr;
   }
