@@ -95,6 +95,7 @@
       color: $muted;
       &:hover:not(.active), &:active{
         color: $hover;
+        cursor: pointer;
       }
     }
     .active {

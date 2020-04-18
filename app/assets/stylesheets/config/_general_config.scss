@@ -1,6 +1,7 @@
 // Spacing
 $d-spacer-section: $spacer * 4.25;
 
+// Fixes scrolling for link through Anchor link
 @mixin fix-anchor-link {
   display: block;
   content: " ";
@@ -11,6 +12,7 @@ $d-spacer-section: $spacer * 4.25;
   pointer-events: none;
 }
 
+// List of CSS options for background images
 @mixin cover-image {
   background-position: center;
   background-repeat: no-repeat;
@@ -40,9 +42,7 @@ body {
   flex-shrink: 0;
 }
 
-
 // Customize bootstrap button hover and active colors
-
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     @include button-variant($value, $value,
@@ -62,4 +62,9 @@ body {
       border-color: lighten($value, 7.5%);
     }
   }
+}
+
+// Custom style for active links
+a:active, a:focus {
+  color: darken($link-color, 7.5%);
 }
