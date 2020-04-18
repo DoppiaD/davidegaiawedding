@@ -8,15 +8,27 @@ $orange: #E67E22;
 $green: #1EDD88;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
+$black: #000;
+
 
 // ----------------------------------------
 // Bootstrap Colors
+$lotr-green: rgba(196, 227, 202, 0.5);
 $primary: #327C68;
 $secondary: #6E0D25;
-$muted: #adb5bd;
-$hover: lighten($primary, 10%);
-$d-card-hover-color: #32325d;
 
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "lotr-green": $lotr-green
+);
+
+
+$muted: #adb5bd;
+$hover: lighten($primary, 15%);
+$d-card-hover-color: #32325d;
+$guest-grayscale: rgba(237, 237, 237, 1);
+$navbar-bg: #FFF;
 // $success:       $green;
 // $info:          $cyan;
 // $warning:       $yellow;
@@ -24,12 +36,7 @@ $d-card-hover-color: #32325d;
 // $light:         $gray-100;
 // $dark:          $gray-800;
 
-// ----------------------------------------
-// Theme Colors
 
-$guest-grayscale: rgba(237, 237, 237, 1);
-$lotr-green: rgba(196, 227, 202, 0.5);
-$navbar-bg: #FFF;
 // ----------------------------------------
 // Shadows
 $d-text-shadow: 0 0 15px rgba(0,0,0,0.2);
