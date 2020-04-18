@@ -82,7 +82,7 @@
           <!-- Image dimension 300x200-->
           <%= image_tag "https://www.greatsights.co.nz/assets/greatsights/product/hobbiton-21.jpg", class: "card-img-top", alt: "#{registry.activity}" %>
           <div class="card-body registry-body">
-            <h5 class="value-img-overlay">£50</h5>
+            <h5 class="value-img-overlay">£<%= registry.value %></h5>
             <h5 class="card-title"><%= registry.activity %></h5>
             <p class="card-text"><%= registry.description %></p>
           </div>
