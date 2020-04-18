@@ -27,6 +27,7 @@ import { scrollToChevron } from '../components/banner'
 import { timelineModalJs } from '../pages/logistics'
 import { onRefreshOpenModal } from '../guests/index'
 import { copyBankText } from '../registry/index'
+import { initializeBootstrapTooltip } from '../registry/index'
 
 document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
@@ -35,10 +36,5 @@ document.addEventListener('turbolinks:load', () => {
   timelineModalJs();
   onRefreshOpenModal();
   copyBankText();
-
-
-  // Initialize all tooltips
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
+  initializeBootstrapTooltip();
 });
