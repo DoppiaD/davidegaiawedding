@@ -8,10 +8,6 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: $spacer $spacer;
-    .btn-guest {
-      padding-left: 1.1rem;
-      padding-right: 1.1rem;
-    }
     .guest-card {
       text-align: center;
       .card-body {
@@ -22,11 +18,18 @@
         }
       }
     }
-    .card-footer {
-      padding: $spacer / 2 0;
+    .card-guest-buttons {
+      padding-left: $spacer / 2;
+      padding-right: $spacer / 2;
       background-color: white;
-      display: flex;
-      justify-content: space-around;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 0 $spacer / 2;
+      justify-content: space-evenly;
+      .btn-guest {
+        place-self: center stretch;
+      }
     }
   }
 }
@@ -39,29 +42,19 @@
   background-color: $guest-grayscale !important;
 }
 
-@include media-breakpoint-up(sm) {
-  .guests {
-    .guest-deck {
-      .btn-guest {
-        padding-left: 1.8rem;
-        padding-right: 1.8rem;
-      }
-    }
-  }
-}
-
 @include media-breakpoint-up(md) {
   .guests {
     .guests-title {
       margin-bottom: $d-spacer-section;
     }
-      .guest-deck {
-        grid-template-columns: 1fr 1fr 1fr;
-        .btn-guest {
-          padding-left: 2.1rem;
-          padding-right: 2.1rem;
-        }
+    .guest-deck {
+      grid-template-columns: 1fr 1fr 1fr;
+      .card-guest-buttons {
+        padding-left: $spacer;
+        padding-right: $spacer;
+        gap: 0 $spacer;
       }
+    }
   }
 }
 
@@ -70,21 +63,6 @@
     margin-top: $d-spacer-section;
     .guest-deck {
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      .btn-guest {
-        padding-left: 2.3rem;
-        padding-right: 2.3rem;
-      }
-    }
-  }
-}
-
-@include media-breakpoint-up(xl) {
-  .guests {
-    .guest-deck {
-      .btn-guest {
-        padding-left: 2.6rem;
-        padding-right: 2.6rem;
-      }
     }
   }
 }

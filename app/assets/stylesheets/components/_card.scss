@@ -3,17 +3,39 @@
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   transition-property: color, background-color, box-shadow, transform;
   transition-duration: .15s;
-  border: 0;
+  transition-timing-function: ease;
+  // border: 0;
   &:hover {
     box-shadow: $d-card-hover-shadow;
-    transform: translateY(-2px);
-    color: $secondary;
+    transform: matrix(1, 0, 0, 1, 0, 0);
   }
   &:active {
-    box-shadow: $d-card-hover-shadow;
+    box-shadow: $d-card-active-shadow;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: translateY(2px);
+    &:after {
+      opacity: .15;
+    }
+  }
+  &:focus {
+    box-shadow: $d-card-focus-shadow;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: $border-radius;
+    background: $primary;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .15s;
   }
   h5 {
     margin-bottom: $spacer * 0.5;;
+    transform: matrix(1, 0, 0, 1, 0, 0);
   }
   p {
     @include d-p-gray;
