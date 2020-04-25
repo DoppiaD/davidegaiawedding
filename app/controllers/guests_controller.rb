@@ -1,5 +1,5 @@
 class GuestsController < ApplicationController
-  before_action :set_guest, only: [:edit, :update]
+  before_action :set_guest, only: [:edit, :update, :participate]
 
   def index
     @guests = policy_scope(Guest).order(:created_at)
@@ -23,25 +23,27 @@ class GuestsController < ApplicationController
   end
 
   def participate
-    @guest = Guest.find(params[:guest_id])
-    authorize @guest
-    participate = (params[:participate] == "true")
-    @guest.update(participate: participate)
-    if participate
+    # @guest = Guest.find(params[:guest_id])
+    # authorize @guest
+
+    if @guest.toggle!(:participate) & @guest.participate
       redirect_to "#{guests_path}##{@guest.id}"
     else
       redirect_to guests_path
     end
   end
 
+
   private
 
   def set_guest
     @guest = Guest.find(params[:id])
+    bynding.pry
     authorize @guest
   end
 
   def guest_params
     params.require(:guest).permit(:participate, :name, :last_name, :allergies, :shuttle_to, :shuttle_from, :child)
   end
+
 end

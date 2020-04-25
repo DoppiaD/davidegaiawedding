@@ -78,11 +78,13 @@
   <div class="col">
     <div class="registry-deck">
       <% @registries.each do |registry| %>
+      <% if registry.selected? %>
         <div class="card registry-card d-card-shadow">
-            <span class="registry-selected"><i class="fas fa-check-circle"></i></span>
-
-          <!-- Image dimension 300x200-->
-          <%= image_tag "https://www.hobbitontours.com/media/1181/hobbiton-movie-set-8.jpg", class: "card-img-top", alt: "#{registry.activity}" %>
+          <span class="registry-selected"><i class="fas fa-check-circle"></i></span>
+          <%= link_to honeymoons_path(registry: registry.id), method: :post, class: "stretched-link", remote: true do %>
+            <!-- Image dimension 300x200-->
+            <%= image_tag "https://www.hobbitontours.com/media/1181/hobbiton-movie-set-8.jpg", class: "card-img-top", alt: "#{registry.activity}" %>
+          <% end %>
           <div class="card-body registry-body">
             <h5 class="value-img-overlay">£<%= registry.value %></h5>
             <h5 class="card-title"><%= registry.activity %></h5>
