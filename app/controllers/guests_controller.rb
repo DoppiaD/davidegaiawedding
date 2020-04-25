@@ -23,9 +23,6 @@ class GuestsController < ApplicationController
   end
 
   def participate
-    # @guest = Guest.find(params[:guest_id])
-    # authorize @guest
-
     if @guest.toggle!(:participate) & @guest.participate
       redirect_to "#{guests_path}##{@guest.id}"
     else
@@ -33,17 +30,14 @@ class GuestsController < ApplicationController
     end
   end
 
-
   private
 
   def set_guest
     @guest = Guest.find(params[:id])
-    bynding.pry
     authorize @guest
   end
 
   def guest_params
     params.require(:guest).permit(:participate, :name, :last_name, :allergies, :shuttle_to, :shuttle_from, :child)
   end
-
 end
