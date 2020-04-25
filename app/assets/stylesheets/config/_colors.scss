@@ -10,6 +10,9 @@ $gray: #0E0000;
 $light-gray: #F4F4F4;
 $black: #000;
 
+$shadow-hover-black: rgba(52, 52, 96, .3);
+$shadow-active-black: rgba(52, 52, 96, 0.25);
+$shadow-custom-black: rgba(50,50,93, .25);
 
 // ----------------------------------------
 // Bootstrap Colors
@@ -39,11 +42,12 @@ $navbar-bg: #FFF;
 
 // ----------------------------------------
 // Card Shadows
-$d-text-shadow: 0 0 15px rgba(0,0,0,0.2);
-$d-card-shadow: 0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025);
-// $d-card-shadow: 0px 0px 40px -8px rgba($primary, 1);
-// $d-card-shadow: 0 13px 27px -5px rgba($secondary, .25),0 8px 16px -8px rgba($secondary, .3),0 -6px 16px -6px rgba($secondary, .025);
+$d-text-shadow: 0 0 15px rgba($black, 0.2);
 
-$d-card-hover-shadow: 0 30px 60px -12px rgba(50,50,93,.25),0 18px 36px -18px rgba(0,0,0,.3),0 -12px 36px -8px rgba(0,0,0,.025);
-$d-card-active-shadow: 0px 13px 27px -5px rgba(52, 52, 96, 0.25), 0px 8px 16px -8px rgba(0, 0, 0, 0.3), 0px -6px 16px -6px rgba(0, 0, 0, 0.024);
-$d-card-focus-shadow: 0px 13px 27px -5px rgba(50, 50, 93, 0.25), 0px 8px 16px -8px rgba(0, 0, 0, 0.3), 0px -6px 16px -6px rgba(0, 0, 0, 0.024);
+@function card-shadow-color($shadow-color1: $shadow-hover-black, $shadow-color2: $shadow-active-black, $shadow-color3: $shadow-custom-black) {
+  $d-card-shadow: 0 13px 27px -5px $shadow-color3,0 8px 16px -8px $shadow-color1,0 -6px 16px -6px $shadow-color1;
+  $d-card-hover-shadow: 0 30px 60px -12px $shadow-color3,0 18px 36px -18px $shadow-color1,0 -12px 36px -8px $shadow-color1;
+  $d-card-active-shadow: 0px 13px 27px -5px $shadow-color2, 0px 8px 16px -8px $shadow-color1, 0px -6px 16px -6px $shadow-color1;
+  $d-card-focus-shadow: 0px 13px 27px -5px $shadow-color3, 0px 8px 16px -8px $shadow-color1, 0px -6px 16px -6px $shadow-color1;
+  @return ($d-card-shadow, $d-card-hover-shadow, $d-card-active-shadow, $d-card-focus-shadow)
+}

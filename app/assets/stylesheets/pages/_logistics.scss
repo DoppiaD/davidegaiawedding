@@ -184,12 +184,7 @@
       border: $border-width solid $border-color;
     }
     [data-modaltitle] {
-      box-shadow: $d-card-shadow;
-      border: none;
-      &:hover {
-        box-shadow: $d-card-hover-shadow;
-        cursor: pointer;
-      }
+      @include main-card-shadow($shadow-hover-black, $shadow-active-black, $shadow-custom-black);
     }
     h5 {
       margin: 0;

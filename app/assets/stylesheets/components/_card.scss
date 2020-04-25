@@ -1,16 +1,23 @@
-.d-card-shadow {
-  box-shadow: $d-card-shadow;
+@mixin main-card-shadow($color1, $color2, $color3) {
+  $general-shadows: card-shadow-color($color1, $color2, $color3);
+  $n-card-shadow: nth($general-shadows, 1);
+  $n-card-hover-shadow: nth($general-shadows, 2);
+  $n-card-active-shadow: nth($general-shadows, 3);
+  $n-card-focus-shadow: nth($general-shadows, 4);
+
+  box-shadow: $n-card-shadow;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   transition-property: color, background-color, box-shadow, transform;
   transition-duration: .15s;
   transition-timing-function: ease;
-  // border: 0;
+  border: none;
   &:hover {
-    box-shadow: $d-card-hover-shadow;
+    box-shadow: $n-card-hover-shadow;
     transform: matrix(1, 0, 0, 1, 0, 0);
+    cursor: pointer;
   }
   &:active {
-    box-shadow: $d-card-active-shadow;
+    box-shadow: $n-card-active-shadow;
     transform: matrix(1, 0, 0, 1, 0, 0);
     transform: translateY(2px);
     &:after {
@@ -18,9 +25,9 @@
     }
   }
   &:focus {
-    box-shadow: $d-card-focus-shadow;
+    box-shadow: $n-card-focus-shadow;
   }
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     left: 0;
@@ -28,7 +35,7 @@
     right: 0;
     bottom: 0;
     border-radius: $border-radius;
-    background: $primary;
+    background: $color1;
     pointer-events: none;
     opacity: 0;
     transition: opacity .15s;
@@ -40,4 +47,13 @@
   p {
     @include d-p-gray;
   }
+}
+
+.d-card-shadow {
+  @include main-card-shadow($shadow-hover-black, $shadow-active-black, $shadow-custom-black);
+}
+
+.d-card-shadow-primary {
+  @include main-card-shadow(rgba($primary, 0.6), rgba($primary, 0.6), rgba($primary, 0.6));
+
 }

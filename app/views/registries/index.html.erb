@@ -79,15 +79,16 @@
     <div class="registry-deck">
       <% @registries.each do |registry| %>
         <div class="card registry-card d-card-shadow">
+            <span class="registry-selected"><i class="fas fa-check-circle"></i></span>
+
           <!-- Image dimension 300x200-->
-          <%= image_tag "https://www.greatsights.co.nz/assets/greatsights/product/hobbiton-21.jpg", class: "card-img-top", alt: "#{registry.activity}" %>
+          <%= image_tag "https://www.hobbitontours.com/media/1181/hobbiton-movie-set-8.jpg", class: "card-img-top", alt: "#{registry.activity}" %>
           <div class="card-body registry-body">
             <h5 class="value-img-overlay">£<%= registry.value %></h5>
             <h5 class="card-title"><%= registry.activity %></h5>
             <p class="card-text"><%= registry.description %></p>
           </div>
           <div class="card-footer">
-
             <h6 class="card-text"><i class="fas fa-gifts"></i> PERK</h6>
             <p class="card-text"><%= registry.perk %></p>
           </div>
