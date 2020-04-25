@@ -81,9 +81,10 @@
       border-radius: $border-radius;
     .registry-selected {
       & > i {
+        font-size: 140%;
         position: absolute;
-        left: -4px;
-        top: -4px;
+        left: -7px;
+        top: -7px;
         right: 0;
         bottom: 0;
         color: $primary;

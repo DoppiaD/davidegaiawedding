@@ -1,23 +1,23 @@
 @mixin main-card-shadow($color1, $color2, $color3) {
+  // Set the shadow color dinamically depending on function set in color.scss
   $general-shadows: card-shadow-color($color1, $color2, $color3);
-  $n-card-shadow: nth($general-shadows, 1);
-  $n-card-hover-shadow: nth($general-shadows, 2);
-  $n-card-active-shadow: nth($general-shadows, 3);
-  $n-card-focus-shadow: nth($general-shadows, 4);
+  $d-card-shadow: nth($general-shadows, 1);
+  $d-card-hover-shadow: nth($general-shadows, 2);
+  $d-card-active-shadow: nth($general-shadows, 3);
+  $d-card-focus-shadow: nth($general-shadows, 4);
 
-  box-shadow: $n-card-shadow;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: $d-card-shadow;
   transition-property: color, background-color, box-shadow, transform;
   transition-duration: .15s;
   transition-timing-function: ease;
   border: none;
   &:hover {
-    box-shadow: $n-card-hover-shadow;
+    box-shadow: $d-card-hover-shadow;
     transform: matrix(1, 0, 0, 1, 0, 0);
     cursor: pointer;
   }
   &:active {
-    box-shadow: $n-card-active-shadow;
+    box-shadow: $d-card-active-shadow;
     transform: matrix(1, 0, 0, 1, 0, 0);
     transform: translateY(2px);
     &:after {
@@ -25,7 +25,7 @@
     }
   }
   &:focus {
-    box-shadow: $n-card-focus-shadow;
+    box-shadow: $d-card-focus-shadow;
   }
   &::after {
     content: "";
