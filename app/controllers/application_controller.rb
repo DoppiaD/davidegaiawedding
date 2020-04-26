@@ -18,7 +18,6 @@ class ApplicationController < ActionController::Base
    # policy_name = exception.policy.class.to_s.underscore
 
    # redirect_back(fallback_location: root_path, alert: "You are not authorized to perform this action.")
-   redirect_to new_user_session_path
-   # redirect_to root_path
+   redirect_to root_path
   end
 end

@@ -81,14 +81,16 @@
   <div class="col">
     <div class="registry-deck">
       <% @registries.each do |registry| %>
-            <% if @honeymoons.exists?(registry: registry) %>
-              <% selected_params = ['d-card-shadow-primary', '', honeymoon_path(registry), :delete] %>
+            <% if !user_signed_in? %>
+              <% selected_params = ['d-card-shadow', 'hide-registry-selected', honeymoons_path(registry: registry.id), :post, false] %>
+            <% elsif @honeymoons.exists?(registry: registry) %>
+              <% selected_params = ['d-card-shadow-primary', '', honeymoon_path(registry), :delete, true] %>
             <% else %>
-              <% selected_params = ['d-card-shadow', 'hide-registry-selected', honeymoons_path(registry: registry.id),:post] %>
+              <% selected_params = ['d-card-shadow', 'hide-registry-selected', honeymoons_path(registry: registry.id), :post, true] %>
             <% end %>
             <div class="card registry-card <%= selected_params[0] %>">
               <span class="<%= selected_params[1] %> registry-selected"><i class="fas fa-check-circle"></i></span>
-            <%= link_to selected_params[2], method: selected_params[3], class: "stretched-link", remote: true do %>
+            <%= link_to selected_params[2], method: selected_params[3], class: "stretched-link", remote: selected_params[4] do %>
               <!-- Image dimension 300x200-->
               <%= image_tag "https://www.hobbitontours.com/media/1181/hobbiton-movie-set-8.jpg", class: "card-img-top", alt: "#{registry.activity}", id: "card-registry-#{registry.id}" %>
             <% end %>
