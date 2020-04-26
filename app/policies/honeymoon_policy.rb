@@ -6,7 +6,7 @@ class HoneymoonPolicy < ApplicationPolicy
   end
 
   def create?
-    user_signed_in? && user_is_owner?
+    user_is_owner?
   end
 
   def destroy?

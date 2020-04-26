@@ -13,12 +13,10 @@
       <h6>Account Name</h6>
       <div class="input-group">
         <input id="uk-name" type="text" class="bank-info form-control" aria-label="Gaia Tonanzi" value="Gaia Tonanzi" readonly>
-        <!-- <p class="form-control">Gaia Tonanzi</p> -->
         <div class="input-group-append">
           <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#uk-name"} do %>
             <i class="fas fa-copy"></i>
           <% end %>
-          <!-- <button class="btn btn-primary" type="button" data-toggle="tooltip" data-placement="top" title="Copy"><i class="fas fa-copy"></i></button> -->
         </div>
       </div>
       <h6>Account Number</h6>
@@ -83,15 +81,16 @@
   <div class="col">
     <div class="registry-deck">
       <% @registries.each do |registry| %>
-            <% if user_signed_in? && current_user.registries.exists?(registry.id) %>
-              <div class="card registry-card d-card-shadow-primary">
-                <span class="registry-selected"><i class="fas fa-check-circle"></i></span>
+            <% if @honeymoons.exists?(registry: registry) %>
+              <% selected_params = ['d-card-shadow-primary', '', honeymoon_path(registry), :delete] %>
             <% else %>
-            <div class="card registry-card d-card-shadow">
+              <% selected_params = ['d-card-shadow', 'hide-registry-selected', honeymoons_path(registry: registry.id),:post] %>
             <% end %>
-            <%= link_to honeymoons_path(registry), method: :post, class: "stretched-link", remote: true do %>
+            <div class="card registry-card <%= selected_params[0] %>">
+              <span class="<%= selected_params[1] %> registry-selected"><i class="fas fa-check-circle"></i></span>
+            <%= link_to selected_params[2], method: selected_params[3], class: "stretched-link", remote: true do %>
               <!-- Image dimension 300x200-->
-              <%= image_tag "https://www.hobbitontours.com/media/1181/hobbiton-movie-set-8.jpg", class: "card-img-top", alt: "#{registry.activity}" %>
+              <%= image_tag "https://www.hobbitontours.com/media/1181/hobbiton-movie-set-8.jpg", class: "card-img-top", alt: "#{registry.activity}", id: "card-registry-#{registry.id}" %>
             <% end %>
             <div class="card-body registry-body">
               <h5 class="value-img-overlay">£<%= registry.value %></h5>
