@@ -10,6 +10,7 @@ class GuestsController < ApplicationController
 
   def update
     if @guest.update(guest_params)
+      @guest.update(participate: true)
       redirect_to guests_path
     else
       respond_to do |format|
@@ -23,7 +24,9 @@ class GuestsController < ApplicationController
   end
 
   def participate
-    if @guest.toggle!(:participate) && @guest.participate
+    if @guest.name.nil? || @guest.last_name.nil?
+      redirect_to "#{guests_path}##{@guest.id}"
+    elsif @guest.toggle!(:participate) && @guest.participate
       redirect_to "#{guests_path}##{@guest.id}"
     else
       redirect_to guests_path
