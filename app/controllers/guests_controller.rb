@@ -23,7 +23,7 @@ class GuestsController < ApplicationController
   end
 
   def participate
-    if @guest.toggle!(:participate) & @guest.participate
+    if @guest.toggle!(:participate) && @guest.participate
       redirect_to "#{guests_path}##{@guest.id}"
     else
       redirect_to guests_path

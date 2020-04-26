@@ -27,7 +27,8 @@
         <div class="input-group-append">
           <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#uk-number"} do %>
             <i class="fas fa-copy"></i>
-          <% end %>        </div>
+          <% end %>
+        </div>
       </div>
       <h6>Sort Code</h6>
       <div class="input-group">
@@ -35,7 +36,8 @@
         <div class="input-group-append">
           <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#uk-sort"} do %>
             <i class="fas fa-copy"></i>
-          <% end %>        </div>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="col-md-6 bank-col">
@@ -45,7 +47,8 @@
         <div class="input-group-prepend">
           <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#eu-name"} do %>
             <i class="fas fa-copy"></i>
-          <% end %>        </div>
+          <% end %>
+        </div>
         <input id="eu-name" type="text" class="bank-info form-control" aria-label="Davide Lora" value="Davide Lora" readonly>
       </div>
       <h6>Account Number</h6>
@@ -53,7 +56,8 @@
         <div class="input-group-prepend">
           <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#eu-number"} do %>
             <i class="fas fa-copy"></i>
-          <% end %>        </div>
+          <% end %>
+        </div>
         <input id="eu-number" type="text" class="bank-info form-control" aria-label="IT04H0326801019052555232280" value="IT04H0326801019052555232280" readonly>
       </div>
       <h6>BIC/SWIFT</h6>
@@ -61,7 +65,8 @@
         <div class="input-group-prepend">
           <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#eu-sort"} do %>
             <i class="fas fa-copy"></i>
-          <% end %>        </div>
+          <% end %>
+        </div>
         <input id="eu-sort" type="text" class="bank-info form-control" aria-label="SELBIT2BXXX" value="SELBIT2BXXX" readonly>
       </div>
     </div>
@@ -78,22 +83,26 @@
   <div class="col">
     <div class="registry-deck">
       <% @registries.each do |registry| %>
-        <div class="card registry-card d-card-shadow">
-          <span class="registry-selected"><i class="fas fa-check-circle"></i></span>
-          <%= link_to honeymoons_path(registry), method: :post, class: "stretched-link", remote: true do %>
-            <!-- Image dimension 300x200-->
-            <%= image_tag "https://www.hobbitontours.com/media/1181/hobbiton-movie-set-8.jpg", class: "card-img-top", alt: "#{registry.activity}" %>
-          <% end %>
-          <div class="card-body registry-body">
-            <h5 class="value-img-overlay">£<%= registry.value %></h5>
-            <h5 class="card-title"><%= registry.activity %></h5>
-            <p class="card-text"><%= registry.description %></p>
+            <% if user_signed_in? && current_user.registries.exists?(registry.id) %>
+              <div class="card registry-card d-card-shadow-primary">
+                <span class="registry-selected"><i class="fas fa-check-circle"></i></span>
+            <% else %>
+            <div class="card registry-card d-card-shadow">
+            <% end %>
+            <%= link_to honeymoons_path(registry), method: :post, class: "stretched-link", remote: true do %>
+              <!-- Image dimension 300x200-->
+              <%= image_tag "https://www.hobbitontours.com/media/1181/hobbiton-movie-set-8.jpg", class: "card-img-top", alt: "#{registry.activity}" %>
+            <% end %>
+            <div class="card-body registry-body">
+              <h5 class="value-img-overlay">£<%= registry.value %></h5>
+              <h5 class="card-title"><%= registry.activity %></h5>
+              <p class="card-text"><%= registry.description %></p>
+            </div>
+            <div class="card-footer">
+              <h6 class="card-text"><i class="fas fa-gifts"></i> PERK</h6>
+              <p class="card-text"><%= registry.perk %></p>
+            </div>
           </div>
-          <div class="card-footer">
-            <h6 class="card-text"><i class="fas fa-gifts"></i> PERK</h6>
-            <p class="card-text"><%= registry.perk %></p>
-          </div>
-        </div>
       <% end %>
       </div>
     </div>
