@@ -82,7 +82,7 @@
     <div class="registry-deck">
       <% @registries.each do |registry| %>
             <% if !user_signed_in? %>
-              <% selected_params = ['d-card-shadow', 'hide-registry-selected', honeymoons_path(registry: registry.id), :post, false] %>
+              <% selected_params = ['d-card-shadow', 'hide-registry-selected', honeymoons_path, :post, false] %>
             <% elsif @honeymoons.exists?(registry: registry) %>
               <% selected_params = ['d-card-shadow-primary', '', honeymoon_path(registry), :delete, true] %>
             <% else %>
