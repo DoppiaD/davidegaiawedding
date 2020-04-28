@@ -6,13 +6,30 @@ body {
   background-color: transparent; // Applied only if banner class is present in the page
   transition: 0.5s background-color ease;
   justify-content: space-between;
-
-  .navbar-brand img {
+  .d-logo {
+    position: absolute;
+    left: 50%;
+    top: $d-navbar-spacer / 2;
+    transform: translate(-50%, -50%);
+  }
+  & img {
     width: 40px;
   }
-
   .navbarSupportedContent {
     flex-grow: 0;
+  }
+  #navbarDropdown {
+    &:focus, &:active {
+      outline: none;
+    }
+  }
+  .navbar-user-icon {
+  }
+  i.fa-user {
+    color: $primary;
+    border-radius: 50%;
+    padding: 4px 5px;
+    border: 2px solid $primary;
   }
 }
 
@@ -21,15 +38,11 @@ body {
 }
 
 @include media-breakpoint-up(md) {
-
   .navbar-davide {
-    justify-content: space-evenly;
-  }
-
-  .navbar-brand {
-    // margin: 0 auto;
-    position: inline-block;
-    transform: translateX(-50%);
+    justify-content: space-around;
+    .d-logo {
+      top: 50%;
+    }
   }
 }
 
@@ -53,6 +66,7 @@ body {
   border: none;
   margin-left: 0;
   padding-left: 0;
+  padding-right: 0;
   background: transparent;
 }
 
