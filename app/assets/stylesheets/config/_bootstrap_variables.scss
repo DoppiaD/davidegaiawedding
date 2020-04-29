@@ -13,7 +13,6 @@ $enable-shadows: false;
 // ----------------------------------------
 // Buttons & inputs
 $border-radius: .5rem;
-
 $border-radius-sm: $border-radius;
 // $btn-padding-x-sm: 2.6rem !default;
 
@@ -22,6 +21,7 @@ $border-radius-sm: $border-radius;
 // Links
 $link-color: $primary;
 $link-hover-color: lighten($link-color, 5%);
+// Focus/Active link color is in colors.scss
 
 // ----------------------------------------
 // Cards

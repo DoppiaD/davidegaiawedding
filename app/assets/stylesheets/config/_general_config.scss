@@ -66,5 +66,5 @@ body {
 
 // Custom style for active links
 a:active, a:focus {
-  color: darken($link-color, 7.5%);
+  @include active-focus-link-color;
 }

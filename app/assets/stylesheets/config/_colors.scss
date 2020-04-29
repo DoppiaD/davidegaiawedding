@@ -32,6 +32,9 @@ $hover: lighten($primary, 5%);
 $d-card-hover-color: #32325d;
 $guest-grayscale: rgba(237, 237, 237, 1);
 $navbar-bg: #FFF;
+@mixin active-focus-link-color {
+  color: darken($link-color, 7.5%); // Navbar icon has this color hardcoded in border-color
+}
 // $success:       $green;
 // $info:          $cyan;
 // $warning:       $yellow;

@@ -30,7 +30,16 @@ body {
     border-radius: 50%;
     padding: 4px 5px;
     border: 2px solid $primary;
+    &:hover {
+      color: $link-hover-color;
+      border-color: $link-hover-color;
+    }
+    &:active, &:focus {
+      @include active-focus-link-color;
+      border-color: darken($link-color, 7.5%);
+    }
   }
+
 }
 
 .navbar-davide-colorize {
