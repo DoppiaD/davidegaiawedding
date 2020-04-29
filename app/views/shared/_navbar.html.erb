@@ -12,8 +12,8 @@
     <% end %>
   </div>
   <% if user_signed_in? %>
-    <div class="form-inline order-md-11 navbar-user-icon dropwdown">
-      <%= link_to "#", class: "btn btn-link", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
+    <div class="btn-group  order-md-11 navbar-user-icon dropwdown">
+      <%= link_to "#", class: "btn-link", role: 'button', id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
         <i class="fas fa-user"></i>
       <% end %>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="nav-dropdown">
