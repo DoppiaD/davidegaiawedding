@@ -36,7 +36,7 @@ body {
     }
     &:active, &:focus {
       @include active-focus-link-color;
-      border-color: darken($link-color, 7.5%);
+      border-color: $active-focus-link;
     }
   }
 

@@ -1,24 +1,14 @@
 // Define variables for your color scheme
 
-// For example:
-$red: #FD1015;
-$blue: #167FFB;
-$yellow: #FFC65A;
-$orange: #E67E22;
-$green: #1EDD88;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
 $black: #000;
 
-$shadow-hover-black: rgba(52, 52, 96, .3);
-$shadow-active-black: rgba(52, 52, 96, 0.25);
-$shadow-custom-black: rgba(50,50,93, .25);
-
 // ----------------------------------------
 // Bootstrap Colors
-$lotr-green: rgba(196, 227, 202, 0.5);
 $primary: #327C68;
 $secondary: #6E0D25;
+$lotr-green: rgba(196, 227, 202, 0.5);
 
 $theme-colors: (
   "primary": $primary,
@@ -26,25 +16,24 @@ $theme-colors: (
   "lotr-green": $lotr-green
 );
 
-
-$muted: #adb5bd;
-$hover: lighten($primary, 5%);
+// Custom colors
+$muted: #adb5bd; // Text muted (used in cards for p elements)
+$hover: lighten($primary, 5%); // Link/buttons hover color
+$active-focus-link: darken($link-color, 7.5%);
 $d-card-hover-color: #32325d;
 $guest-grayscale: rgba(237, 237, 237, 1);
 $navbar-bg: #FFF;
-@mixin active-focus-link-color {
-  color: darken($link-color, 7.5%); // Navbar icon has this color hardcoded in border-color
-}
-// $success:       $green;
-// $info:          $cyan;
-// $warning:       $yellow;
-// $danger:        $red;
-// $light:         $gray-100;
-// $dark:          $gray-800;
 
+@mixin active-focus-link-color {
+  color: $active-focus-link;
+}
 
 // ----------------------------------------
 // Card Shadows
+$shadow-hover-black: rgba(52, 52, 96, .3);
+$shadow-active-black: rgba(52, 52, 96, 0.25);
+$shadow-custom-black: rgba(50,50,93, .25);
+
 $d-text-shadow: 0 0 15px rgba($black, 0.2);
 
 @function card-shadow-color($shadow-color1: $shadow-hover-black, $shadow-color2: $shadow-active-black, $shadow-color3: $shadow-custom-black) {
