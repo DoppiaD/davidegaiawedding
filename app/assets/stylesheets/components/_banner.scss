@@ -1,23 +1,21 @@
 .home-banner {
-  background-image: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)), asset-url("banner.jpg");
+  background-image: linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.05)), asset-url("banner.jpg");
   @include cover-image;
   height: 100vh;
-  color: #eee;
+  background-position: right;
+  color: white;
   text-align: center;
   display: flex;
   align-items: flex-end;
   margin-top: -$d-navbar-spacer; //used to counterbalance body padding-top due to navbar
-}
-
-.banner-hero {
-  padding-bottom: 20vh;
-  text-align: left;
-  display: block;
-  h1 {
+  .banner-hero {
+    padding-bottom: 20vh;
+    text-align: left;
+    display: block;
     text-shadow: $d-text-shadow;
+
   }
 }
-
 .banner-description {
   margin-bottom: 3vh;
   display: flex;
