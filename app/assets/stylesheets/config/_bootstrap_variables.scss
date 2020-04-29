@@ -16,12 +16,16 @@ $border-radius: .5rem;
 $border-radius-sm: $border-radius;
 // $btn-padding-x-sm: 2.6rem !default;
 
-
 // ----------------------------------------
 // Links
 $link-color: $primary;
-$link-hover-color: lighten($link-color, 5%);
-// Focus/Active link color is in colors.scss
+$link-hover-color: lighten($link-color, 5%); // Focus/Active link color is in colors.scss
+$link-active-focus-color: darken($link-color, 7.5%);
+
+// ----------------------------------------
+// Navbar
+$navbar-light-active-color: $link-active-focus-color;
+$navbar-light-hover-color: $link-hover-color;
 
 // ----------------------------------------
 // Cards

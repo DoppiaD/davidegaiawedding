@@ -19,13 +19,12 @@ $theme-colors: (
 // Custom colors
 $muted: #adb5bd; // Text muted (used in cards for p elements)
 $hover: lighten($primary, 5%); // Link/buttons hover color
-$active-focus-link: darken($link-color, 7.5%);
 $d-card-hover-color: #32325d;
 $guest-grayscale: rgba(237, 237, 237, 1);
 $navbar-bg: #FFF;
 
 @mixin active-focus-link-color {
-  color: $active-focus-link;
+  color: $link-active-focus-color;
 }
 
 // ----------------------------------------
