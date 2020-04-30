@@ -73,11 +73,12 @@
 // Cards
 .registry-deck {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-gap: $spacer * 4 $spacer  * 4;
+  grid-gap: $spacer  $spacer;
   .registry-card {
     // border-radius: $border-radius;
+    font-size: 12px;
     .hide-registry-selected {
       visibility: hidden;
     }
