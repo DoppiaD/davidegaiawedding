@@ -58,7 +58,7 @@ GEM
       zeitwerk (~> 2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    autoprefixer-rails (9.7.4)
+    autoprefixer-rails (9.7.6)
       execjs
     bcrypt (3.1.13)
     bindex (0.8.1)
@@ -240,28 +240,28 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autoprefixer-rails
+  autoprefixer-rails (~> 9.7, >= 9.7.6)
   bootsnap (>= 1.4.2)
   capybara (>= 2.15)
-  devise
+  devise (~> 4.7, >= 4.7.1)
   dotenv-rails
-  font-awesome-sass
+  font-awesome-sass (~> 5.12)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   pry-byebug (~> 3.9)
   pry-rails (~> 0.3.9)
   puma (~> 4.1)
-  pundit
+  pundit (~> 2.1)
   rails (~> 6.0, >= 6.0.2.2)
   redis (~> 4.0)
   sass-rails (>= 6)
   selenium-webdriver
-  simple_form
+  simple_form (~> 5.0, >= 5.0.2)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
-  turbolinks_render
+  turbolinks_render (~> 0.9.17)
   tzinfo-data
   web-console (>= 3.3.0)
   webdrivers

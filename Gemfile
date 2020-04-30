@@ -55,10 +55,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Custom gems
-
-gem 'devise'
-gem 'autoprefixer-rails'
-gem 'font-awesome-sass'
-gem 'simple_form'
-gem 'turbolinks_render'
-gem 'pundit'
+gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'autoprefixer-rails', '~> 9.7', '>= 9.7.6'
+gem 'font-awesome-sass', '~> 5.12'
+gem 'simple_form', '~> 5.0', '>= 5.0.2'
+gem 'turbolinks_render', '~> 0.9.17'
+gem 'pundit', '~> 2.1'
