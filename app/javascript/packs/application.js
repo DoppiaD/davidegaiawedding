@@ -21,6 +21,7 @@ require("channels")
 // CUSTOM JS
 // ----------------------------------------------------
 import "bootstrap";
+import cloudinary from "cloudinary-core";
 import { initUpdateNavbarOnScroll } from '../components/navbar'
 import { windowHeight } from '../components/banner'
 import { scrollToChevron } from '../components/banner'
@@ -37,4 +38,6 @@ document.addEventListener('turbolinks:load', () => {
   onRefreshOpenModal();
   copyBankText();
   initializeBootstrapTooltip();
+  // Initialize Cloudinary
+  cloudinary.Cloudinary.new({cloud_name: "doppiad"}).responsive();
 });
