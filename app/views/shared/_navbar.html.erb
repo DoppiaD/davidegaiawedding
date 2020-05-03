@@ -8,7 +8,7 @@
   </button>
   <div class="navbar-brand order-md-3">
     <%= link_to root_path, class: "d-logo" do %>
-      <%= cl_image_tag("logo", width: :auto,  dpr: :auto, responsive: :true, responsive_placeholder: "blank") %>
+      <%= cl_image_tag("logo", width: :auto, dpr: :auto, quality: :auto, fetch_format: :auto, responsive: :true, responsive_placeholder: "blank") %>
     <% end %>
   </div>
   <% if user_signed_in? %>

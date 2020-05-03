@@ -1,10 +1,18 @@
-test:
-  service: Disk
-  root: <%= Rails.root.join("tmp/storage") %>
+# Use cloudinary
+cloudinary:
+  service: Cloudinary
 
-local:
-  service: Disk
-  root: <%= Rails.root.join("storage") %>
+## Init STD rails config
+# test:
+#   service: Disk
+#   root: <%= Rails.root.join("tmp/storage") %>
+#
+# local:
+#   service: Disk
+#   root: <%= Rails.root.join("storage") %>
+## End STD rails config
+
+
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
