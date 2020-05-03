@@ -6,20 +6,17 @@
       <div class="guest-deck">
         <% @guests.each do |guest| %>
           <div class="card guest-card">
-            <% grayscale_img = guest.participate ? "" : "guest-grayscale-img" %>
+            <% grayscale = guest.participate ? "" : ["guest-grayscale-img", "guest-grayscale-bck"] %>
             <% if guest.name.nil? || guest.last_name.nil? %>
-              <%= image_tag "LOTR/1_notext.png", class: "card-img-top #{grayscale_img}", alt: "Legolas" %>
-            <% else %>
-              <%= image_tag "LOTR/Aragorn.png", class: "card-img-top #{grayscale_img}", alt: "Legolas" %>
-            <% end %>
-            <% grayscale_bck = guest.participate ? "" : "guest-grayscale-bck" %>
-            <div class="card-body <%= grayscale_bck %>">
-              <% if guest.name.nil? || guest.last_name.nil? %>
+              <%= image_tag "LOTR/1_notext.png", class: "card-img-top #{grayscale[0]}"%>
+              <div class="card-body <%= grayscale[1] %>">
                 <h5 class="card-title"><%= "It's dangerous to go alone, take this!" %></h5>
-              <% else %>
+            <% else %>
+              <%= image_tag "LOTR/Aragorn.png", class: "card-img-top #{grayscale[0]}"%>
+              <div class="card-body <%= grayscale[1] %>">
                 <h5 class="card-title"><%= "#{guest.name}" %></h5>
                 <h5 class="card-title"><%= "#{guest.last_name}" %></h5>
-                <% end %>
+            <% end %>
             </div>
             <div class="card-footer card-guest-buttons">
               <% if guest.participate %>
