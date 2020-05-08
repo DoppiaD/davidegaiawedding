@@ -1,15 +1,15 @@
 # Use cloudinary
-cloudinary:
-  service: Cloudinary
+# cloudinary:
+#   service: Cloudinary
 
 ## Init STD rails config
-# test:
-#   service: Disk
-#   root: <%= Rails.root.join("tmp/storage") %>
-#
-# local:
-#   service: Disk
-#   root: <%= Rails.root.join("storage") %>
+test:
+  service: Disk
+  root: <%= Rails.root.join("tmp/storage") %>
+
+local:
+  service: Disk
+  root: <%= Rails.root.join("storage") %>
 ## End STD rails config
 
 

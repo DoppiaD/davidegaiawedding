@@ -25,6 +25,7 @@ class GuestsController < ApplicationController
   end
 
   def participate
+    # Unknown +1 Guests are initialized with nil name and last name
     # If Nil no need to update participate until user saves name+last name
     if @guest.name.nil? || @guest.last_name.nil?
       redirect_to "#{guests_path}##{@guest.id}"
@@ -43,6 +44,6 @@ class GuestsController < ApplicationController
   end
 
   def guest_params
-    params.require(:guest).permit(:participate, :name, :last_name, :allergies, :shuttle_to, :shuttle_from, :child)
+    params.require(:guest).permit(:participate, :name, :last_name, :allergies, :shuttle_to, :shuttle_from, :photo)
   end
 end

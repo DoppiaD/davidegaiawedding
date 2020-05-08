@@ -17,7 +17,7 @@
                 <h5 class="card-title"><%= "#{guest.name}" %></h5>
                 <h5 class="card-title"><%= "#{guest.last_name}" %></h5>
             <% end %>
-            </div>
+              </div>
             <div class="card-footer card-guest-buttons">
               <% if guest.participate %>
                 <%= content_tag :button, 'EDIT', id: "guest-edit#{guest.id}", data: {guest_id: "#{guest.id}", toggle: "modal", target: "#guestmodal-#{guest.id}"}, class: "btn btn-sm btn-primary btn-guest" %>
