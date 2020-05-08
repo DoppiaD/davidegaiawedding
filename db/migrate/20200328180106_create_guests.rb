@@ -9,6 +9,7 @@ class CreateGuests < ActiveRecord::Migration[6.0]
       t.boolean :shuttle_to, null: false, default: false
       t.boolean :shuttle_from, null: false, default: false
       t.boolean :child, null: false, default: false
+      t.string :avatar
 
       t.timestamps
     end

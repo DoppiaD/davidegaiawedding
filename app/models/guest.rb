@@ -1,6 +1,5 @@
 class Guest < ApplicationRecord
   belongs_to :user
-  has_one_attached :avatar
 
-  validates :name, :last_name, presence: true
+  validates :name, :last_name, :avatar, presence: true
 end
