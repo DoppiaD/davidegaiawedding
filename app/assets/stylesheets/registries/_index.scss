@@ -1,14 +1,11 @@
-.honeymoon-banner {
-  @include cover-image;
-  height: 60vh;
-}
-
 #honeymoon {
   @include anchor-styling;
-
   .honeymoon-banner {
-    // background-image: image-url("Polinesia.jpeg");
-    // <%= cl_image_path("Polinesia", width: :auto, dpr: :auto, quality: :auto, fetch_format: :auto, responsive: :true, responsive_placeholder: "blank") %>
+    background-image: image-url("polinesia.jpeg");
+    @include cover-image;
+    height: 60vh;
+    background-position: bottom;
+    // style="background-image: url('<%= cl_image_path("Polinesia", width: :auto, dpr: :auto, quality: "auto:best", fetch_format: :auto, responsive: :true, responsive_placeholder: "blank") %>')"
   }
 }
 

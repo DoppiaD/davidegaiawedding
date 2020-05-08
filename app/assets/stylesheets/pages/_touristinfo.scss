@@ -17,22 +17,21 @@
 #turin {
   @include anchor-styling;
   .tourist-banner {
-    background-image: url('https://www.quiiky.com/wp-content/uploads/2018/06/AdobeStock_skyline-turin-torino-italy-gay-lesbian-lgbt-tour-tasty-piedmont-.jpeg');
+    background-image: image_url('turin.jpg');
   }
 }
 
 #langhe {
   @include anchor-styling;
   .tourist-banner {
-    background-image: url('https://live.staticflickr.com/65535/49105661002_219ba349b4_h.jpg');
+    background-image: image_url('langhe.jpg');
   }
 }
 
 #cavour {
   @include anchor-styling;
   .tourist-banner {
-    background-image: url('https://live.staticflickr.com/5112/7184627793_b75605c882_b.jpg');
-    // background-image: url('https://live.staticflickr.com/3802/20079998248_0badf93beb_4k.jpg');
+    background-image: image_url('cavour.jpg');
   }
 }
 
