@@ -459,7 +459,7 @@ SimpleForm.setup do |config|
   # enable custom form wrappers
   config.wrapper_mappings = {
     boolean:       :custom_boolean,
-    date:          :no_validation_vertical_form 
+    text:          :no_validation_vertical_form 
   #   check_boxes:   :custom_collection,
   #   date:          :custom_multi_select,
   #   datetime:      :custom_multi_select,
