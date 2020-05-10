@@ -3,7 +3,7 @@
   <%= f.input :name, wrapper_html: { class: 'col-sm-6' }, placeholder: 'Bilbo', input_html: { id: "guest-n-#{guest.id}"} %>
   <%= f.input :last_name, wrapper_html: { class: 'col-sm-6' }, placeholder: 'Baggings', input_html: { id: "guest-ln-#{guest.id}"} %>
 </div>
-<%= f.input :allergies, label: 'Food allergies / Dietary requirements', placeholder: 'Vegan: I dislike Orcs, goblins and Uruk-hai', input_html: {id: "guest-a-#{guest.id}"} %>
+<%= f.input :allergies, label: 'Food allergies / Dietary requirements', wrapper: :no_validation_vertical_form, placeholder: 'Vegan: I dislike Orcs, goblins and Uruk-hai', input_html: {id: "guest-a-#{guest.id}"} %>
 <div class="form-row">
   <div class="d-flex col-12 mb-1 justify-content-between">
     <p class="mb-0">Will you need the shuttle?</p>
