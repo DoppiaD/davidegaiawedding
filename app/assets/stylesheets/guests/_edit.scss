@@ -18,13 +18,14 @@
   border-radius: $border-radius;
   padding: $spacer / 2;
   margin-left: 0;
+  // color: darken($muted, 30%);
+  color: $muted;
 }
 
 .d-input-checkbox {
   // You can remove valid/error class in: config/initializer/simple_form-bootstrap and modify:
   // # vertical input for boolean
  display: none;
- // vertical-align: middle;
  & + label:before {
    content: "\f111";
    font-family: "Font Awesome 5 Free";
