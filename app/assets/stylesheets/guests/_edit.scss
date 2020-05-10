@@ -1,0 +1,58 @@
+// CSS for the
+.edit_guest {
+  .form-check-label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .check-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: $spacer $spacer;
+  }
+}
+
+.d-checkbox {
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  padding: $spacer / 2;
+  margin-left: 0;
+}
+
+.d-input-checkbox {
+  // You can remove valid/error class in: config/initializer/simple_form-bootstrap and modify:
+  // # vertical input for boolean
+ display: none;
+ // vertical-align: middle;
+ & + label:before {
+   content: "\f111";
+   font-family: "Font Awesome 5 Free";
+   font-weight: 400;
+   margin-right: $spacer;
+   display: block;
+   cursor: pointer;
+ }
+ &:checked + label:before {
+   content: '\f058';
+   color: $primary;
+   font-weight: 900;
+ }
+}
+
+// This class is triggered by JavaScript
+.d-checkbox-colored-bg {
+  // background-color: $primary;
+  border-color: $primary;
+  // color: color-yiq($primary);
+  color: $primary;
+}
+
+
+@include media-breakpoint-up(md) {
+ .edit_guest {
+   .check-grid {
+     grid-template-columns: 1fr 1fr;
+   }
+  }
+}

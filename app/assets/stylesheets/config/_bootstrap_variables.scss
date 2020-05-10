@@ -23,6 +23,10 @@ $link-hover-color: lighten($link-color, 5%); // Focus/Active link color is in co
 $link-active-focus-color: darken($link-color, 7.5%);
 
 // ----------------------------------------
+// Forms
+$input-placeholder-color: $muted;
+
+// ----------------------------------------
 // Navbar
 $navbar-light-active-color: $link-active-focus-color;
 $navbar-light-hover-color: $link-hover-color;
