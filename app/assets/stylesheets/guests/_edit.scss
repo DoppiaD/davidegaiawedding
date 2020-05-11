@@ -11,11 +11,14 @@
     grid-template-rows: auto;
     grid-gap: $spacer $spacer;
   }
+  .edit-guest-btn {
+    margin-top: $spacer;
+  }
 }
 
 .d-checkbox {
-
   margin-left: 0;
+  margin-bottom: 0;
   color: $muted;
 }
 
