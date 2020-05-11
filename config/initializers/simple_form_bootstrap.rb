@@ -375,41 +375,23 @@ SimpleForm.setup do |config|
 
   # Input Group - custom component
   # see example app and config at https://github.com/rafaelfranca/simple_form-bootstrap
-  config.wrappers :d_checkbox, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
-    b.use :html5
-    b.use :placeholder
-    b.optional :maxlength
-    b.optional :minlength
-    b.optional :pattern
-    b.optional :min_max
-    b.optional :readonly
-    b.use :label
-    b.wrapper :input_group_tag, tag: 'div', class: 'input-group' do |ba|
-      ba.optional :prepend
-      ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
-      ba.optional :append
-    end
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
-  end
-
-  config.wrappers :d_checkbox, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
-    b.use :html5
-    b.use :placeholder
-    b.optional :maxlength
-    b.optional :minlength
-    b.optional :pattern
-    b.optional :min_max
-    b.optional :readonly
-    b.use :label
-    b.wrapper :input_group_tag, tag: 'div', class: 'input-group' do |ba|
-      ba.optional :prepend
-      ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
-      ba.optional :append
-    end
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
-  end
+  # config.wrappers :input_group, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+  #   b.use :html5
+  #   b.use :placeholder
+  #   b.optional :maxlength
+  #   b.optional :minlength
+  #   b.optional :pattern
+  #   b.optional :min_max
+  #   b.optional :readonly
+  #   b.use :label
+  #   b.wrapper :input_group_tag, tag: 'div', class: 'input-group' do |ba|
+  #     ba.optional :prepend
+  #     ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+  #     ba.optional :append
+  #   end
+  #   b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+  #   b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+  # end
 
 
   # Floating Labels form
@@ -457,9 +439,9 @@ SimpleForm.setup do |config|
   }
 
   # enable custom form wrappers
-  config.wrapper_mappings = {
-    boolean:       :custom_boolean,
-    text:          :no_validation_vertical_form 
+  # config.wrapper_mappings = {
+  #   radio_buttons: :custom_boolean,
+  #   text:          :no_validation_vertical_form
   #   check_boxes:   :custom_collection,
   #   date:          :custom_multi_select,
   #   datetime:      :custom_multi_select,
@@ -467,5 +449,5 @@ SimpleForm.setup do |config|
   #   radio_buttons: :custom_collection,
   #   range:         :custom_range,
   #   time:          :custom_multi_select
-  }
+  # }
 end

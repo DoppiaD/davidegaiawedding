@@ -42,6 +42,17 @@
   background-color: $guest-grayscale !important;
 }
 
+
+@include media-breakpoint-down(md) {
+  .guests {
+    .guest-deck {
+      .card-guest-buttons {
+        padding: $spacer / 2;
+      }
+    }
+  }
+}
+
 @include media-breakpoint-up(md) {
   .guests {
     .guests-title {
