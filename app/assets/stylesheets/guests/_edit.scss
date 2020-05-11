@@ -14,11 +14,8 @@
 }
 
 .d-checkbox {
-  border: $border-width solid $border-color;
-  border-radius: $border-radius;
-  padding: $spacer / 2;
+
   margin-left: 0;
-  // color: darken($muted, 30%);
   color: $muted;
 }
 
@@ -34,21 +31,23 @@
    display: block;
    cursor: pointer;
  }
+ & + label {
+   border: $border-width solid $border-color;
+   border-radius: $border-radius;
+   padding: $spacer / 2;
+ }
  &:checked + label:before {
    content: '\f058';
    color: $primary;
    font-weight: 900;
+   border-radius: $border-radius;
+   border-color: $primary;
+ }
+ &:checked ~ label{
+   color: $primary;
+   border-color: $primary;
  }
 }
-
-// This class is triggered by JavaScript
-.d-checkbox-colored-bg {
-  // background-color: $primary;
-  border-color: $primary;
-  // color: color-yiq($primary);
-  color: $primary;
-}
-
 
 @include media-breakpoint-up(md) {
  .edit_guest {

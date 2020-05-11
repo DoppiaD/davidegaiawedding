@@ -10,25 +10,9 @@
     <p class="mb-0"><i class="fas fa-info-circle mb-0 pb-0"></i></p>
   </div>
   <div class="col-12 check-grid">
-    <%= f.input :shuttle_to, label: "From Hotel Barrage to Wedding Venue", wrapper: :custom_boolean, wrapper_html: { class: "d-checkbox d-checkbox-st-#{guest.id}" }, input_html: { class: "d-input-checkbox", id: "guest-st-#{guest.id}" } %>
-    <%= f.input :shuttle_from, label: "From Wedding Venue " + " to Hotel Barrage", wrapper: :custom_boolean, wrapper_html: { class: "d-checkbox d-checkbox-sf-#{guest.id}" }, input_html: {class: "d-input-checkbox", id: "guest-sf-#{guest.id}"} %>
+    <%= f.input :shuttle_to, label: "From Hotel Barrage to Wedding Venue", wrapper: :custom_boolean, wrapper_html: { class: "d-checkbox" }, input_html: { class: "d-input-checkbox", id: "guest-st-#{guest.id}" } %>
+    <%= f.input :shuttle_from, label: "From Wedding Venue to Hotel Barrage", wrapper: :custom_boolean, wrapper_html: { class: "d-checkbox" }, input_html: {class: "d-input-checkbox", id: "guest-sf-#{guest.id}"} %>
   </div>
 </div>
 <%= f.submit "Close and Save", class: "btn btn-primary" %>
 <% end %>
-
-<!--
-<fieldset class="form-group boolean optional guest_shuttle_from form-group-valid col-6 offset-1">
-  <div class="form-check">
-    <input name="guest[shuttle_from]" type="hidden" value="0">
-      Shadow Content (User Agent)
-    </input>
-    <input class="form-check-input is-valid boolean optional" id="guest-sf-2" type="checkbox" value="1" checked="checked" name="guest[shuttle_from]">
-      Shadow Content (User Agent)
-    </input>
-    <label class="form-check-label boolean optional" for="guest-sf-2">
-      From Wedding Venue to Hotel Barrage
-    </label>
-  </div>
-</fieldset>
--->

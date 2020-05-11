@@ -27,8 +27,6 @@ import { windowHeight } from '../components/banner'
 import { scrollToChevron } from '../components/banner'
 import { timelineModalJs } from '../pages/logistics'
 import { onRefreshOpenModal } from '../guests/index'
-import { checkboxBgColor } from '../guests/edit'
-import { toggleCheckboxBgColor } from '../guests/edit'
 import { copyBankText } from '../registry/index'
 import { initializeBootstrapTooltip } from '../registry/index'
 
@@ -40,8 +38,6 @@ document.addEventListener('turbolinks:load', () => {
   onRefreshOpenModal();
   copyBankText();
   initializeBootstrapTooltip();
-  checkboxBgColor();
-  toggleCheckboxBgColor();
   // Initialize Cloudinary
   // cloudinary.Cloudinary.new({cloud_name: "doppiad"}).responsive();
 });
