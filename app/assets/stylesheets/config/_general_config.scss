@@ -51,6 +51,11 @@ body {
     // $active-background: darken($value, 7.5%),
     // $active-border: darken($value, 10%)
     );
+    &:focus {
+      background-color: $value;
+      border-color: $value;
+      box-shadow: none;
+    }
   }
   .btn-outline-#{$color} {
     @include button-outline-variant($value,
