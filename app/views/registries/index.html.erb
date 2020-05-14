@@ -92,7 +92,7 @@
               <span class="<%= selected_params[1] %> registry-selected"><i class="fas fa-check-circle"></i></span>
             <%= link_to selected_params[2], method: selected_params[3], class: "stretched-link", remote: selected_params[4] do %>
               <!-- Image dimension 300x200-->
-              <%= image_tag "https://www.hobbitontours.com/media/1181/hobbiton-movie-set-8.jpg", class: "card-img-top", alt: "#{registry.activity}", id: "card-registry-#{registry.id}" %>
+              <%= image_tag "hobbiton.jpg", class: "card-img-top", alt: "#{registry.activity}", id: "card-registry-#{registry.id}" %>
             <% end %>
             <div class="card-body registry-body">
               <h5 class="value-img-overlay">£<%= registry.value %></h5>
