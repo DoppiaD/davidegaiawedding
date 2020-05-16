@@ -1,6 +1,8 @@
 class GuestsController < ApplicationController
   before_action :set_guest, only: [:edit, :update, :participate]
 
+  AVATARS = %w(Aragorn Arwen Frodo Galadriel Gandalf Gimli Legolas Sam Saruman)
+
   def index
     @guests = policy_scope(Guest).order(:created_at)
   end

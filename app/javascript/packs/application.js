@@ -38,6 +38,7 @@ document.addEventListener('turbolinks:load', () => {
   onRefreshOpenModal();
   copyBankText();
   initializeBootstrapTooltip();
+
   // Initialize Cloudinary
   // cloudinary.Cloudinary.new({cloud_name: "doppiad"}).responsive();
 });

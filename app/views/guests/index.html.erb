@@ -12,7 +12,7 @@
               <div class="card-body <%= grayscale[1] %>">
                 <h5 class="card-title"><%= "It's dangerous to go alone, take this!" %></h5>
             <% else %>
-              <%= image_tag "LOTR/#{guest.avatar}", class: "card-img-top #{grayscale[0]}"%>
+              <%= image_tag "LOTR/#{guest.avatar}.png", class: "card-img-top #{grayscale[0]}"%>
               <div class="card-body <%= grayscale[1] %>">
                 <h5 class="card-title"><%= "#{guest.name}" %></h5>
                 <h5 class="card-title"><%= "#{guest.last_name}" %></h5>

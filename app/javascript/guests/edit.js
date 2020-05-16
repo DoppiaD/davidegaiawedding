@@ -20,5 +20,10 @@ const toggleCheckboxBgColor = () => {
   }
 }
 
+// Get value of select on change
+$('#guest-av-17').change(function() {
+  console.log($(this).val())
+})
+
 // export { toggleCheckboxBgColor };
 // export { checkboxBgColor };

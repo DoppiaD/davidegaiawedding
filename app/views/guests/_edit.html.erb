@@ -4,11 +4,12 @@
   <%= f.input :last_name, wrapper_html: { class: 'col-sm-6' }, placeholder: 'Baggings', input_html: { id: "guest-ln-#{guest.id}"} %>
 </div>
 <%= f.input :allergies, label: 'Food allergies / Dietary requirements', wrapper: :no_validation_vertical_form, placeholder: 'Vegan: I dislike Orcs, goblins and Uruk-hai', input_html: {id: "guest-a-#{guest.id}"} %>
+<%= f.input :avatar, collection: GuestsController::AVATARS, label: 'Pick your avatar', input_html: {id: "guest-av-#{guest.id}"} %>
 <div class="form-row">
   <div class="d-flex col-12 mb-1 justify-content-between">
     <p class="mb-0">Will you need the shuttle?</p>
     <p class="mb-0"><i class="fas fa-info-circle mb-0 pb-0"></i></p>
-  </div>
+  </div>  
   <div class="col-12 check-grid">
     <%= f.input :shuttle_to, label: "From Hotel Barrage to Wedding Venue", wrapper: :custom_boolean, wrapper_html: { class: "d-checkbox" }, input_html: { class: "d-input-checkbox", id: "guest-st-#{guest.id}" } %>
     <%= f.input :shuttle_from, label: "From Wedding Venue to Hotel Barrage", wrapper: :custom_boolean, wrapper_html: { class: "d-checkbox" }, input_html: {class: "d-input-checkbox", id: "guest-sf-#{guest.id}"} %>

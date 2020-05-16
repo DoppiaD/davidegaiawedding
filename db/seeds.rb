@@ -15,15 +15,15 @@ puts "Fetching pictures"
 # plus = File.open('app/assets/images/LOTR/Plus_one.png')
 # temp.avatar.attach(io: sam, filename: 'Sam.png', content_type: 'image/png')
 
-gandalf = 'Gandalf.png'
-aragorn = 'Aragorn.png'
-arwen = 'Arwen.png'
-frodo = 'Frodo.png'
-galadriel = 'Galadriel.png'
-gimli = 'Gimli.png'
-legolas = 'Legolas.png'
-sam = 'Sam.png'
-saruman = 'Saruman.png'
+aragorn = GuestsController::AVATARS[0]
+arwen = GuestsController::AVATARS[1]
+frodo = GuestsController::AVATARS[2]
+galadriel = GuestsController::AVATARS[3]
+gandalf = GuestsController::AVATARS[4]
+gimli = GuestsController::AVATARS[5]
+legolas = GuestsController::AVATARS[6]
+sam = GuestsController::AVATARS[7]
+saruman = GuestsController::AVATARS[8]
 
 puts "Creating seed of Guests"
 Guest.create!(user: u, name: "Bilbo", participate: true, last_name: "Baggings", allergies: "Goblins", shuttle_to: true, shuttle_from: false, avatar: gandalf)
