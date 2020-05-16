@@ -28,10 +28,7 @@ const setAvatarPicture = () => {
       var avatar = $(this).val()
       var id = $(this).attr('id')
       $(`#${id}-thumb`).css({
-        "background-image": `url(${avatars_path[avatar]})`,
-        "background-size": "cover",
-        "min-height": "200px",
-        "background-repeat": "no-repeat"
+        "background-image": `url(${avatars_path[avatar]})`
       })
     }
   })

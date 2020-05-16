@@ -5,11 +5,16 @@
 </div>
 <%= f.input :allergies, label: 'Food allergies / Dietary requirements', wrapper: :no_validation_vertical_form, placeholder: 'Vegan: I dislike Orcs, goblins and Uruk-hai', input_html: {id: "guest-a-#{guest.id}"} %>
 <div class="form-row mb-3">
+  <div class="col-12">
+    <%= f.label :avatar, label: 'Pick your avatar'%>
+    </div>
   <div class="col-12 col-lg-6 my-auto">
-    <%= f.input :avatar, collection: GuestsController::AVATARS, label: 'Pick your avatar', input_html: {id: "guest-av-#{guest.id}", data: {guest_id: "#{guest.id}"}, class: "guest-avatar"}, wrapper_html: {class: "mr-3"} %>
+    <%= f.input :avatar, label: false, collection: GuestsController::AVATARS, input_html: {id: "guest-av-#{guest.id}", data: {guest_id: "#{guest.id}"}, class: "guest-avatar"}, wrapper_html: {class: ""} %>
   </div>
-  <div class="col-8 col-lg-6 offset-2 offset-lg-0" id="guest-av-<%= guest.id %>-thumb">
-    <!-- Image is set by JS function -->
+  <div class="col-8 col-lg-6 offset-2 offset-lg-0">
+    <div class="mx-1" id="guest-av-<%= guest.id %>-thumb" >
+      <!-- Image is set by JS function -->
+    </div>
   </div>
 </div>
 <div class="form-row">
