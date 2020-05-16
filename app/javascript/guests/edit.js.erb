@@ -1,0 +1,41 @@
+<% helpers = ActionController::Base.helpers %>
+
+const setAvatarPicture = () => {
+  const avatars_path = {
+    'Aragorn': "<%= helpers.image_url 'LOTR/Aragorn.png' %>",
+    'Arwen': "<%= helpers.image_url 'LOTR/Arwen.png' %>",
+    'Frodo': "<%= helpers.image_url 'LOTR/Frodo.png' %>",
+    'Galadriel': "<%= helpers.image_url 'LOTR/Galadriel.png' %>",
+    'Gandalf': "<%= helpers.image_url 'LOTR/Gandalf.png' %>",
+    'Gimli': "<%= helpers.image_url 'LOTR/Gimli.png' %>",
+    'Legolas': "<%= helpers.image_url 'LOTR/Legolas.png' %>",
+    'Sam': "<%= helpers.image_url 'LOTR/Sam.png' %>",
+    'Saruman': "<%= helpers.image_url 'LOTR/Saruman.png' %>"
+  }
+
+  $('.guest-avatar').each(function(i, obj) {
+    var avatar = $(this).val()
+    var id = $(this).attr('id')
+    $(`#${id}-thumb`).css({
+      "background-image": `url(${avatars_path[avatar]})`,
+      "background-size": "cover",
+      "background-position": "center",
+      "border-radius": "8px",
+      "min-height": "200px",
+      "background-repeat": "no-repeat"
+    })
+    obj.onchange = function() {
+      var avatar = $(this).val()
+      var id = $(this).attr('id')
+      $(`#${id}-thumb`).css({
+        "background-image": `url(${avatars_path[avatar]})`,
+        "background-size": "cover",
+        "min-height": "200px",
+        "background-repeat": "no-repeat"
+      })
+    }
+  })
+
+}
+
+export { setAvatarPicture };

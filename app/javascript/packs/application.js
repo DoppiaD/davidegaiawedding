@@ -27,6 +27,7 @@ import { windowHeight } from '../components/banner'
 import { scrollToChevron } from '../components/banner'
 import { timelineModalJs } from '../pages/logistics'
 import { onRefreshOpenModal } from '../guests/index'
+import { setAvatarPicture } from '../guests/edit'
 import { copyBankText } from '../registry/index'
 import { initializeBootstrapTooltip } from '../registry/index'
 
@@ -38,6 +39,7 @@ document.addEventListener('turbolinks:load', () => {
   onRefreshOpenModal();
   copyBankText();
   initializeBootstrapTooltip();
+  setAvatarPicture();
 
   // Initialize Cloudinary
   // cloudinary.Cloudinary.new({cloud_name: "doppiad"}).responsive();
