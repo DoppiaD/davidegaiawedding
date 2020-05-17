@@ -9,7 +9,7 @@
     <%= f.label :avatar, label: 'Pick your avatar'%>
     </div>
   <div class="col-12 col-lg-6 my-auto">
-    <%= f.input :avatar, label: false, collection: GuestsController::AVATARS, input_html: {id: "guest-av-#{guest.id}", data: {guest_id: "#{guest.id}"}, class: "guest-avatar"}, wrapper_html: {class: ""} %>
+    <%= f.input :avatar, label: false, wrapper: :custom_vertical_multi_select, collection: GuestsController::AVATARS, input_html: {id: "guest-av-#{guest.id}", class: "guest-js-avatar"} %>
   </div>
   <div class="col-8 col-lg-6 offset-2 offset-lg-0">
     <div class="mx-1" id="guest-av-<%= guest.id %>-thumb" >

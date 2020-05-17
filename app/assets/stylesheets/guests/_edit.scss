@@ -59,3 +59,19 @@
    }
   }
 }
+
+// Classes toggled by JavaScript to change the the avatar in the modal 
+.avatar-picture-in-modal {
+  background-size: cover;
+  background-position: center;
+  border-radius: $border-radius;
+  border: none;
+  min-height: 200px;
+  background-repeat: no-repeat;
+}
+
+.avatar-no-picture-in-modal {
+  border-radius: $border-radius;
+  border: $border-width solid $border-color;
+  height: 200px;
+}

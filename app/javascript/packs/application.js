@@ -8,7 +8,6 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
@@ -23,13 +22,11 @@ require("channels")
 import "bootstrap";
 // import cloudinary from "cloudinary-core"; // Needed for cloudinary auto settings
 import { initUpdateNavbarOnScroll } from '../components/navbar'
-import { windowHeight } from '../components/banner'
-import { scrollToChevron } from '../components/banner'
+import { windowHeight, scrollToChevron } from '../components/banner'
 import { timelineModalJs } from '../pages/logistics'
 import { onRefreshOpenModal } from '../guests/index'
-import { setAvatarPicture } from '../guests/edit'
-import { copyBankText } from '../registry/index'
-import { initializeBootstrapTooltip } from '../registry/index'
+import { setAvatarPictureInModal } from '../guests/edit'
+import { initializeBootstrapTooltip, copyBankText } from '../registry/index'
 
 document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
@@ -39,7 +36,7 @@ document.addEventListener('turbolinks:load', () => {
   onRefreshOpenModal();
   copyBankText();
   initializeBootstrapTooltip();
-  setAvatarPicture();
+  setAvatarPictureInModal();
 
   // Initialize Cloudinary
   // cloudinary.Cloudinary.new({cloud_name: "doppiad"}).responsive();
