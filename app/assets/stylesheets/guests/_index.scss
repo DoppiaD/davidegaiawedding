@@ -30,8 +30,24 @@
       .btn-guest {
         place-self: center stretch;
       }
+      .btn-guest-two-col {
+        place-self: center stretch;
+        grid-column: 1 / three;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: $spacer * 3;
+        padding-right: $spacer * 3;
+      }
     }
   }
+}
+
+.border-color-no-participate {
+  border-color: $secondary;
+}
+
+.border-color-yes-participate {
+  border-color: $primary;
 }
 
 .guest-grayscale-img {
@@ -48,6 +64,10 @@
     .guest-deck {
       .card-guest-buttons {
         padding: $spacer / 2;
+        .btn-guest-two-col {
+          padding-left: $spacer * 2;
+          padding-right: $spacer * 2;
+        }
       }
     }
   }
@@ -55,9 +75,6 @@
 
 @include media-breakpoint-up(md) {
   .guests {
-    .guests-title {
-      margin-bottom: $d-spacer-section;
-    }
     .guest-deck {
       grid-template-columns: 1fr 1fr 1fr;
       .card-guest-buttons {
@@ -72,6 +89,9 @@
 @include media-breakpoint-up(lg) {
   .guests {
     margin-top: $d-spacer-section;
+    .guests-title {
+      margin-bottom: $d-spacer-section;
+    }
     .guest-deck {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }

@@ -66,6 +66,9 @@ body {
       background-color: lighten($value, 5%);
       border-color: lighten($value, 7.5%);
     }
+    &:focus {
+      box-shadow: none;
+    }
   }
 }
 

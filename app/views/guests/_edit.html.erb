@@ -1,22 +1,23 @@
 <%= simple_form_for guest, remote: true do |f| %>
 <div class="form-row">
-  <%= f.input :name, wrapper_html: { class: 'col-sm-6' }, placeholder: 'Bilbo', input_html: { id: "guest-n-#{guest.id}"} %>
-  <%= f.input :last_name, wrapper_html: { class: 'col-sm-6' }, placeholder: 'Baggings', input_html: { id: "guest-ln-#{guest.id}"} %>
-</div>
-<%= f.input :allergies, label: 'Food allergies / Dietary requirements', wrapper: :no_validation_vertical_form, placeholder: 'Vegan: I dislike Orcs, goblins and Uruk-hai', input_html: {id: "guest-a-#{guest.id}"} %>
-<div class="form-row mb-3">
   <div class="col-12">
     <%= f.label :avatar, label: 'Pick your avatar'%>
-    </div>
-  <div class="col-12 col-lg-6 my-auto">
-    <%= f.input :avatar, label: false, wrapper: :custom_vertical_multi_select, collection: GuestsController::AVATARS, input_html: {id: "guest-av-#{guest.id}", class: "guest-js-avatar"} %>
   </div>
-  <div class="col-8 col-lg-6 offset-2 offset-lg-0">
+  <div class="col-6 offset-3">
     <div class="mx-1" id="guest-av-<%= guest.id %>-thumb" >
       <!-- Image is set by JS function -->
     </div>
   </div>
+  <div class="col-12 mt-3">
+    <%= f.input :avatar, label: false, wrapper: :custom_vertical_multi_select, collection: GuestsController::AVATARS, input_html: {id: "guest-av-#{guest.id}", class: "guest-js-avatar"} %>
+  </div>
 </div>
+<div class="form-row">
+  <%= f.input :name, wrapper_html: { class: 'col-sm-6' }, placeholder: 'Bilbo', input_html: { id: "guest-n-#{guest.id}"} %>
+  <%= f.input :last_name, wrapper_html: { class: 'col-sm-6' }, placeholder: 'Baggings', input_html: { id: "guest-ln-#{guest.id}"} %>
+</div>
+<%= f.input :allergies, label: 'Food allergies / Dietary requirements', wrapper: :no_validation_vertical_form, placeholder: 'Vegan: I dislike Orcs, goblins and Uruk-hai', input_html: {id: "guest-a-#{guest.id}"} %>
+
 <div class="form-row">
   <div class="d-flex col-12 mb-1 justify-content-between">
     <p class="mb-0">Will you need the shuttle?</p>

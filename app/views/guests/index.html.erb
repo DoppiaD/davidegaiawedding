@@ -5,30 +5,30 @@
     <div class="col">
       <div class="guest-deck">
         <% @guests.each do |guest| %>
+        <% grayscale = guest.participate ? ["", ""] : ["guest-grayscale-img", "guest-grayscale-bck"] %>
           <div class="card guest-card">
-            <% grayscale = guest.participate ? "" : ["guest-grayscale-img", "guest-grayscale-bck"] %>
             <% if guest.name.nil? || guest.last_name.nil? || guest.avatar.nil?%>
               <%= image_tag "LOTR/Plus_one.png", class: "card-img-top #{grayscale[0]}"%>
               <div class="card-body <%= grayscale[1] %>">
-                <h5 class="card-title"><%= "It's dangerous to go alone, take this!" %></h5>
+                <h5 class="card-title">It's dangerous to go alone, take this!</h5>
+              </div>
             <% else %>
               <%= image_tag "LOTR/#{guest.avatar}.png", class: "card-img-top #{grayscale[0]}"%>
               <div class="card-body <%= grayscale[1] %>">
                 <h5 class="card-title"><%= "#{guest.name}" %></h5>
                 <h5 class="card-title"><%= "#{guest.last_name}" %></h5>
-            <% end %>
               </div>
+            <% end %>
             <div class="card-footer card-guest-buttons">
               <% if guest.participate %>
-                <%= content_tag :button, 'EDIT', id: "guest-edit#{guest.id}", data: {guest_id: "#{guest.id}", toggle: "modal", target: "#guestmodal-#{guest.id}"}, class: "btn btn-sm btn-primary btn-guest" %>
-                <%= link_to "NO", participate_guest_path(guest), id: "guest-no#{guest.id}", method: :patch, class: "btn btn-sm btn-outline-secondary btn-guest", remote: true %>
+                <%= content_tag :button, 'EDIT', data: {guest_id: "#{guest.id}", toggle: "modal", target: "#guest-modal-#{guest.id}"}, class: "btn btn-sm btn-primary btn-guest" %>
+                <%= link_to "NO", participate_guest_path(guest), method: :patch, class: "btn btn-sm btn-outline-secondary btn-guest", remote: true %>
               <% else %>
-                <%= link_to "YES", participate_guest_path(guest), method: :patch, class: "btn btn-sm btn-outline-primary btn-guest btn-yes", data: {guest_id: "#{guest.id}"}, remote: true %>
-                <%= link_to "NO", "#", class: "btn btn-sm btn-secondary btn-guest disabled" %>
+                <%= content_tag :button, "YES!", data: {guest_id: "#{guest.id}", toggle: "modal", target: "#guest-modal-#{guest.id}"}, class: "btn btn-sm btn-outline-primary btn-guest-two-col" %>
               <% end %>
             </div>
           </div>
-          <div class="modal fade" id="guestmodal-<%= guest.id %>" tabindex="-1" role="dialog" aria-labelledby="timelineModal" aria-hidden="true" data-backdrop="static">
+          <div class="modal fade" id="guest-modal-<%= guest.id %>" tabindex="-1" role="dialog" aria-labelledby="timelineModal" aria-hidden="true" data-backdrop="static">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -44,9 +44,7 @@
             </div>
           </div>
         <% end %>
-
       </div>
     </div>
   </div>
-
 </div>

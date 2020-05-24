@@ -29,13 +29,12 @@ class GuestsController < ApplicationController
   def participate
     # Unknown +1 Guests are initialized with nil name and last name
     # If Nil no need to update participate until user saves name+last name
-    if @guest.name.nil? || @guest.last_name.nil?
-      redirect_to "#{guests_path}##{@guest.id}"
-    elsif @guest.toggle!(:participate) && @guest.participate
-      redirect_to "#{guests_path}##{@guest.id}"
-    else
-      redirect_to guests_path
-    end
+    # if @guest.name.nil? || @guest.last_name.nil?
+    #   redirect_to "#{guests_path}##{@guest.id}"
+    # elsif @guest.toggle!(:participate) && @guest.participate
+    #   redirect_to "#{guests_path}##{@guest.id}"
+    @guest.update(participate: false)
+    redirect_to guests_path
   end
 
   private
