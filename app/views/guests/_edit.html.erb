@@ -1,16 +1,12 @@
-<%= simple_form_for guest, remote: true do |f| %>
+<%= simple_form_for guest, validate: true, remote: true do |f| %>
 <div class="form-row">
   <div class="col-12">
     <%= f.label :avatar, label: 'Pick your avatar'%>
   </div>
-  <div class="col-6 offset-3">
-    <div class="mx-1" id="guest-av-<%= guest.id %>-thumb" >
-      <!-- Image is set by JS function -->
-    </div>
+  <div class="col-8 col-md-6 offset-2 offset-md-3" id="guest-av-<%= guest.id %>-thumb">
+    <!-- Image is set by JS function -->
   </div>
-  <div class="col-12 mt-3">
-    <%= f.input :avatar, label: false, wrapper: :custom_vertical_multi_select, collection: GuestsController::AVATARS, input_html: {id: "guest-av-#{guest.id}", class: "guest-js-avatar"} %>
-  </div>
+  <%= f.input :avatar, label: false, wrapper: :custom_vertical_multi_select, collection: GuestsController::AVATARS, input_html: {id: "guest-av-#{guest.id}", class: "guest-js-avatar"}, wrapper_html: { class: "col-12 mt-3" } %>
 </div>
 <div class="form-row">
   <%= f.input :name, wrapper_html: { class: 'col-sm-6' }, placeholder: 'Bilbo', input_html: { id: "guest-n-#{guest.id}"} %>

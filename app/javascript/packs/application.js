@@ -19,25 +19,27 @@ require("channels")
 // ----------------------------------------------------
 // CUSTOM JS
 // ----------------------------------------------------
+require('@client-side-validations/client-side-validations')
+require('@client-side-validations/simple-form/dist/simple-form.bootstrap4')
 import "bootstrap";
 // import cloudinary from "cloudinary-core"; // Needed for cloudinary auto settings
 import { initUpdateNavbarOnScroll } from '../components/navbar'
 import { windowHeight, scrollToChevron } from '../components/banner'
 import { timelineModalJs } from '../pages/logistics'
 import { onRefreshOpenModal } from '../guests/index'
-import { setAvatarPictureInModal } from '../guests/edit'
+import { setAvatarPictureInModal, activateCSValidation } from '../guests/edit'
 import { initializeBootstrapTooltip, copyBankText } from '../registry/index'
 
 document.addEventListener('turbolinks:load', () => {
-  initUpdateNavbarOnScroll();
-  windowHeight();
-  scrollToChevron();
-  timelineModalJs();
-  onRefreshOpenModal();
-  copyBankText();
-  initializeBootstrapTooltip();
-  setAvatarPictureInModal();
-
+  initUpdateNavbarOnScroll()
+  windowHeight()
+  scrollToChevron()
+  timelineModalJs()
+  onRefreshOpenModal()
+  copyBankText()
+  initializeBootstrapTooltip()
+  setAvatarPictureInModal()
+  activateCSValidation()
   // Initialize Cloudinary
   // cloudinary.Cloudinary.new({cloud_name: "doppiad"}).responsive();
 });

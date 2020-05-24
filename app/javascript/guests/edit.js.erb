@@ -18,13 +18,11 @@ const changeAvatar = (avatar, id) => {
     myDiv.css({ "background-image": `url(${AVATARS_PATH[avatar]})` })
     myDiv.addClass("avatar-picture-in-modal")
     myDiv.removeClass("avatar-no-picture-in-modal")
-
   }
   else {
     myDiv.css({ "background-image": "" })
     myDiv.removeClass("avatar-picture-in-modal")
     myDiv.addClass("avatar-no-picture-in-modal")
-
   }
 }
 
@@ -42,3 +40,12 @@ const setAvatarPictureInModal = () => {
 }
 
 export { setAvatarPictureInModal };
+
+const activateCSValidation = () => {
+  $('[id*="guest-modal-"]').on('shown.bs.modal', function (e) {
+    // $(this).find('input:visible:first').focus().end().find('form').enableClientSideValidations()
+    $(ClientSideValidations.selectors.forms).validate();
+  })
+}
+
+export { activateCSValidation };
