@@ -23,3 +23,143 @@ en:
       location_two_description: Italy's best wine region
       location_three: Cavour
       location_three_description: The historical wedding town
+    logistics:
+      hotel_name: Hotel Barrage
+      hotel_address_html: Stradale S. Secondo 100, Pinerolo (TO),<br> 10064, Italy
+      hotel_feature_one: 'Free shuttle to/from venue'
+      hotel_feature_two: Late breakfast included
+      hotel_feature_three: Fixed low special price
+      hotel_info: "To book, write an email or make a direct call to the  Hotel mentioning our wedding:"
+      hotel_mailto: 'mailto:info@hotelbarrage.it?subject=Davide%26Gaia%20Wedding%20-%20Booking'
+      hotel_email: 'info@hotelbarrage.it'
+      hotel_phone_tel: 'tel:+390121040500'
+      hotel_phone: '+39 0121 040500'
+      hotel_website: 'https://www.hotelbarrage.it'
+      trip_title: How to get there
+      trip_quote_html: “It's a dangerous business, going out your door. You step onto the road,<br> and if you don't keep your feet, there's no knowing where you might be swept off to.”
+      trip_city_one: Turin
+      trip_city_one_lg_text: " Caselle"
+      trip_city_two: Milan
+      trip_city_two_lg_text: " Malpensa"
+      trip_city_three: Drive
+      trip_city_three_lg_text: ", Rent, Share"
+    _trip:
+      turin:
+        - paragraph: "Land at:"
+          title: Torino Airport
+        - paragraph: "Go to train station:"
+          title: Torino Porta Susa
+          icons:
+            - train
+            - bus
+            - taxi
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+            - '2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+            - '3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+        - paragraph: "Take a train to:"
+          title: Pinerolo
+          icons:
+            - train
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+        - paragraph: "Arrive to:"
+          title: Hotel Barrage
+          icons:
+            - walking
+            - bus
+            - taxi
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+            - '2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+            - '3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+        - paragraph: "Check-in:"
+          title: 'Suit up!'
+        - paragraph: "Free shuttle to:"
+          title: Tenuta La Morra
+          icons:
+            - shuttle-van
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+        - paragraph: "Drink, eat, celebrate!"
+          title: Enjoy the party
+        - paragraph: "Free shuttle to:"
+          h5: Hotel Barrage
+          icons:
+            - shuttle-van
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+      milan:
+        - paragraph: "Land at:"
+          title: Milan Malpensa Airport
+        - paragraph: "Go to train station:"
+          title: Torino Porta Susa
+          icons:
+            - train
+            - bus
+            - taxi
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+            - '2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+            - '3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+        - paragraph: "Arrive to:"
+          title: Hotel Barrage
+          icons:
+            - walking
+            - bus
+            - taxi
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+            - '2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+            - '3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+        - paragraph: "Check-in:"
+          title: 'Suit up!'
+        - paragraph: "Free shuttle to:"
+          title: Tenuta La Morra
+          icons:
+            - shuttle-van
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+        - paragraph: "Drink, eat, celebrate!"
+          title: Enjoy the party
+        - paragraph: "Free shuttle to:"
+          h5: Hotel Barrage
+          icons:
+            - shuttle-van
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+      drive:
+        - paragraph: "Land at:"
+          title: We suggest somewhere near Turin
+        - paragraph: "Rent a:"
+          title: Car, Truck, Caravan
+          icons:
+            - car
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+        - paragraph: "Arrive to:"
+          title: Hotel Barrage
+          icons:
+            - walking
+            - bus
+            - taxi
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+            - '2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+            - '3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+        - paragraph: "Check-in:"
+          title: 'Suit up!'
+        - paragraph: "Free shuttle to:"
+          title: Tenuta La Morra
+          icons:
+            - shuttle-van
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+        - paragraph: "Drink, eat, celebrate!"
+          title: Enjoy the party
+        - paragraph: "Free shuttle to:"
+          h5: Hotel Barrage
+          icons:
+            - shuttle-van
+          descriptions:
+            - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'

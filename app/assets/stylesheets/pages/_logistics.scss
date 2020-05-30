@@ -113,27 +113,9 @@
         display: none;
       }
     }
-
-  }
-}
-
-@include media-breakpoint-up(sm) {
-  .trip-info {
     .trip-nav {
-      .trip-item:first-child { //Custom nav content
-        p::after {
-          content: ' Caselle';
-        }
-      }
-      .trip-item:nth-child(2) {//Custom nav content
-        p::before {
-          content: 'Milan ';
-        }
-      }
-      .trip-item:last-child {//Custom nav content
-        p::after {
-          content: ', Rent, Share';
-        }
+      .show-span {
+        display: none;
       }
     }
   }
