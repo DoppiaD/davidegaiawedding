@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class HoneymoonTest < ActiveSupport::TestCase
+class UserRegistryTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

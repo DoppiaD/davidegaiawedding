@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class HoneymoonsControllerTest < ActionDispatch::IntegrationTest
+class UserRegistriesControllerTest < ActionDispatch::IntegrationTest
   test "should get create" do
     get honeymoons_create_url
     assert_response :success

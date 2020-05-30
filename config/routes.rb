@@ -12,5 +12,5 @@ Rails.application.routes.draw do
     # patch '/guests/:id/participate', to: 'guests#participate'
   end
   resources :registries, only: [:index]
-  resources :honeymoons, only: [:create, :destroy]
+  resources :user_registries, only: [:create, :destroy]
 end

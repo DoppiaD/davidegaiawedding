@@ -3,7 +3,7 @@
 puts "Cleaning databases..."
 User.destroy_all
 Guest.destroy_all
-Honeymoon.destroy_all
+UserRegistry.destroy_all
 Registry.destroy_all
 # ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
 
@@ -40,9 +40,9 @@ p = Registry.create!(activity: 'Hobbiton', description: 'Ipsum lorem Hobbits!. W
 b = Registry.create!(activity: 'Bora Bora', description: 'Ipsum lorem Beach!. We love to swim and relax.', value: 1000, perk: "Stolen sand")
 
 puts "Joining the honeymoon"
-Honeymoon.create!(user: u, registry: r)
-Honeymoon.create!(user: u, registry: p)
-Honeymoon.create!(user: u, registry: b)
-Honeymoon.create!(user: c, registry: r)
+UserRegistry.create!(user: u, registry: r)
+UserRegistry.create!(user: u, registry: p)
+UserRegistry.create!(user: u, registry: b)
+UserRegistry.create!(user: c, registry: r)
 
 puts "Done!"

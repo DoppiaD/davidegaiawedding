@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   has_many :guests, dependent: :destroy
 
-  has_many :honeymoons, dependent: :destroy
-  has_many :registries, through: :honeymoons
+  has_many :user_registries, dependent: :destroy
+  has_many :registries, through: :user_registries
 end

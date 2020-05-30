@@ -82,11 +82,11 @@
     <div class="registry-deck">
       <% @registries.each do |registry| %>
             <% if !user_signed_in? %>
-              <% selected_params = ['d-card-shadow', 'hide-registry-selected', honeymoons_path, :post, false] %>
-            <% elsif @honeymoons.exists?(registry: registry) %>
-              <% selected_params = ['d-card-shadow-primary', '', honeymoon_path(registry), :delete, true] %>
+              <% selected_params = ['d-card-shadow', 'hide-registry-selected', user_registries_path, :post, false] %>
+            <% elsif @user_registries.exists?(registry: registry) %>
+              <% selected_params = ['d-card-shadow-primary', '', user_registry_path(registry), :delete, true] %>
             <% else %>
-              <% selected_params = ['d-card-shadow', 'hide-registry-selected', honeymoons_path(registry: registry.id), :post, true] %>
+              <% selected_params = ['d-card-shadow', 'hide-registry-selected', user_registries_path(registry: registry.id), :post, true] %>
             <% end %>
             <div class="card registry-card <%= selected_params[0] %>">
               <span class="<%= selected_params[1] %> registry-selected"><i class="fas fa-check-circle"></i></span>

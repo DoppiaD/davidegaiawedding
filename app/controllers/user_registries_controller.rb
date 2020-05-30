@@ -1,16 +1,16 @@
-class HoneymoonsController < ApplicationController
+class UserRegistriesController < ApplicationController
   def create
     @registry = Registry.find(params[:registry])
-    @honeymoon = Honeymoon.new(user: current_user, registry: @registry)
-    authorize @honeymoon
-    @honeymoon.save
+    @user_registry = UserRegistry.new(user: current_user, registry: @registry)
+    authorize @user_registry
+    @user_registry.save
     redirect_to registries_path(anchor: "card-registry-#{params[:registry]}")
   end
 
   def destroy
-    @honeymoon = Honeymoon.find_by(user: current_user, registry_id: params[:id])
-    authorize @honeymoon
-    @honeymoon.destroy
+    @user_registry = UserRegistry.find_by(user: current_user, registry_id: params[:id])
+    authorize @user_registry
+    @user_registry.destroy
     redirect_to registries_path(anchor: "card-registry-#{params[:id]}")
   end
   #

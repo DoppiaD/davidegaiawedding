@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_30_124632) do
+ActiveRecord::Schema.define(version: 2020_05_30_130316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,15 +30,6 @@ ActiveRecord::Schema.define(version: 2020_05_30_124632) do
     t.index ["user_id"], name: "index_guests_on_user_id"
   end
 
-  create_table "honeymoons", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "registry_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["registry_id"], name: "index_honeymoons_on_registry_id"
-    t.index ["user_id"], name: "index_honeymoons_on_user_id"
-  end
-
   create_table "registries", force: :cascade do |t|
     t.string "activity"
     t.text "description"
@@ -46,6 +37,15 @@ ActiveRecord::Schema.define(version: 2020_05_30_124632) do
     t.integer "value"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "user_registries", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "registry_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["registry_id"], name: "index_user_registries_on_registry_id"
+    t.index ["user_id"], name: "index_user_registries_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -63,6 +63,6 @@ ActiveRecord::Schema.define(version: 2020_05_30_124632) do
   end
 
   add_foreign_key "guests", "users"
-  add_foreign_key "honeymoons", "registries"
-  add_foreign_key "honeymoons", "users"
+  add_foreign_key "user_registries", "registries"
+  add_foreign_key "user_registries", "users"
 end

@@ -4,7 +4,7 @@ class RegistriesController < ApplicationController
   def index
     # @registries = policy_scope(Registry)
     @registries = Registry.all
-    @honeymoons = policy_scope(Honeymoon)
+    @user_registries = policy_scope(UserRegistry)
   end
 
   # def is_selected(id)

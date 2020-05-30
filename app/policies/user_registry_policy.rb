@@ -1,4 +1,4 @@
-class HoneymoonPolicy < ApplicationPolicy
+class UserRegistryPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.where(user: user)
