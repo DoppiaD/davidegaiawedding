@@ -1,0 +1,40 @@
+<div class="timeline-container">
+  <div class="timeline">
+    <ul>
+      <% trip_modes.each do |trip_mode| %>
+        <li>
+          <div class="bullet"></div>
+            <% if trip_mode[:icons].nil? %>
+              <div class="timeline-desc">
+            <% else %>
+              <div class="timeline-desc" data-toggle="modal" data-target="#timelineModal" data-modaltitle='<%= trip_mode.to_json.html_safe %>'>
+            <% end %>
+            <p><%= trip_mode[:paragraph] %></p>
+            <h5><%= trip_mode[:title] %></h5>
+            <% unless trip_mode[:icons].nil? %>
+              <div class="transportation">
+                <% trip_mode[:icons].each do |icon| %>
+                  <i class="fas fa-<%= icon %>"></i>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div class="modal fade" id="timelineModal" tabindex="-1" role="dialog" aria-labelledby="timelineModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitleText"></h5> <!-- h5 content is added by JS -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"></div> <!-- content is added by JS function-->
+    </div>
+  </div>
+</div>

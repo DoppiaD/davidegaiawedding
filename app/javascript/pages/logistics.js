@@ -14,7 +14,7 @@ const timelineModalJs = () => {
     const button = $(event.relatedTarget)
     const title = button.data('modaltitle')
     const modal = $(this)
-    modal.find('.modal-title').text(title['h5'])
+    modal.find('.modal-title').text(title['title'])
     let modalBody = ""
     title['icons'].forEach((icon, i) => {
       const titleIcon = '<i class="fas fa-' + icon + '"></i>'

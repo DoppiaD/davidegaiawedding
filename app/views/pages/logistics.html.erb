@@ -9,73 +9,71 @@
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
       </span>
-      <h1>Hotel Barrage</h1>
-      <p>Stradale S. Secondo 100, Pinerolo (TO),<br> 10064, Italy</p>
+      <h1><%= t('.hotel_name') %></h1>
+      <p><%= t('.hotel_address_html') %></p>
       <div class="feature-deck">
         <div class="card text-center">
           <div class="card-body">
             <h1 class="card-title"><i class="fas fa-shuttle-van"></i></h1>
-            <p class="card-text">Free shuttle to/from venue<p>
+            <p class="card-text"><%= t('.hotel_feature_one') %><p>
           </div>
         </div>
         <div class="card text-center">
           <div class="card-body">
             <h1 class="card-title"><i class="fas fa-coffee"></i></h1>
-            <p class="card-text">Late breakfast included<p>
+            <p class="card-text"><%= t('.hotel_feature_two') %><p>
           </div>
         </div>
         <div class="card text-center">
           <div class="card-body">
             <h1 class="card-title"><i class="fas fa-tag"></i></h1>
-            <p class="card-text">Fixed low special price<p>
+            <p class="card-text"><%= t('.hotel_feature_three') %><p>
           </div>
         </div>
       </div>
-      <p class="mt-4">To book, write an email or make a direct call to the  Hotel mentioning our wedding:</p>
-      <h6><i class="fas fa-envelope"></i> <a href="mailto:info@hotelbarrage.it?subject=Davide%26Gaia Wedding - Booking">info@hotelbarrage.it</a></h6>
-      <h6><i class="fas fa-phone"></i> <a href="tel:+390121040500">+39 0121 040500</a></h6>
-      <%= link_to "More Info", "https://www.hotelbarrage.it", class:"btn btn-outline-primary" %>
+      <p class="mt-4"><%= t('.hotel_info') %></p>
+      <h6><i class="fas fa-envelope"></i> <a href=<%= t('.hotel_mailto') %>><%= t('.hotel_email') %></a></h6>
+      <h6><i class="fas fa-phone"></i> <a href=<%= t('.hotel_phone_tel') %>><%= t('.hotel_phone') %></a></h6>
+      <%= link_to "More Info", t('.hotel_website'), class:"btn btn-outline-primary mt-3" %>
     </div>
   </div>
 </div>
 <div class="container trip-info" id="trip">
   <div class="row">
     <div class="col text-center trip-hero">
-      <h2>How to get there</h2>
-      <h6>“It's a dangerous business, going out your door. You step onto the road,<br>
-        and if you don't keep your feet, there's no knowing where you might be swept off to.”
-      </h6>
+      <h2><%= t('.trip_title') %></h2>
+      <h6><%= t('.trip_quote_html') %></h6>
     </div>
   </div>
   <nav class="nav text-center nav-pills trip-nav nav-justified">
     <a class="nav-item nav-link active trip-item" data-target="#nav-turin" data-toggle="tab" role="tab" aria-controls="nav-turin">
       <div class="trip-feature">
         <h3 class="mb-1"><i class="fas fa-plane"></i></h3>
-        <p class="mb-0">Turin</p>
+        <p class="mb-0"><%= t('.trip_city_one') %><span class="show-span"><%= t('.trip_city_one_lg_text') %></span></p>
       </div>
     </a>
     <a class="nav-item nav-link trip-item" data-target="#nav-milan" data-toggle="tab" role="tab" aria-controls="nav-milan">
       <div class="trip-feature">
         <h3 class="mb-1"><i class="fas fa-plane"></i></h3>
-        <p class="mb-0">Malpensa</p>
+        <p class="mb-0"><%= t('.trip_city_two') %><span class="show-span"><%= t('.trip_city_two_lg_text') %></span></p>
       </div>
     </a>
     <a class="nav-item nav-link trip-item" data-target="#nav-car" data-toggle="tab" role="tab" aria-controls="nav-car">
       <div class="trip-feature">
         <h3 class="mb-1"><i class="fas fa-car"></i></h3>
-        <p class="mb-0">Drive</p>
+        <p class="mb-0"><%= t('.trip_city_three') %><span class="show-span"><%= t('.trip_city_three_lg_text') %></span></p>
       </div>
     </a>
   </nav>
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-turin" role="tabpanel">
-      <%= render 'trip-turin' %>
+      <%= render 'trip', trip_modes: t('pages._trip.turin') %>
     </div>
     <div class="tab-pane fade" id="nav-milan" role="tabpanel">
-      <%= render 'trip-turin' %>
+      <%= render 'trip', trip_modes: t('pages._trip.milan')%>
     </div>
     <div class="tab-pane fade" id="nav-car" role="tabpanel">
-      <%= render 'trip-turin' %>
+      <%= render 'trip', trip_modes: t('pages._trip.drive')%>
     </div>
   </div>
 </div>
