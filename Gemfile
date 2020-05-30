@@ -32,6 +32,7 @@ group :development, :test do
   gem 'pry-byebug', '~> 3.9'
   gem 'pry-rails', '~> 0.3.9'
   gem 'dotenv-rails'
+  gem 'i18n-tasks', '~> 0.9.31'
 end
 
 group :development do
@@ -65,4 +66,4 @@ gem 'turbolinks_render', '~> 0.9.17'
 gem 'pundit', '~> 2.1'
 # gem 'carrierwave'
 # gem 'cloudinary', '~> 1.13', '>= 1.13.2'
-gem 'i18n', '~> 1.8', '>= 1.8.2'
+gem 'rails-i18n', '~> 6.0'
