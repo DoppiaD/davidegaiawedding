@@ -7,9 +7,7 @@
     </div>
     <div class="row">
       <div class="col banner-description">
-        <p>“We think we’re quite ready
-          <br>
-          for another adventure!”</p>
+        <p><%= t('.cta_html') %></p>
         <div class="my-3">
           <%= link_to "RSVP", guests_path, class: "btn btn-primary", role: 'button' %>
         </div>
@@ -23,22 +21,20 @@
 <div class="container text-center info-spacer">
   <div class="row">
     <div class="col wedding-date" id="chevron-hook">
-      <h6>Come celebrate with us!</h6>
-      <h1 class="display-1">September 25th, 2020</h1>
+      <h6><%= t('.wedding_cta') %></h6>
+      <h1 class="display-1"><%= t('.wedding_date') %></h1>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-6 wedding-data">
       <i class="fas fa-calendar-day fa-3x mb-3"></i>
-      <h6 class="text-uppercase">Wedding Celebration</h6>
-      <p>Ceremony begins at 16:00.<br>
-        Food starts at 18:00!</p>
+      <h6 class="text-uppercase"><%= t('.ceremony') %></h6>
+      <p> <%= t('.ceremony_info_html') %> </p>
     </div>
     <div class="col-sm-6 wedding-data">
       <i class="fas fa-map-marked-alt fa-3x mb-3"></i>
-      <h6 class="text-uppercase">Tenuta la Morra</h6>
-      <p>Via Villafranca 77, 10061<br>
-        Cavour TO, Italy</p>
+      <h6 class="text-uppercase"><%= t('.wedding_location') %></h6>
+      <p><%= t('.wedding_address_html') %></p>
     </div>
   </div>
 </div>
@@ -47,8 +43,8 @@
 <div class="container info-spacer">
   <div class="row ">
     <div class="col logistics-hero text-center">
-      <h2>Logistics</h2>
-      <h6>“Home is behind, the wedding ahead.”</h6>
+      <h2><%= t('.logistics') %></h2>
+      <h6><%= t('.logistics_quote') %></h6>
     </div>
   </div>
   <div class="card-deck logistics-home">
@@ -57,8 +53,8 @@
         <%= image_tag("https://via.placeholder.com/400x150", class: "card-img-top")%>
       <% end %>
       <div class="card-body text-center">
-        <h5 class="card-title">Where to stay</h5>
-        <p class="card-text">Partner hotel for wedding night</p>
+        <h5 class="card-title"><%= t('.where_to_stay') %></h5>
+        <p class="card-text"><%= t('.wts_description') %></p>
       </div>
     </div>
     <div class="card d-card-shadow">
@@ -66,8 +62,8 @@
         <%= image_tag("https://via.placeholder.com/400x150", class: "card-img-top")%>
       <% end %>
       <div class="card-body text-center">
-        <h5 class="card-title">How to get here</h5>
-        <p class="card-text">Step by step travel instructions</p>
+        <h5 class="card-title"><%= t('.arrival_info') %></h5>
+        <p class="card-text"><%= t('.arrival_description') %></p>
       </div>
     </div>
   </div>
@@ -77,8 +73,8 @@
 <div class="container info-spacer">
   <div class="row ">
     <div class="col tourist-hero text-center">
-      <h2>Tourist Info</h2>
-      <h6>“Not All Those Who Wander Are Lost.”</h6>
+      <h2><%= t('.tourist_info') %></h2>
+      <h6><%= t('.tourist_quote') %></h6>
     </div>
   </div>
   <div class="card-deck tourist-home">
@@ -87,8 +83,8 @@
         <%= image_tag("turin.jpg", class: "card-img-top")%>
       <% end %>
       <div class="card-body text-center">
-        <h5 class="card-title">Torino</h5>
-        <p class="card-text">Our hometown</p>
+        <h5 class="card-title"><%= t('.location_one') %></h5>
+        <p class="card-text"><%= t('.location_one_description') %></p>
       </div>
     </div>
     <div class="card d-card-shadow">
@@ -96,8 +92,8 @@
         <%= image_tag("langhe.jpg", class: "card-img-top")%>
       <% end %>
       <div class="card-body text-center">
-        <h5 class="card-title">Langhe</h5>
-        <p class="card-text">Italy's best wine region</p>
+        <h5 class="card-title"><%= t('.location_two') %></h5>
+        <p class="card-text"><%= t('.location_two_description') %></p>
       </div>
     </div>
     <div class="card d-card-shadow">
@@ -105,8 +101,8 @@
         <%= image_tag("cavour.jpg", class: "card-img-top")%>
       <% end %>
       <div class="card-body text-center">
-        <h5 class="card-title">Cavour</h5>
-        <p class="card-text">The historical wedding town</p>
+        <h5 class="card-title"><%= t('.location_three') %></h5>
+        <p class="card-text"><%= t('.location_three_description') %></p>
       </div>
     </div>
   </div>

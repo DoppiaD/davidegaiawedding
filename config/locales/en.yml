@@ -1,35 +1,25 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
   pages:
     home:
-      couple_names: "Davide & Gaia i18n en" 
+      couple_names: Davide & Gaia
+      cta_html: '"We think we’re quite ready<br> for another adventure!"'
+      wedding_cta: Come celebrate with us!
+      wedding_date: September 24th, 2021
+      ceremony: Wedding Celebration
+      ceremony_info_html: Ceremony starts at 16:00. <br> Food starts at 18:00
+      wedding_location: Tenuta la Morra
+      wedding_address_html: Via Villafranca 77, 10061<br> Cavour TO, Italy
+      logistics: Logistics
+      logistics_quote: '"Home is behind, the wedding ahead"'
+      where_to_stay: Where to stay
+      wts_description: Partner hotel for wedding night
+      arrival_info: How to get here
+      arrival_description: Step by step travel instructions
+      tourist_info: Tourist Info
+      tourist_quote: '“Not All Those Who Wander Are Lost.”'
+      location_one: Torino
+      location_one_description: Our hometown
+      location_two: Langhe
+      location_two_description: Italy's best wine region
+      location_three: Cavour
+      location_three_description: The historical wedding town
