@@ -1,9 +1,20 @@
 en:
+  shared:
+    navbar:
+      guests_page_text: RSVP
+      log_out_text: Log out
+      logistics_page_text: logistics
+      tourist_page_text: Tourist Info
+      registry_page_text: Registry
+    footer:
+      footer_quote_start: Crafted by Davide with lots of
+      footer_quote_end: for Gaia
   pages:
     home:
       couple_names: Davide & Gaia
       cta_html: '"We think we’re quite ready<br> for another adventure!"'
       wedding_cta: Come celebrate with us!
+      cta_button_text: RSVP
       wedding_date: September 24th, 2021
       ceremony: Wedding Celebration
       ceremony_info_html: Ceremony starts at 16:00. <br> Food starts at 18:00
