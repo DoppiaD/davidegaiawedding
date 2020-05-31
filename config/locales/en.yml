@@ -163,3 +163,154 @@ en:
             - shuttle-van
           descriptions:
             - '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.'
+    touristinfo:
+      - location: Turin
+        location_id: turin
+        location_image: turin.jpg
+        location_link_text: FIND ON THE MAP
+        location_link: "https://goo.gl/maps/z34rzDvACxb7sXzY6"
+        places_title: What to see
+        places_quote: '“All we have to decide is what to do with the time that is given us.”'
+        places:
+          - place_name: Place name
+            place_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            place_description: Place description with only.
+            place_link_text: LINK
+            place_link: "#"
+          - place_name: Place name
+            place_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            place_description: Place description with only.
+            place_link_text: LINK
+            place_link: "#"
+          - place_name: Place name
+            place_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            place_description: Place description with only.
+            place_link_text: LINK
+            place_link: "#"
+          - place_name: Place name
+            place_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            place_description: Place description with only.
+            place_link_text: LINK
+        restaurants_title: What to eat
+        restaurants_quote: "“You already had one breakfast. We've had one, yes. What about second breakfast?”"
+        restaurants:
+          - restaurant_name: Restaurant name
+            restaurant_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            restaurant_description: Restaurant description with only.
+            restaurant_link_text: LINK
+            restaurant_link: "#"
+          - restaurant_name: Restaurant name
+            restaurant_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            restaurant_description: Restaurant description with only.
+            restaurant_link_text: LINK
+            restaurant_link: "#"
+          - restaurant_name: Restaurant name
+            restaurant_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            restaurant_description: Restaurant description with only.
+            restaurant_link_text: LINK
+            restaurant_link: "#"
+          - restaurant_name: Restaurant name
+            restaurant_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            restaurant_description: Restaurant description with only.
+            restaurant_link_text: LINK
+            restaurant_link: "#"
+      - location: Langhe
+        location_id: langhe
+        location_image: "langhe.jpg"
+        location_link_text: FIND ON THE MAP
+        location_link: "https://www.google.com/maps/d/viewer?ie=UTF8&hl=it&oe=UTF8&msa=0&t=m&ll=44.61074002212622%2C8.12370616870112&spn=7.587316%2C14.0625&z=11&source=embed&mid=1vjSeKqhkP1naHkHVU3PW5ul9Hx8"
+        places_title: What to see
+        places_quote: '“All we have to decide is what to do with the time that is given us.”'
+        places:
+          - place_name: Place name
+            place_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            place_description: Place description with only.
+            place_link_text: LINK
+            place_link: "#"
+          - place_name: Place name
+            place_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            place_description: Place description with only.
+            place_link_text: LINK
+            place_link: "#"
+          - place_name: Place name
+            place_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            place_description: Place description with only.
+            place_link_text: LINK
+            place_link: "#"
+          - place_name: Place name
+            place_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            place_description: Place description with only.
+            place_link_text: LINK
+        restaurants_title: What to eat
+        restaurants_quote: "“You already had one breakfast. We've had one, yes. What about second breakfast?”"
+        restaurants:
+          - restaurant_name: Restaurant name
+            restaurant_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            restaurant_description: Restaurant description with only.
+            restaurant_link_text: LINK
+            restaurant_link: "#"
+          - restaurant_name: Restaurant name
+            restaurant_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            restaurant_description: Restaurant description with only.
+            restaurant_link_text: LINK
+            restaurant_link: "#"
+          - restaurant_name: Restaurant name
+            restaurant_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            restaurant_description: Restaurant description with only.
+            restaurant_link_text: LINK
+            restaurant_link: "#"
+          - restaurant_name: Restaurant name
+            restaurant_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            restaurant_description: Restaurant description with only.
+            restaurant_link_text: LINK
+            restaurant_link: "#"
+      - location: Cavour
+        location_id: cavour
+        location_image: "cavour.jpg"
+        location_link_text: FIND ON THE MAP
+        location_link: "https://goo.gl/maps/Vs4fY57SdnMQ3xEY8"
+        places_title: What to see
+        places_quote: '“All we have to decide is what to do with the time that is given us.”'
+        places:
+          - place_name: Place name
+            place_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            place_description: Place description with only.
+            place_link_text: LINK
+            place_link: "#"
+          - place_name: Place name
+            place_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            place_description: Place description with only.
+            place_link_text: LINK
+            place_link: "#"
+          - place_name: Place name
+            place_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            place_description: Place description with only.
+            place_link_text: LINK
+            place_link: "#"
+          - place_name: Place name
+            place_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            place_description: Place description with only.
+            place_link_text: LINK
+        restaurants_title: What to eat
+        restaurants_quote: "“You already had one breakfast. We've had one, yes. What about second breakfast?”"
+        restaurants:
+          - restaurant_name: Restaurant name
+            restaurant_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            restaurant_description: Restaurant description with only.
+            restaurant_link_text: LINK
+            restaurant_link: "#"
+          - restaurant_name: Restaurant name
+            restaurant_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            restaurant_description: Restaurant description with only.
+            restaurant_link_text: LINK
+            restaurant_link: "#"
+          - restaurant_name: Restaurant name
+            restaurant_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            restaurant_description: Restaurant description with only.
+            restaurant_link_text: LINK
+            restaurant_link: "#"
+          - restaurant_name: Restaurant name
+            restaurant_pic: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"
+            restaurant_description: Restaurant description with only.
+            restaurant_link_text: LINK
+            restaurant_link: "#"
