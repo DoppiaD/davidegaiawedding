@@ -1,35 +1,35 @@
 ---
-en:
+it:
   simple_form:
-    "yes": 'Yes'
+    "yes": 'Si'
     "no": 'No'
     required:
-      text: 'required'
+      text: 'richiesto'
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
     error_notification:
-      default_message: "Please review the problems below:"
+      default_message: "Rivedi i seguenti problemi:"
     labels:
       defaults:
         username: 'User name'
         email: Email
         password: 'Password'
       guest:
-        name: Name
-        last_name: Last name
+        name: Nome
+        last_name: Cognome
     hints:
       defaults:
-        username: 'User name to sign in.'
-        password: 'If you do not remember the password contact Davide or Gaia'
+        username: 'User name per accedere.'
+        password: 'Se non ti ricordi la password contatta Davide o Gaia'
     placeholders:
       defaults:
-        username: 'Your username'
-        email: example@gmail.com
+        username: 'Il tuo username'
+        email: esempio@gmail.com
         password: '••••••••'
   errors:
     messages:
-      invalid: Email not valid
-      blank: Can't be blank
-      too_short: Password too short
+      invalid: Email non valida
+      blank: Non può essere lasciato vuoto
+      too_short: Password troppo corta
