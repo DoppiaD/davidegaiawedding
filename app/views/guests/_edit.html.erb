@@ -1,7 +1,7 @@
 <%= simple_form_for guest, validate: true, remote: true do |f| %>
 <div class="form-row">
   <div class="col-12">
-    <%= f.label :avatar, label: 'Pick your avatar'%>
+    <%= f.label :avatar, label: t('.pick_avatar_label')%>
   </div>
   <div class="col-8 col-md-6 offset-2 offset-md-3" id="guest-av-<%= guest.id %>-thumb">
     <!-- Image is set by JS function -->
@@ -12,17 +12,17 @@
   <%= f.input :name, wrapper_html: { class: 'col-sm-6' }, placeholder: 'Bilbo', input_html: { id: "guest-n-#{guest.id}"} %>
   <%= f.input :last_name, wrapper_html: { class: 'col-sm-6' }, placeholder: 'Baggings', input_html: { id: "guest-ln-#{guest.id}"} %>
 </div>
-<%= f.input :allergies, label: 'Food allergies / Dietary requirements', wrapper: :no_validation_vertical_form, placeholder: 'Vegan: I dislike Orcs, goblins and Uruk-hai', input_html: {id: "guest-a-#{guest.id}"} %>
+<%= f.input :allergies, label: t('.allergies_label'), wrapper: :no_validation_vertical_form, placeholder: 'Vegan: I dislike Orcs, goblins and Uruk-hai', input_html: {id: "guest-a-#{guest.id}"} %>
 
 <div class="form-row">
   <div class="d-flex col-12 mb-1 justify-content-between">
-    <p class="mb-0">Will you need the shuttle?</p>
+    <p class="mb-0"><%= t('.shuttle_question') %></p>
     <p class="mb-0"><i class="fas fa-info-circle mb-0 pb-0"></i></p>
   </div>
   <div class="col-12 check-grid">
-    <%= f.input :shuttle_to, label: "From Hotel Barrage to Wedding Venue", wrapper: :custom_boolean, wrapper_html: { class: "d-checkbox" }, input_html: { class: "d-input-checkbox", id: "guest-st-#{guest.id}" } %>
-    <%= f.input :shuttle_from, label: "From Wedding Venue to Hotel Barrage", wrapper: :custom_boolean, wrapper_html: { class: "d-checkbox" }, input_html: {class: "d-input-checkbox", id: "guest-sf-#{guest.id}"} %>
+    <%= f.input :shuttle_to, label: t('.shuttle_from_label'), wrapper: :custom_boolean, wrapper_html: { class: "d-checkbox" }, input_html: { class: "d-input-checkbox", id: "guest-st-#{guest.id}" } %>
+    <%= f.input :shuttle_from, label: t('.shuttle_to_label'), wrapper: :custom_boolean, wrapper_html: { class: "d-checkbox" }, input_html: {class: "d-input-checkbox", id: "guest-sf-#{guest.id}"} %>
   </div>
 </div>
-<%= f.submit "Close and Save", class: "btn btn-primary edit-guest-btn" %>
+<%= f.submit t('.form_close'), class: "btn btn-primary edit-guest-btn" %>
 <% end %>

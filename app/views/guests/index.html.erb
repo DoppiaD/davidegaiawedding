@@ -1,5 +1,5 @@
 <div class="container guests">
-  <h1 class="display-1 text-center guests-title">Will you join the party?</h1>
+  <h1 class="display-1 text-center guests-title"><%= t('.title') %></h1>
 
   <div class="row">
     <div class="col">
@@ -10,7 +10,7 @@
             <% if guest.name.nil? || guest.last_name.nil? || guest.avatar.nil?%>
               <%= image_tag "LOTR/Plus_one.png", class: "card-img-top #{grayscale[0]}"%>
               <div class="card-body <%= grayscale[1] %>">
-                <h5 class="card-title">It's dangerous to go alone, take this!</h5>
+                <h5 class="card-title"><%= t('.plus_one_text') %></h5>
               </div>
             <% else %>
               <%= image_tag "LOTR/#{guest.avatar}.png", class: "card-img-top #{grayscale[0]}"%>
@@ -21,10 +21,10 @@
             <% end %>
             <div class="card-footer card-guest-buttons">
               <% if guest.participate %>
-                <%= content_tag :button, 'EDIT', data: {guest_id: "#{guest.id}", toggle: "modal", target: "#guest-modal-#{guest.id}"}, class: "btn btn-sm btn-primary btn-guest" %>
-                <%= link_to "NO", participate_guest_path(guest), method: :patch, class: "btn btn-sm btn-outline-secondary btn-guest", remote: true %>
+                <%= content_tag :button, t('.participate_edit'), data: {guest_id: "#{guest.id}", toggle: "modal", target: "#guest-modal-#{guest.id}"}, class: "btn btn-sm btn-primary btn-guest" %>
+                <%= link_to t('.participate_no'), participate_guest_path(guest), method: :patch, class: "btn btn-sm btn-outline-secondary btn-guest", remote: true %>
               <% else %>
-                <%= content_tag :button, "YES!", data: {guest_id: "#{guest.id}", toggle: "modal", target: "#guest-modal-#{guest.id}"}, class: "btn btn-sm btn-outline-primary btn-guest-two-col" %>
+                <%= content_tag :button, t('.participate_yes'), data: {guest_id: "#{guest.id}", toggle: "modal", target: "#guest-modal-#{guest.id}"}, class: "btn btn-sm btn-outline-primary btn-guest-two-col" %>
               <% end %>
             </div>
           </div>
@@ -32,7 +32,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Edit RSVP info</h5>
+                  <h5 class="modal-title" id="exampleModalLabel"><%= t('.modal_title') %></h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>

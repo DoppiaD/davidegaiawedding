@@ -331,3 +331,18 @@ en:
       page_info_two: "The amount indicated is only a suggestion, feel free to donate freely"
       card_value: "%{price} €"
       card_perk: PERK
+  guests:
+    index:
+      title: "Will you join the party?"
+      plus_one_text: "It's dangerous to go alone, take this!"
+      participate_edit: EDIT
+      participate_no: "NO"
+      participate_yes: "YES!"
+      modal_title: Edit RSVP info
+    edit:
+      pick_avatar_label: Pick your avatar
+      allergies_label: "Food allergies / Dietary requirements"
+      shuttle_question: "Will you need the shuttle?"
+      shuttle_from_label: "From Hotel Barrage to Wedding Venue"
+      shuttle_to_label: "From Wedding Venue to Hotel Barrage"
+      form_close: Close and Save
