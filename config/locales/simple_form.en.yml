@@ -1,3 +1,4 @@
+---
 en:
   simple_form:
     "yes": 'Yes'
@@ -10,22 +11,20 @@ en:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Please review the problems below:"
-    # Examples
-    # labels:
-    #   defaults:
-    #     password: 'Password'
-    #   user:
-    #     new:
-    #       email: 'E-mail to sign in.'
-    #     edit:
-    #       email: 'E-mail.'
-    # hints:
-    #   defaults:
-    #     username: 'User name to sign in.'
-    #     password: 'No special characters, please.'
-    # include_blanks:
-    #   defaults:
-    #     age: 'Rather not say'
-    # prompts:
-    #   defaults:
-    #     age: 'Select your age'
+    labels:
+      defaults:
+        username: 'User name'
+        email: Email
+        password: 'Password'
+      guest:
+        name: Name
+        last_name: Last name
+    hints:
+      defaults:
+        username: 'User name to sign in.'
+        password: 'If you do not remember the password contact Davide or Gaia'
+    placeholders:
+      defaults:
+        username: 'Your username'
+        email: example@gmail.com
+        password: '******'
