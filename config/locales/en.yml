@@ -358,3 +358,21 @@ en:
       logistics_page_text: logistics
       registry_page_text: Registry
       tourist_page_text: Tourist Info
+  simple_form:
+    labels:
+      defaults:
+        username: 'User name'
+        email: Email
+        password: 'Password'
+      guest:
+        name: Name
+        last_name: Last name
+    hints:
+      defaults:
+        username: 'User name to sign in.'
+        password: 'If you do not remember the password contact Davide or Gaia'
+    placeholders:
+      defaults:
+        username: 'Your username'
+        email: example@gmail.com
+        password: '******'
