@@ -34,6 +34,7 @@ en:
       hotel_email: 'info@hotelbarrage.it'
       hotel_phone_tel: 'tel:+390121040500'
       hotel_phone: '+39 0121 040500'
+      hotel_website_text: MORE INFO
       hotel_website: 'https://www.hotelbarrage.it'
       trip_title: How to get there
       trip_quote_html: “It's a dangerous business, going out your door. You step onto the road,<br> and if you don't keep your feet, there's no knowing where you might be swept off to.”

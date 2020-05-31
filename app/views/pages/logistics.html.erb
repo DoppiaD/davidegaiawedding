@@ -1,7 +1,6 @@
 <div class="container hotel-info" id="hotel">
   <div class="row">
-    <div class="col-lg-6 hotel-picture">
-    </div>
+    <div class="col-lg-6 hotel-picture"></div>
     <div class="col-lg-6 hotel-data">
       <span>
         <i class="fas fa-star"></i>
@@ -15,29 +14,30 @@
         <div class="card text-center">
           <div class="card-body">
             <h1 class="card-title"><i class="fas fa-shuttle-van"></i></h1>
-            <p class="card-text"><%= t('.hotel_feature_one') %><p>
+            <p class="card-text"><%= t('.hotel_feature_one') %></p>
           </div>
         </div>
         <div class="card text-center">
           <div class="card-body">
             <h1 class="card-title"><i class="fas fa-coffee"></i></h1>
-            <p class="card-text"><%= t('.hotel_feature_two') %><p>
+            <p class="card-text"><%= t('.hotel_feature_two') %></p>
           </div>
-        </div
+        </div>
         <div class="card text-center">
           <div class="card-body">
             <h1 class="card-title"><i class="fas fa-tag"></i></h1>
-            <p class="card-text"><%= t('.hotel_feature_three') %><p>
+            <p class="card-text"><%= t('.hotel_feature_three') %></p>
           </div>
         </div>
       </div>
       <p class="mt-4"><%= t('.hotel_info') %></p>
       <h6><i class="fas fa-envelope"></i> <a href=<%= t('.hotel_mailto') %>><%= t('.hotel_email') %></a></h6>
       <h6><i class="fas fa-phone"></i> <a href=<%= t('.hotel_phone_tel') %>><%= t('.hotel_phone') %></a></h6>
-      <%= link_to "More Info", t('.hotel_website'), class:"btn btn-outline-primary mt-3" %>
+      <%= link_to t('.hotel_website_text'), t('.hotel_website'), class:"btn btn-outline-primary mt-3" %>
     </div>
   </div>
 </div>
+
 <div class="container trip-info" id="trip">
   <div class="row">
     <div class="col text-center trip-hero">
