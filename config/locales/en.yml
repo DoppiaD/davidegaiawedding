@@ -85,7 +85,7 @@ en:
         - paragraph: "Drink, eat, celebrate!"
           title: Enjoy the party
         - paragraph: "Free shuttle to:"
-          h5: Hotel Barrage
+          title: Hotel Barrage
           icons:
             - shuttle-van
           descriptions:
@@ -124,7 +124,7 @@ en:
         - paragraph: "Drink, eat, celebrate!"
           title: Enjoy the party
         - paragraph: "Free shuttle to:"
-          h5: Hotel Barrage
+          title: Hotel Barrage
           icons:
             - shuttle-van
           descriptions:
@@ -159,7 +159,7 @@ en:
         - paragraph: "Drink, eat, celebrate!"
           title: Enjoy the party
         - paragraph: "Free shuttle to:"
-          h5: Hotel Barrage
+          title: Hotel Barrage
           icons:
             - shuttle-van
           descriptions:
@@ -315,3 +315,19 @@ en:
             restaurant_description: Restaurant description with only.
             restaurant_link_text: LINK
             restaurant_link: "#"
+  registries:
+    index:
+      title: Honeymoon Crowdfunding
+      bank_link_text: "BANK TRANSFER INFO"
+      uk_title: UK Account Details
+      uk_name: Account Name
+      uk_number: Account Number
+      uk_sort: Sort Code
+      eu_title: EU Account Details
+      eu_name: Account Name
+      eu_number: IBAN
+      eu_sort: BIC/SWIFT
+      page_info_one: "Select all the perks you want!"
+      page_info_two: "The amount indicated is only a suggestion, feel free to donate freely"
+      card_value: "%{price} €"
+      card_perk: PERK

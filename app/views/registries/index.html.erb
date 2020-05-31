@@ -1,16 +1,16 @@
 <div class="container-fluid" id="honeymoon">
   <div class="honeymoon-banner">
     <div class="honeymoon-title">
-      <h1 class="display-1 text-center">Honeymoon Crowdfunding</h1>
-      <%= link_to "BANK TRANSFER INFO", "#", class: "btn btn-primary", 'role': 'button', data: {toggle: 'collapse', target: '#bankTransferInfo'}, aria: {expanded: 'false', controls: '#bankTransferInfo'} %>
+      <h1 class="display-1 text-center"><%= t('.title') %></h1>
+      <%= link_to t('.bank_link_text'), "#", class: "btn btn-primary", 'role': 'button', data: {toggle: 'collapse', target: '#bankTransferInfo'}, aria: {expanded: 'false', controls: '#bankTransferInfo'} %>
     </div>
   </div>
 </div>
 <div class="container collapse" id="bankTransferInfo">
   <div class="row">
     <div class="col-md-6 bank-border bank-col ">
-      <h4>UK Account Details</h4>
-      <h6>Account Name</h6>
+      <h4><%= t('.uk_title') %></h4>
+      <h6><%= t('.uk_name') %></h6>
       <div class="input-group">
         <input id="uk-name" type="text" class="bank-info form-control" aria-label="Gaia Tonanzi" value="Gaia Tonanzi" readonly>
         <div class="input-group-append">
@@ -19,7 +19,7 @@
           <% end %>
         </div>
       </div>
-      <h6>Account Number</h6>
+      <h6><%= t('.uk_number') %></h6>
       <div class="input-group">
         <input id="uk-number" type="text" class="bank-info form-control" aria-label="79366709" value="79366709" readonly>
         <div class="input-group-append">
@@ -28,7 +28,7 @@
           <% end %>
         </div>
       </div>
-      <h6>Sort Code</h6>
+      <h6><%= t('.uk_sort') %></h6>
       <div class="input-group">
         <input id="uk-sort" type="text" class="bank-info form-control" aria-label="04-00-04" value="04-00-04" readonly>
         <div class="input-group-append">
@@ -39,8 +39,8 @@
       </div>
     </div>
     <div class="col-md-6 bank-col">
-      <h4>EU Account Details</h4>
-      <h6>Account Name</h6>
+      <h4><%= t('.eu_title') %></h4>
+      <h6><%= t('.eu_name') %></h6>
       <div class="input-group">
         <div class="input-group-prepend">
           <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#eu-name"} do %>
@@ -49,7 +49,7 @@
         </div>
         <input id="eu-name" type="text" class="bank-info form-control" aria-label="Davide Lora" value="Davide Lora" readonly>
       </div>
-      <h6>Account Number</h6>
+      <h6><%= t('.eu_number') %></h6>
       <div class="input-group">
         <div class="input-group-prepend">
           <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#eu-number"} do %>
@@ -58,7 +58,7 @@
         </div>
         <input id="eu-number" type="text" class="bank-info form-control" aria-label="IT04H0326801019052555232280" value="IT04H0326801019052555232280" readonly>
       </div>
-      <h6>BIC/SWIFT</h6>
+      <h6><%= t('.eu_sort') %></h6>
       <div class="input-group">
         <div class="input-group-prepend">
           <%= button_tag type: "button", class: "btn btn-primary btn-bank-copy", title: "Copy", data: {toggle: "tooltip", placement: "top", clipboard_target: "#eu-sort"} do %>
@@ -73,8 +73,8 @@
 <div class="container">
   <div class="row">
     <div class="col registry-title">
-      <h3>Select all the perks you want!</h3>
-      <h3>The amount indicated is only a suggestion, feel free to donate freely</h3>
+      <h3><%= t('.page_info_one') %></h3>
+      <h3><%= t('.page_info_two') %></h3>
     </div>
   </div>
 <div class="row">
@@ -95,12 +95,12 @@
               <%= image_tag "hobbiton.jpg", class: "card-img-top", alt: "#{registry.activity}", id: "card-registry-#{registry.id}" %>
             <% end %>
             <div class="card-body registry-body">
-              <h5 class="value-img-overlay">£<%= registry.value %></h5>
+              <h5 class="value-img-overlay"><%= t('.card_value', price: registry.value) %></h5>
               <h5 class="card-title"><%= registry.activity %></h5>
               <p class="card-text"><%= registry.description %></p>
             </div>
             <div class="card-footer">
-              <h6 class="card-text"><i class="fas fa-gifts"></i> PERK</h6>
+              <h6 class="card-text"><i class="fas fa-gifts"></i> <%= t('.card_perk') %></h6>
               <p class="card-text"><%= registry.perk %></p>
             </div>
           </div>
