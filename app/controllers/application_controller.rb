@@ -10,12 +10,14 @@ class ApplicationController < ActionController::Base
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   ## i18n
-  before_action :set_locale
+  # The gem commang sets a before_filter that automatically sets locale(s) based on device default language
+  include HttpAcceptLanguage::AutoLocale
+  # before_action :set_locale
+  # def set_locale
+  #   I18n.locale = params.fetch(:locale, I18n.default_locale).to_sym
+  # end
 
-  def set_locale
-    I18n.locale = params.fetch(:locale, I18n.default_locale).to_sym
-  end
-
+  # This action sets the locale (e.g. it) in the url
   def default_url_options
     { locale: I18n.locale == I18n.default_locale ? nil : I18n.locale }
   end
