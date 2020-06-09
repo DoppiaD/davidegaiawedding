@@ -1,5 +1,360 @@
 ---
 it:
+  guests:
+    edit:
+      allergies_label: Food allergies / Dietary requirements
+      form_close: Close and Save
+      pick_avatar_label: Pick your avatar
+      shuttle_from_label: From Hotel Barrage to Wedding Venue
+      shuttle_question: Will you need the shuttle?
+      shuttle_to_label: From Wedding Venue to Hotel Barrage
+    index:
+      modal_title: Edit RSVP info
+      participate_edit: EDIT
+      participate_no: 'NO'
+      participate_yes: YES!
+      plus_one_text: It's dangerous to go alone, take this!
+      title: Will you join the party?
   pages:
+    _trip:
+      drive:
+      - paragraph: 'Land at:'
+        title: We suggest somewhere near Turin
+      - paragraph: 'Rent a:'
+        title: Car, Truck, Caravan
+        icons:
+        - car
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+      - paragraph: 'Arrive to:'
+        title: Hotel Barrage
+        icons:
+        - walking
+        - bus
+        - taxi
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+        - 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+        - 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+      - paragraph: 'Check-in:'
+        title: Suit up!
+      - paragraph: 'Free shuttle to:'
+        title: Tenuta La Morra
+        icons:
+        - shuttle-van
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+      - paragraph: Drink, eat, celebrate!
+        title: Enjoy the party
+      - paragraph: 'Free shuttle to:'
+        title: Hotel Barrage
+        icons:
+        - shuttle-van
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+      milan:
+      - paragraph: 'Land at:'
+        title: Milan Malpensa Airport
+      - paragraph: 'Go to train station:'
+        title: Torino Porta Susa
+        icons:
+        - train
+        - bus
+        - taxi
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+        - 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+        - 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+      - paragraph: 'Arrive to:'
+        title: Hotel Barrage
+        icons:
+        - walking
+        - bus
+        - taxi
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+        - 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+        - 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+      - paragraph: 'Check-in:'
+        title: Suit up!
+      - paragraph: 'Free shuttle to:'
+        title: Tenuta La Morra
+        icons:
+        - shuttle-van
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+      - paragraph: Drink, eat, celebrate!
+        title: Enjoy the party
+      - paragraph: 'Free shuttle to:'
+        title: Hotel Barrage
+        icons:
+        - shuttle-van
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+      turin:
+      - paragraph: 'Land at:'
+        title: Torino Airport
+      - paragraph: 'Go to train station:'
+        title: Torino Porta Susa
+        icons:
+        - train
+        - bus
+        - taxi
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+        - 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+        - 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+      - paragraph: 'Take a train to:'
+        title: Pinerolo
+        icons:
+        - train
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+      - paragraph: 'Arrive to:'
+        title: Hotel Barrage
+        icons:
+        - walking
+        - bus
+        - taxi
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+        - 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+        - 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+      - paragraph: 'Check-in:'
+        title: Suit up!
+      - paragraph: 'Free shuttle to:'
+        title: Tenuta La Morra
+        icons:
+        - shuttle-van
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
+      - paragraph: Drink, eat, celebrate!
+        title: Enjoy the party
+      - paragraph: 'Free shuttle to:'
+        title: Hotel Barrage
+        icons:
+        - shuttle-van
+        descriptions:
+        - 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ante metus. Donec suscipit eleifend mi aliquet feugiat. Vestibulum in mi id nulla viverra accumsan nec eu felis.
     home:
-      couple_names: Davide & Gaia i18n it
+      arrival_description: Step by step travel instructions
+      arrival_info: How to get here
+      ceremony: Wedding Celebration
+      ceremony_info_html: Ceremony starts at 16:00. <br> Food starts at 18:00
+      couple_names: Davide &  i18n IT
+      cta_button_text: RSVP
+      cta_html: '"We think we’re quite ready<br> for another adventure!"'
+      location_one: Torino
+      location_one_description: Our hometown
+      location_three: Cavour
+      location_three_description: The historical wedding town
+      location_two: Langhe
+      location_two_description: Italy's best wine region
+      logistics: Logistics
+      logistics_quote: '"Home is behind, the wedding ahead"'
+      tourist_info: Tourist Info
+      tourist_quote: "“Not All Those Who Wander Are Lost.”"
+      wedding_address_html: Via Villafranca 77, 10061<br> Cavour TO, Italy
+      wedding_cta: Come celebrate with us!
+      wedding_date: September 24th, 2021
+      wedding_location: Tenuta la Morra
+      where_to_stay: Where to stay
+      wts_description: Partner hotel for wedding night
+    logistics:
+      hotel_address_html: Stradale S. Secondo 100, Pinerolo (TO),<br> 10064, Italy
+      hotel_email: info@hotelbarrage.it
+      hotel_feature_one: Free shuttle to/from venue
+      hotel_feature_three: Fixed low special price
+      hotel_feature_two: Late breakfast included
+      hotel_info: 'To book, write an email or make a direct call to the         Hotel mentioning our wedding:'
+      hotel_mailto: mailto:info@hotelbarrage.it?subject=Davide%26Gaia%20Wedding%20-%20Booking
+      hotel_name: Hotel Barrage
+      hotel_phone: "+39 0121 040500"
+      hotel_phone_tel: tel:+390121040500
+      hotel_website: https://www.hotelbarrage.it
+      hotel_website_text: MORE INFO
+      trip_city_one: Turin
+      trip_city_one_lg_text: " Caselle"
+      trip_city_three: Drive
+      trip_city_three_lg_text: ", Rent, Share"
+      trip_city_two: Milan
+      trip_city_two_lg_text: " Malpensa"
+      trip_quote_html: "“It's a dangerous business, going out your door. You step onto the road,<br> and if you don't keep your feet, there's no knowing where you might be swept off to.”"
+      trip_title: How to get there
+    touristinfo:
+    - location: Turin
+      location_id: turin
+      location_image: turin.jpg
+      location_link_text: FIND ON THE MAP
+      location_link: https://goo.gl/maps/z34rzDvACxb7sXzY6
+      places_title: What to see
+      places_quote: "“All we have to decide is what to do with the time that is given us.”"
+      places:
+      - place_name: Place name
+        place_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        place_description: Place description with only.
+        place_link_text: LINK
+        place_link: "#"
+      - place_name: Place name
+        place_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        place_description: Place description with only.
+        place_link_text: LINK
+        place_link: "#"
+      - place_name: Place name
+        place_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        place_description: Place description with only.
+        place_link_text: LINK
+        place_link: "#"
+      - place_name: Place name
+        place_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        place_description: Place description with only.
+        place_link_text: LINK
+      restaurants_title: What to eat
+      restaurants_quote: "“You already had one breakfast. We've had one, yes. What about second breakfast?”"
+      restaurants:
+      - restaurant_name: Restaurant name
+        restaurant_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        restaurant_description: Restaurant description with only.
+        restaurant_link_text: LINK
+        restaurant_link: "#"
+      - restaurant_name: Restaurant name
+        restaurant_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        restaurant_description: Restaurant description with only.
+        restaurant_link_text: LINK
+        restaurant_link: "#"
+      - restaurant_name: Restaurant name
+        restaurant_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        restaurant_description: Restaurant description with only.
+        restaurant_link_text: LINK
+        restaurant_link: "#"
+      - restaurant_name: Restaurant name
+        restaurant_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        restaurant_description: Restaurant description with only.
+        restaurant_link_text: LINK
+        restaurant_link: "#"
+    - location: Langhe
+      location_id: langhe
+      location_image: langhe.jpg
+      location_link_text: FIND ON THE MAP
+      location_link: https://www.google.com/maps/d/viewer?ie=UTF8&hl=it&oe=UTF8&msa=0&t=m&ll=44.61074002212622%2C8.12370616870112&spn=7.587316%2C14.0625&z=11&source=embed&mid=1vjSeKqhkP1naHkHVU3PW5ul9Hx8
+      places_title: What to see
+      places_quote: "“All we have to decide is what to do with the time that is given us.”"
+      places:
+      - place_name: Place name
+        place_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        place_description: Place description with only.
+        place_link_text: LINK
+        place_link: "#"
+      - place_name: Place name
+        place_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        place_description: Place description with only.
+        place_link_text: LINK
+        place_link: "#"
+      - place_name: Place name
+        place_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        place_description: Place description with only.
+        place_link_text: LINK
+        place_link: "#"
+      - place_name: Place name
+        place_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        place_description: Place description with only.
+        place_link_text: LINK
+      restaurants_title: What to eat
+      restaurants_quote: "“You already had one breakfast. We've had one, yes. What about second breakfast?”"
+      restaurants:
+      - restaurant_name: Restaurant name
+        restaurant_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        restaurant_description: Restaurant description with only.
+        restaurant_link_text: LINK
+        restaurant_link: "#"
+      - restaurant_name: Restaurant name
+        restaurant_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        restaurant_description: Restaurant description with only.
+        restaurant_link_text: LINK
+        restaurant_link: "#"
+      - restaurant_name: Restaurant name
+        restaurant_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        restaurant_description: Restaurant description with only.
+        restaurant_link_text: LINK
+        restaurant_link: "#"
+      - restaurant_name: Restaurant name
+        restaurant_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        restaurant_description: Restaurant description with only.
+        restaurant_link_text: LINK
+        restaurant_link: "#"
+    - location: Cavour
+      location_id: cavour
+      location_image: cavour.jpg
+      location_link_text: FIND ON THE MAP
+      location_link: https://goo.gl/maps/Vs4fY57SdnMQ3xEY8
+      places_title: What to see
+      places_quote: "“All we have to decide is what to do with the time that is given us.”"
+      places:
+      - place_name: Place name
+        place_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        place_description: Place description with only.
+        place_link_text: LINK
+        place_link: "#"
+      - place_name: Place name
+        place_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        place_description: Place description with only.
+        place_link_text: LINK
+        place_link: "#"
+      - place_name: Place name
+        place_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        place_description: Place description with only.
+        place_link_text: LINK
+        place_link: "#"
+      - place_name: Place name
+        place_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        place_description: Place description with only.
+        place_link_text: LINK
+      restaurants_title: What to eat
+      restaurants_quote: "“You already had one breakfast. We've had one, yes. What about second breakfast?”"
+      restaurants:
+      - restaurant_name: Restaurant name
+        restaurant_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        restaurant_description: Restaurant description with only.
+        restaurant_link_text: LINK
+        restaurant_link: "#"
+      - restaurant_name: Restaurant name
+        restaurant_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        restaurant_description: Restaurant description with only.
+        restaurant_link_text: LINK
+        restaurant_link: "#"
+      - restaurant_name: Restaurant name
+        restaurant_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        restaurant_description: Restaurant description with only.
+        restaurant_link_text: LINK
+        restaurant_link: "#"
+      - restaurant_name: Restaurant name
+        restaurant_pic: https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg
+        restaurant_description: Restaurant description with only.
+        restaurant_link_text: LINK
+        restaurant_link: "#"
+  registries:
+    index:
+      bank_link_text: BANK TRANSFER INFO
+      card_perk: PERK
+      card_value: "%{price} €"
+      eu_name: Account Name
+      eu_number: IBAN
+      eu_sort: BIC/SWIFT
+      eu_title: EU Account Details
+      page_info_one: Select all the perks you want!
+      page_info_two: The amount indicated is only a suggestion, feel free to donate freely
+      title: Honeymoon Crowdfunding
+      uk_name: Account Name
+      uk_number: Account Number
+      uk_sort: Sort Code
+      uk_title: UK Account Details
+  shared:
+    footer:
+      footer_quote_end: for Gaia
+      footer_quote_start: Crafted by Davide with lots of
+    navbar:
+      guests_page_text: RSVP
+      log_out_text: Log out
+      logistics_page_text: logistics
+      registry_page_text: Registry
+      tourist_page_text: Tourist Info
