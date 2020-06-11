@@ -11,12 +11,12 @@ class ApplicationController < ActionController::Base
 
   ## i18n
   # The gem commang sets a before_filter that automatically sets locale(s) based on device default language
-  # include HttpAcceptLanguage::AutoLocale
-  before_action :set_locale
-  def set_locale
-    I18n.locale = params.fetch(:locale, I18n.default_locale).to_sym
-    # I18n.locale = http_accept_language.compatible_language_from(I18n.available_locales)
-  end
+  include HttpAcceptLanguage::AutoLocale
+  # before_action :set_locale
+  # def set_locale
+  #   # I18n.locale = params.fetch(:locale, I18n.default_locale).to_sym
+  #   # I18n.locale = http_accept_language.compatible_language_from(I18n.available_locales)
+  # end
 
   # This action sets the locale (e.g. it) in the url
   def default_url_options

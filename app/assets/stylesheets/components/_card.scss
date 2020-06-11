@@ -55,5 +55,14 @@
 
 .d-card-shadow-primary {
   @include main-card-shadow(rgba($primary, 0.6), rgba($primary, 0.6), rgba($primary, 0.6));
+}
 
+.d-card-grid {
+  @include basic-grid {
+}
+
+@include media-breakpoint-up(md) {
+  .d-card-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

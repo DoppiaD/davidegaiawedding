@@ -76,3 +76,10 @@ body {
 a:active, a:focus {
   @include active-focus-link-color;
 }
+
+@mixin basic-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: $spacer  $spacer;
+}
