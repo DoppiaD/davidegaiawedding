@@ -336,7 +336,7 @@ en:
     index:
       bank_link_text: BANK TRANSFER INFO
       card_perk: PERK
-      card_value: "%{price} €"
+      card_value: "%{price} £"
       eu_name: Account Name
       eu_number: IBAN
       eu_sort: BIC/SWIFT
@@ -355,6 +355,6 @@ en:
     navbar:
       guests_page_text: RSVP
       log_out_text: Log out
-      logistics_page_text: logistics
+      logistics_page_text: Logistics
       registry_page_text: Registry
       tourist_page_text: Tourist Info

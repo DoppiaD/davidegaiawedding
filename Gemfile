@@ -29,7 +29,7 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
-  gem 'pry-byebug', '~> 3.9'
+  gem 'pry-byebug', '~> 3.9' # Use with: binding.pry
   gem 'pry-rails', '~> 0.3.9'
   gem 'dotenv-rails'
   gem 'i18n-tasks', '~> 0.9.31'

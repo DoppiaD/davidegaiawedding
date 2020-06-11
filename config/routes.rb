@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  scope '(:locale)', locale: /en_GB|it/ do
+  scope '(:locale)', locale: /it/ do
     devise_for :users
-    
     root to: 'pages#home'
+
     get '/logistics', to: 'pages#logistics'
     get '/tourist-info', to: 'pages#touristinfo'
 
@@ -10,7 +10,6 @@ Rails.application.routes.draw do
       member do
         patch :participate
       end
-      # patch '/guests/:id/participate', to: 'guests#participate'
     end
     resources :registries, only: [:index]
     resources :user_registries, only: [:create, :destroy]
