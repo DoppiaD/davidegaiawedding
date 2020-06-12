@@ -58,7 +58,7 @@
 }
 
 .d-card-grid {
-  @include basic-grid {
+  @include d-basic-grid;
 }
 
 @include media-breakpoint-up(md) {

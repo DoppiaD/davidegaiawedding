@@ -70,7 +70,7 @@
 
 // Cards
 .registry-deck {
-  @include basic-grid
+  @include d-basic-grid;
   .registry-card {
     // border-radius: $border-radius;
     font-size: 12px;
