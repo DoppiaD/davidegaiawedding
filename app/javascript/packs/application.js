@@ -40,6 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   initializeBootstrapTooltip()
   setAvatarPictureInModal()
   activateCSValidation()
+  $(".alert" ).fadeOut(3000)
   // Initialize Cloudinary
   // cloudinary.Cloudinary.new({cloud_name: "doppiad"}).responsive();
 });
