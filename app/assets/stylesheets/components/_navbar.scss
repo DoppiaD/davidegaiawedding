@@ -17,6 +17,7 @@ body {
   }
   .navbarSupportedContent {
     flex-grow: 0;
+    visibility: visible;
   }
   #navbarDropdown {
     &:focus, &:active {
@@ -39,7 +40,6 @@ body {
       border-color: $link-active-focus-color;
     }
   }
-
 }
 
 .navbar-davide-colorize {
@@ -53,6 +53,9 @@ body {
       top: 50%;
     }
   }
+  #navbarOverlayContent {
+    visibility: hidden;
+  }
 }
 
 // Hamburger menu styling
@@ -61,8 +64,8 @@ body {
 	height: 2px;
 	background-color: $primary;
 	display: block;
-	transition: all 0.2s;
-  // transition: transform .35s ease-in-out;
+	// transition: all 0.2s;
+  transition: .35s ease-in-out;
 	margin-top: 4px;
 }
 
@@ -77,12 +80,14 @@ body {
   padding-left: 0;
   padding-right: 0;
   background: transparent;
+  z-index: 1111;
 }
 
 // Animation for Hamburger dropdown-menu
 .navbar-toggler .top-bar {
   transform: rotate(45deg);
   transform-origin: 10% 10%;
+  background-color: color-yiq($primary);
 }
 
 .navbar-toggler .middle-bar {
@@ -92,10 +97,12 @@ body {
 .navbar-toggler .bottom-bar {
   transform: rotate(-45deg);
   transform-origin: 10% 90%;
+  background-color: color-yiq($primary);
 }
 
 .navbar-toggler.collapsed .top-bar {
   transform: rotate(0);
+  background-color: $primary;
 }
 
 .navbar-toggler.collapsed .middle-bar {
@@ -104,4 +111,44 @@ body {
 
 .navbar-toggler.collapsed .bottom-bar {
   transform: rotate(0);
+  background-color: $primary;
+}
+
+// Full page Hamburger Menu Overlay
+@include media-breakpoint-down(md) {
+  .navbarSupportedContent {
+    visibility: hidden;
+  }
+}
+
+#navbarOverlayContent {
+  // Spacing between elements is given by bootstrap class
+  width: 100%;
+  height: 100%;
+  background: $primary;
+  opacity: 0.85;
+  color: color-yiq($primary);
+  font-size: 5vh;
+  font-weight: 600;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.25s;
+  .nav-item {
+    color: white !important;
+  }
+  &.collapse {
+    transform: translateX(100%);
+  }
+}
+
+.nav-flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-top: 10%;
 }

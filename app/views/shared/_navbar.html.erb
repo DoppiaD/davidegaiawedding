@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-md navbar-light navbar-davide fixed-top">
-  <button class="navbar-toggler collapsed order-md-12" type="button" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler collapsed order-md-12" type="button" data-toggle="collapse" data-target="#navbarOverlayContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="icon-bar top-bar"></span>
     <span class="icon-bar middle-bar"></span>
     <span class="icon-bar bottom-bar"></span>
@@ -35,6 +35,20 @@
   <div class="collapse navbar-collapse navbarSupportedContent order-md-4">
     <div class="navbar-nav">
       <%= link_to t('.registry_page_text'), registries_path, class: "nav-item nav-link #{'active' if current_page?(registries_path)}" %>
+    </div>
+  </div>
+
+  <div class="collapse navbar-collapse order-md-1" id="navbarOverlayContent">
+    <div class="nav-flex-center">
+      <div class="navbar-nav p-5">
+        <%= link_to t('.logistics_page_text'), logistics_path, class: "nav-item nav-link #{'active' if current_page?(logistics_path)}" %>
+      </div>
+      <div class="navbar-nav p-5">
+        <%= link_to t('.tourist_page_text'), tourist_info_path, class: "nav-item nav-link #{'active' if current_page?(tourist_info_path)}" %>
+      </div>
+      <div class="navbar-nav p-5">
+        <%= link_to t('.registry_page_text'), registries_path, class: "nav-item nav-link #{'active' if current_page?(registries_path)}" %>
+      </div>
     </div>
   </div>
 </div>

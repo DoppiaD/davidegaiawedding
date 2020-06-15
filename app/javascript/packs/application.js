@@ -40,7 +40,17 @@ document.addEventListener('turbolinks:load', () => {
   initializeBootstrapTooltip()
   setAvatarPictureInModal()
   activateCSValidation()
-  $(".alert" ).fadeOut(3000)
   // Initialize Cloudinary
   // cloudinary.Cloudinary.new({cloud_name: "doppiad"}).responsive();
+  $(".alert" ).fadeOut(3000) // Fade Out flash alerts
+
+  $('.navbarOverlayContent').on('show.bs.dropdown', function(){
+    console.log(this)
+    $(this).find('.navbarOverlayContent').first().stop(true, true).slideDown(300);
+  });
+
+  $('.navbar-toggler').on('hide.bs.dropdown', function(){
+    $(this).find('.navbarOverlayContent').first().stop(true, true).slideUp(300);
+  });
+
 });
