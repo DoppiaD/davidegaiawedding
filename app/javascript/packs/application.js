@@ -23,7 +23,7 @@ require('@client-side-validations/client-side-validations')
 require('@client-side-validations/simple-form/dist/simple-form.bootstrap4')
 import "bootstrap";
 // import cloudinary from "cloudinary-core"; // Needed for cloudinary auto settings
-import { initUpdateNavbarOnScroll } from '../components/navbar'
+import { initUpdateNavbarOnScroll, lockBgScrollNavOverlay } from '../components/navbar'
 import { windowHeight, scrollToChevron } from '../components/banner'
 import { timelineModalJs } from '../pages/logistics'
 import { onRefreshOpenModal } from '../guests/index'
@@ -32,6 +32,7 @@ import { initializeBootstrapTooltip, copyBankText } from '../registry/index'
 
 document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll()
+  lockBgScrollNavOverlay()
   windowHeight()
   scrollToChevron()
   timelineModalJs()
@@ -43,14 +44,4 @@ document.addEventListener('turbolinks:load', () => {
   // Initialize Cloudinary
   // cloudinary.Cloudinary.new({cloud_name: "doppiad"}).responsive();
   $(".alert" ).fadeOut(3000) // Fade Out flash alerts
-
-  $('.navbarOverlayContent').on('show.bs.dropdown', function(){
-    console.log(this)
-    $(this).find('.navbarOverlayContent').first().stop(true, true).slideDown(300);
-  });
-
-  $('.navbar-toggler').on('hide.bs.dropdown', function(){
-    $(this).find('.navbarOverlayContent').first().stop(true, true).slideUp(300);
-  });
-
 });

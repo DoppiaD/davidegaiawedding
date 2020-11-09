@@ -140,6 +140,7 @@ body {
     color: white !important;
   }
   &.collapse {
+    // Slide in/out effect of menu overlay
     transform: translateX(100%);
   }
 }
@@ -152,3 +153,7 @@ body {
   height: 100%;
   padding-top: 10%;
 }
+
+.fixed-position {
+    position: fixed;
+ }
