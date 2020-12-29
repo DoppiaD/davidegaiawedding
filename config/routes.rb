@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   scope '(:locale)', locale: /it/ do
     devise_for :users
     root to: 'pages#home'
