@@ -3,8 +3,8 @@
 puts "Cleaning databases..."
 User.destroy_all
 Guest.destroy_all
-UserRegistry.destroy_all
 Registry.destroy_all
+UserRegistry.destroy_all
 # ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
 
 puts "Creating seed of Users"

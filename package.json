@@ -1,5 +1,5 @@
 {
-  "name": "davidegaiawedding",
+  "name": "weddingwebiste",
   "private": true,
   "dependencies": {
     "@client-side-validations/client-side-validations": "^0.1.4",
@@ -18,12 +18,16 @@
     "rails-erb-loader": "^5.5.2",
     "turbolinks": "^5.2.0"
   },
-  "version": "0.1.0",
+  "version": "1.0.0",
   "devDependencies": {
     "eslint": "^6.8.0",
     "webpack-dev-server": "^3.10.3"
   },
   "resolutions": {
     "websocket-extensions": "^0.1.4"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/DoppiaD/davidegaiawedding",
+  "author": "Davide",
+  "license": "MIT"
 }
