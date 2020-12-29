@@ -57,12 +57,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Custom gems
 gem 'devise', '~> 4.7', '>= 4.7.1'
-gem 'autoprefixer-rails', '~> 9.7', '>= 9.7.6'
+gem 'autoprefixer-rails', '~> 10.1'
 gem 'font-awesome-sass', '~> 5.12'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
-gem 'client_side_validations'
-gem 'client_side_validations-simple_form'
-gem 'turbolinks_render', '~> 0.9.17'
+gem 'client_side_validations', '~> 17.2'
+gem 'client_side_validations-simple_form', '~> 11.2'
+gem 'turbolinks_render', '~> 0.9.20'
 gem 'pundit', '~> 2.1'
 # gem 'carrierwave'
 # gem 'cloudinary', '~> 1.13', '>= 1.13.2'

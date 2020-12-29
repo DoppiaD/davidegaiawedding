@@ -75,7 +75,7 @@ GEM
       activesupport (>= 3.0.0, < 6.2)
       ruby2_keywords (>= 0.0.2, < 1.0)
     ast (2.4.1)
-    autoprefixer-rails (9.8.6.5)
+    autoprefixer-rails (10.1.0.0)
       execjs
     bcrypt (3.1.16)
     bindex (0.8.1)
@@ -326,11 +326,11 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (~> 2.9)
-  autoprefixer-rails (~> 9.7, >= 9.7.6)
+  autoprefixer-rails (~> 10.1)
   bootsnap (>= 1.4.2)
   capybara (>= 2.15)
-  client_side_validations
-  client_side_validations-simple_form
+  client_side_validations (~> 17.2)
+  client_side_validations-simple_form (~> 11.2)
   devise (~> 4.7, >= 4.7.1)
   devise-i18n (~> 1.9, >= 1.9.1)
   dotenv-rails
@@ -353,7 +353,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
-  turbolinks_render (~> 0.9.17)
+  turbolinks_render (~> 0.9.20)
   tzinfo-data
   web-console (>= 3.3.0)
   webdrivers
