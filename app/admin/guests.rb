@@ -1,5 +1,5 @@
 ActiveAdmin.register Guest do
-  permit_params :user_id, :participate, :name, :last_name, :allergies, :shuttle_to, :shuttle_from, :child
+  permit_params :user_id, :participate, :name, :last_name, :allergies, :shuttle_to, :shuttle_from, :child, :avatar
 
   index do
     selectable_column
@@ -9,8 +9,8 @@ ActiveAdmin.register Guest do
     column :name
     column :last_name
     column :allergies
-    column :shuttle_to
-    column :shuttle_from
+    column "Shuttle to Venue", :shuttle_to
+    column "Shuttle to Hotel", :shuttle_from
     column :child
     actions
   end

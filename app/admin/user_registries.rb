@@ -5,7 +5,6 @@ ActiveAdmin.register UserRegistry do
     selectable_column
     column :user
     column :registry
-    column("Activity"){|u| u.registry.activity }
     actions
   end
 end

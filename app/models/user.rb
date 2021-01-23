@@ -7,5 +7,10 @@ class User < ApplicationRecord
   has_many :guests, dependent: :destroy
 
   has_many :user_registries, dependent: :destroy
-  has_many :registries, through: :user_registries
+  has_many :registries, -> { distinct }, through: :user_registries
+
+  # For ActiveAdmin
+  def name
+    "#{id} - #{email}"
+  end
 end
