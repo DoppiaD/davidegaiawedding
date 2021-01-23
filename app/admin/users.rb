@@ -18,4 +18,7 @@ ActiveAdmin.register User do
     column :admin
     actions
   end
+
+  preserve_default_filters!
+  filter :sign_in_count
 end
