@@ -2,12 +2,12 @@ ActiveAdmin.register User do
   form do |f|
     f.inputs "Identity" do
       f.input :email
-      f.input :encrypted_password
+      f.input :password
     end
     f.actions
   end
 
-  permit_params :email, :encrypted_password #,  :remember_created_at, :sign_in_count, :current_sign_in_at, :last_sign_in_at
+  permit_params :email, :password
 
   index do
     selectable_column
